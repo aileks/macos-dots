@@ -1,6 +1,5 @@
 return {
     { 'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
         opts = {
             sync_install = false,
             highlight = { enable = true },
@@ -28,7 +27,7 @@ return {
     parser_config.blade = {
       install_info = {
         url = "https://github.com/EmranMR/tree-sitter-blade",
-        files = {"src/parser.c"},
+        -- files = {"src/parser.c"},
         branch = "main",
       },
       filetype = "blade"
