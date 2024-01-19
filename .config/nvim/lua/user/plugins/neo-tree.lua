@@ -19,16 +19,6 @@ return {
             buftype = { 'terminal', "quickfix" },
           },
         },
-        highlights = {
-          statusline = {
-            focused = {
-              bg = '#9d7cd8',
-            },
-            unfocused = {
-              bg = '#9d7cd8',
-            },
-          },
-        },
       },
     },
   },

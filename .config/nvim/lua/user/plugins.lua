@@ -24,6 +24,7 @@ require("lazy").setup({
   { 'jessarcher/vim-heritage' },
   { 'windwp/nvim-autopairs', config = true },
   { 'karb94/neoscroll.nvim', config = true },
+  { 'hiphish/rainbow-delimiters.nvim' },
   { import = 'user.plugins.vim-rooter' },
   { import = 'user.plugins.bufdelete' },
   { import = 'user.plugins.rose-pine' },
@@ -44,6 +45,7 @@ require("lazy").setup({
   { import = 'user.plugins.copilot' },
   { import = 'user.plugins.colorizer' },
   { import = 'user.plugins.illuminate' },
+  { import = 'user.plugins.which-key' },
 }, {
   checker = {
     enabled = true,

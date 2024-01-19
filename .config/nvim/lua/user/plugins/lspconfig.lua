@@ -9,6 +9,7 @@ return {
     'jayp0521/mason-null-ls.nvim',
   },
   config = function()
+    -- Setup Mason to automatically install LSP servers
     require('mason').setup({
       ui = {
         height = 0.8,
@@ -18,7 +19,7 @@ return {
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-    -- php
+    -- PHP
     require('lspconfig').intelephense.setup({
       commands = {
         IntelephenseIndex = {
@@ -64,7 +65,7 @@ return {
       }
     })
 
-    -- vue, javascript, typescript
+    -- Vue, JavaScript, TypeScript
     require('lspconfig').volar.setup({
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -74,13 +75,15 @@ return {
         -- end
       end,
       capabilities = capabilities,
+      -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
+      -- This drastically improves the responsiveness of diagnostic updates on change
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
-    -- tailwind css
+    -- Tailwind CSS
     require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
 
-    -- json
+    -- JSON
     require('lspconfig').jsonls.setup({
       capabilities = capabilities,
       settings = {
@@ -101,6 +104,7 @@ return {
             return utils.root_has_file({ '.eslintrc.js' })
           end,
         }),
+        -- null_ls.builtins.diagnostics.phpstan, -- TODO: Only if config file
         null_ls.builtins.diagnostics.trail_space.with({ disabled_filetypes = { 'NvimTree' } }),
         null_ls.builtins.formatting.eslint_d.with({
           condition = function(utils)
@@ -134,7 +138,7 @@ return {
 
     require('mason-null-ls').setup({ automatic_installation = true })
 
-    -- keymaps
+    -- Keymaps
     vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
     vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
     vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
@@ -146,10 +150,10 @@ return {
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
-    -- commands
+    -- Commands
     vim.api.nvim_create_user_command('Format', function() vim.lsp.buf.format({ timeout_ms = 5000 }) end, {})
 
-    -- diagnostic configuration
+    -- Diagnostic configuration
     vim.diagnostic.config({
       virtual_text = false,
       float = {
@@ -157,7 +161,7 @@ return {
       }
     })
 
-    -- sign configuration
+    -- Sign configuration
     vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
     vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
     vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
