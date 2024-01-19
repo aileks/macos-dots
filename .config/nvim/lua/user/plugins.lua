@@ -46,6 +46,7 @@ require("lazy").setup({
   { import = 'user.plugins.colorizer' },
   { import = 'user.plugins.illuminate' },
   { import = 'user.plugins.which-key' },
+  { import = 'user.plugins.presence' },
 }, {
   checker = {
     enabled = true,
