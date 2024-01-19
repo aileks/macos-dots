@@ -1,0 +1,23 @@
+# focus window
+alt - h : yabai -m window --focus west
+
+# swap managed window
+shift + alt - h : yabai -m window --swap north
+
+# balance size of windows
+shift + alt - 0 : yabai -m space --balance
+
+# send window to desktop
+shift + alt - 1 : yabai -m window --space  1
+shift + alt - 2 : yabai -m window --space  2
+shift + alt - 3 : yabai -m window --space  3
+shift + alt - 4 : yabai -m window --space  4
+shift + alt - 5 : yabai -m window --space  5
+
+# float / unfloat window and center on screen
+shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# apps
+alt - t: /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+alt - v : open -a /Applications/PhpStorm.app
+alt - b: open -a /Applications/Arc.app
