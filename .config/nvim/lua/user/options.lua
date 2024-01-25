@@ -10,7 +10,7 @@ vim.opt.title = true
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.wrap = true 
+vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.linebreak = true
 vim.opt.list = true
@@ -36,3 +36,8 @@ vim.opt.updatetime = 4001
 vim.opt.redrawtime = 10000
 vim.opt.exrc = true
 vim.opt.secure = true
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200 })
+  end,
+})

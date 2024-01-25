@@ -2,7 +2,7 @@ sketchybar --set $NAME \
   label="Loading..." \
   icon.color=0xfff6c177
 
-LOCATION="NewYork"
+LOCATION="Orlando"
 WEATHER_JSON=$(curl -s "https://wttr.in/$LOCATION?format=j1")
 
 MOON_PHASE=$(echo $WEATHER_JSON | jq '.weather[0].astronomy[0].moon_phase' | tr -d '"')

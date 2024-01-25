@@ -9,7 +9,6 @@ return {
     'jayp0521/mason-null-ls.nvim',
   },
   config = function()
-    -- Setup Mason to automatically install LSP servers
     require('mason').setup({
       ui = {
         height = 0.8,
@@ -31,9 +30,9 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
       end,
       capabilities = capabilities
     })
@@ -68,15 +67,13 @@ return {
     -- Vue, JavaScript, TypeScript
     require('lspconfig').volar.setup({
       on_attach = function(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentFormattingProvider = true
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
       end,
       capabilities = capabilities,
-      -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
-      -- This drastically improves the responsiveness of diagnostic updates on change
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 

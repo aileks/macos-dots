@@ -18,6 +18,8 @@ require("lazy").setup({
   { 'tpope/vim-unimpaired', event = 'VeryLazy' },
   { 'tpope/vim-surround' },
   { 'tpope/vim-sleuth' },
+  { 'mbbill/undotree' },
+  { 'windwp/nvim-ts-autotag' },
   { 'farmergreg/vim-lastplace' },
   { 'nelstrom/vim-visual-star-search' },
   { 'whatyouhide/vim-textobj-xmlattr', dependencies = 'kana/vim-textobj-user'  },

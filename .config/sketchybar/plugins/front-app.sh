@@ -1,6 +1,10 @@
 ICON_COLOR=0xffc4a7e7
 
 case $INFO in
+  "Arc")
+    ICON_PADDING_RIGHT=5
+    ICON=󰯬
+    ;;
   "Code")
     ICON_PADDING_RIGHT=2
     ICON_COLOR=0xff22a1f0
@@ -25,12 +29,14 @@ case $INFO in
     ICON=
     ;;
   "Firefox Developer Edition")
+    ICON_PADDING_RIGHT=5
     ICON=󰈹
     ;;
   "FreeTube")
     ICON=󰗃
     ;;
   "kitty")
+    ICON_PADDING_RIGHT=5
     ICON=󰄛
     ;;
   "Messages")

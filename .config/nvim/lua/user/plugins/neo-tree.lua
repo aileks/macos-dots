@@ -34,7 +34,6 @@ return {
     source_selector = {
       winbar = true,
       statusline = false,
-      separator = { left = "", right= "" },
       show_separator_on_edge = true,
       highlight_tab = "SidebarTabInactive",
       highlight_tab_active = "SidebarTabActive",
@@ -47,7 +46,7 @@ return {
         padding = 0,
       },
       name = {
-        use_git_status_colors = false,
+        use_git_status_colors = true,
         highlight_opened_files = true,
       },
     },
@@ -58,6 +57,8 @@ return {
     },
     filesystem = {
       filtered_items = {
+        visible = true,
+        hide_gitignored = true,
         hide_dotfiles = false,
         hide_by_name = {
           ".git",

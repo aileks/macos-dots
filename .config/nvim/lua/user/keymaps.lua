@@ -40,9 +40,19 @@ vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>')
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
 
 -- move text and stuff
-vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
-vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR>==gi')
-vim.keymap.set('n', '<A-j>', ':move .+1<CR>==')
-vim.keymap.set('n', '<A-k>', ':move .-2<CR>==')
-vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
-vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
+vim.keymap.set('i', '<C-j>', '<Esc>:move .+1<CR>==gi')
+vim.keymap.set('i', '<C-k>', '<Esc>:move .-2<CR>==gi')
+vim.keymap.set('n', '<C-j>', ':move .+1<CR>==')
+vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
+vim.keymap.set('v', '<C-j>', ":move '>+1<CR>gv=gv")
+vim.keymap.set('v', '<C-k>', ":move '<-2<CR>gv=gv")
+
+-- undotree
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>')
+
+-- faster window switch
+vim.keymap.set('n', '<leader>w', '<C-w>w')
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')

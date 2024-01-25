@@ -19,5 +19,5 @@ shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # apps
 alt - t: /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-alt - v : open -a /Applications/PhpStorm.app
-alt - b: open -a /Applications/Arc.app
+alt - v : open -a /Applications/Visual\ Studio\ Code.app
+alt - w: open -a /Applications/Arc.app
