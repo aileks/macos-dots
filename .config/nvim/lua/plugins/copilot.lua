@@ -1,5 +1,5 @@
 return {
-  'github/copilot.vim',
+  "github/copilot.vim",
   config = function()
     vim.cmd([[
       imap <silent><script><expr> <M-CR> copilot#Accept("\<CR>")

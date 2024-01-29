@@ -1,0 +1,38 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Rosé Pine",
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_font_features": {
+    "calt": true
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "linter": {
+    "eslint": {
+      "enable": true,
+      "fixOnSave": true
+    }
+  },
+  "autosave": "on_focus_change",
+  "buffer_line_height": "standard",
+  "relative_line_numbers": true
+}
