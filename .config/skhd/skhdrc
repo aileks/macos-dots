@@ -1,8 +1,14 @@
 # focus window
 alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
 
 # swap managed window
-shift + alt - h : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
@@ -18,6 +24,6 @@ shift + alt - 5 : yabai -m window --space  5
 shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # apps
-alt - t: /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-alt - v : open -a /Applications/Visual\ Studio\ Code.app
+alt - t: wezterm cli spawn --new-window
+alt - v : open -a /Applications/PhpStorm.app
 alt - w: open -a /Applications/Arc.app

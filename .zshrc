@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin:/Applications/WezTerm.app/Contents/MacOS"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -25,7 +25,7 @@ alias lh="eza -la --color=always --icons --group-directories-first | grep '^\.'"
 alias gs="git status"
 alias ga="git add --all"
 alias gc="git commit -m"
-alias gp="git push origin"
+alias gp="git push"
 alias cp="cpv"
 alias vim="nvim"
 alias ar="php artisan"
@@ -65,3 +65,7 @@ export PATH="/Users/aileks/Library/Application Support/Herd/bin/":$PATH
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/83/"
 
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/82/"
