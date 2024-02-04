@@ -24,6 +24,7 @@ require("lazy").setup({
     { import = 'plugins.lualine' },
     { import = 'plugins.neo-tree' },
     { import = 'plugins.noice' },
+    { import = 'plugins.nvim-notify' },
     { import = 'plugins.phpactor' },
     { import = 'plugins.presence' },
     { import = 'plugins.projectionist' },
