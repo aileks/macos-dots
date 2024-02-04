@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin:/Applications/WezTerm.app/Contents/MacOS"
+export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin:/Applications/WezTerm.app/Contents/MacOS:$HOME/Library/Application Support/Herd/bin/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -59,13 +59,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# Herd injected PHP binary.
-export PATH="/Users/aileks/Library/Application Support/Herd/bin/":$PATH
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/83/"
-
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/82/"
