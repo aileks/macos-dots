@@ -47,11 +47,6 @@ export FZF_DEFAULT_OPTS="
 	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
-
 #  PNPM
 export PNPM_HOME="/Users/aileks/Library/pnpm"
 case ":$PATH:" in
