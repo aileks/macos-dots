@@ -7,6 +7,7 @@ return {
     'b0o/schemastore.nvim',
     { 'nvimtools/none-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
     'jayp0521/mason-null-ls.nvim',
+    'MunifTanjim/prettier.nvim',
   },
   config = function()
     require('mason').setup({
@@ -17,6 +18,31 @@ return {
     require('mason-lspconfig').setup({ automatic_installation = true })
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+    -- Lua
+    require('lspconfig').lua_ls.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        client.server_capabilities.documentRangeFormattingProvider = true
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
+      end,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' },
+          },
+          workspace = {
+            library = {
+              [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+              [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+            },
+          },
+        },
+      },
+    })
 
     -- PHP
     require('lspconfig').intelephense.setup({
@@ -131,6 +157,24 @@ return {
           })
         end
       end,
+    })
+
+    -- Prettier
+    require('prettier').setup({
+      bin = 'prettier',
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'vue',
+        'html',
+        'css',
+        'scss',
+        'json',
+        'yaml',
+        'markdown',
+      }
     })
 
     require('mason-null-ls').setup({ automatic_installation = true })

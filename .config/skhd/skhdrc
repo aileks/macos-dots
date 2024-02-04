@@ -24,6 +24,6 @@ shift + alt - 5 : yabai -m window --space  5
 shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # apps
-alt - t: wezterm cli spawn --new-window
+alt - t: /Applications/WezTerm.app/Contents/MacOS/wezterm-gui
 alt - v : open -a /Applications/PhpStorm.app
 alt - w: open -a /Applications/Arc.app

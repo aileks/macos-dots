@@ -6,7 +6,6 @@ return {
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    -- 'hrsh7th/cmp-copilot',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
@@ -49,16 +48,14 @@ return {
       },
       window = {
         completion = {
-          col_offset = -2 -- align the abbr and word on cursor (due to fields order below)
+          col_offset = -2
         }
       },
       formatting = {
         fields = { "kind", "abbr", "menu" },
         format = lspkind.cmp_format({
           mode = 'symbol',
-          -- See: https://www.reddit.com/r/neovim/comments/103zetf/how_can_i_get_a_vscodelike_tailwind_css/
           before = function(entry, vim_item)
-            -- Replace the 'menu' field with the kind and source
             vim_item.menu = '  ' .. vim_item.kind .. ' (' .. (source_map[entry.source.name] or entry.source.name) .. ')'
             vim_item.menu_hl_group = 'SpecialComment'
 
@@ -83,7 +80,6 @@ return {
       },
       mapping = {
         ["<Tab>"] = cmp.mapping(function(fallback)
-          -- print('tab...')
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
@@ -109,12 +105,11 @@ return {
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'luasnip' },
-        -- { name = 'copilot' },
         { name = 'buffer' },
         { name = 'path' },
       },
       experimental = {
-        -- ghost_text = true,
+         ghost_text = true,
       },
     })
   end,

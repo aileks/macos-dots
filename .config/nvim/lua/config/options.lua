@@ -1,7 +1,7 @@
 vim.opt.cmdheight = 0
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.number = true
@@ -37,6 +37,7 @@ vim.opt.redrawtime = 10000
 vim.opt.exrc = true
 vim.opt.secure = true
 vim.opt.titlestring = '%f // nvim'
+vim.opt.wrap = true
 
 -- highlighted yank stuff
 vim.cmd [[

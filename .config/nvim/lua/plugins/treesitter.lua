@@ -36,6 +36,7 @@ return {
       'json',
       'lua',
       'markdown',
+      'markdown_inline',
       'php',
       'phpdoc',
       'python',
