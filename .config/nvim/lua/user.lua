@@ -16,6 +16,7 @@ require("lazy").setup({
     { import = 'plugins.cmp' },
     { import = 'plugins.colorizer' },
     { import = 'plugins.copilot' },
+    { import = 'plugins.emmet' },
     { import = 'plugins.floaterm' },
     { import = 'plugins.illuminate' },
     { import = 'plugins.indent-blankline' },

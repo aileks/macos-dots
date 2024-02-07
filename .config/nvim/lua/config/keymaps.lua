@@ -31,3 +31,5 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('i', 'jk', '<Esc>')
+
+vim.g.user_emmet_leader_key = '<A-e>'

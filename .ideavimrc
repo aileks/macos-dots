@@ -1,0 +1,45 @@
+"Settings
+set scrolloff=8
+set incsearch
+set expandtab
+set wrap
+set smartindent
+set number
+set relativenumber
+set wildmode='longest:full,full'
+set completeopt='menuone,longest,preview'
+set ignorecase
+set smartcase
+set clipboard+=unnamed
+set undofile
+set quickscope
+set ideajoin
+
+"Keymaps
+let mapleader=' '
+let maplocalleader=' '
+map <leader>r <Action>(ReformatCode)
+imap <A-j> <esc>:move .+1<CR>==gi
+imap <A-k> <esc>:move .-2<CR>==gi
+vmap <A-j> :move .+1<CR>gv=gv
+vmap <A-k> :move .-2<CR>gv=gv
+nmap <A-j> :move .+1<CR>==gi<Esc>
+nmap <A-k> :move .-2<CR>==gi<Esc>
+nmap ;; <esc>A;<esc>
+nmap ,, <esc>A,<esc>
+nmap <leader>e :NERDTreeToggle<CR>
+nmap <leader>o :NERDTreeFocus<CR>
+vnoremap < <gv
+vnoremap > >gv
+vnoremap y myy`y
+nnoremap q: :q
+nnoremap <leader>w <C-w>
+
+"Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'kana/vim-textobj-entire'
+Plug 'dbakker/vim-paragraph-motion'
+Plug 'jdhao/better-escape.vim'
