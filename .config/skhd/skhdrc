@@ -31,9 +31,9 @@ shift + alt - 4 : yabai -m window --space  4
 shift + alt - 5 : yabai -m window --space  5
 
 # float / unfloat window and center on screen
-ctrl + shift - space : yabai -m window --toggle float --grid 6:6:1:1:4:4
+cmd + shift - space : yabai -m window --toggle float --grid 6:6:1:1:4:4
 
 # apps
 alt - t: /Applications/WezTerm.app/Contents/MacOS/wezterm
-alt - v : open -a /Applications/Visual Studio Code.app
+alt - v : open -a /Applications/Visual\ Studio\ Code.app
 alt - w: open -a /Applications/Arc.app

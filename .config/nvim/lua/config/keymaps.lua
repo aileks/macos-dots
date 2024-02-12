@@ -32,4 +32,9 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('i', 'jk', '<Esc>')
 
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
 vim.g.user_emmet_leader_key = '<A-e>'

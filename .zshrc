@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="bira"
 
 # Plugins
-plugins=(zsh-autosuggestions brew npm composer git fast-syntax-highlighting cp command-not-found sudo macos)
+plugins=(zsh-autosuggestions timer brew thefuck git fast-syntax-highlighting cp command-not-found sudo)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
@@ -36,8 +36,6 @@ alias pn="pnpm"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-export PATH=$PATH:/home/aileks/.spicetify
-export PATH=$PATH:/Users/aileks/.spicetify
 
 # FZF
 export FZF_DEFAULT_OPTS="
