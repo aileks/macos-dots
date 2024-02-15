@@ -27,7 +27,6 @@ require("lazy").setup({
     { import = 'plugins.noice' },
     { import = 'plugins.nvim-notify' },
     { import = 'plugins.phpactor' },
-    { import = 'plugins.presence' },
     { import = 'plugins.projectionist' },
     { import = 'plugins.rose-pine' },
     { import = 'plugins.telescope' },
