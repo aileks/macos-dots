@@ -28,7 +28,7 @@ require("lazy").setup({
     { import = 'plugins.nvim-notify' },
     { import = 'plugins.phpactor' },
     { import = 'plugins.projectionist' },
-    { import = 'plugins.rose-pine' },
+    { import = 'plugins.monokai-pro' },
     { import = 'plugins.telescope' },
     { import = 'plugins.transparant' },
     { import = 'plugins.treesitter' },

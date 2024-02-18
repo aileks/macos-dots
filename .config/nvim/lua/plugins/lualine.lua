@@ -10,13 +10,7 @@ return {
       section_separators = '',
       component_separators = '',
       globalstatus = true,
-      theme = {
-        normal = {
-          a = 'StatusLine',
-          b = 'StatusLine',
-          c = 'StatusLine',
-        },
-      },
+      theme = 'monokai-pro'
     },
     sections = {
       lualine_a = {
