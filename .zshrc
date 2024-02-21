@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="bira"
 
 # Plugins
-plugins=(zsh-autosuggestions timer brew thefuck git fast-syntax-highlighting cp command-not-found sudo)
+plugins=(zsh-autosuggestions brew thefuck git fast-syntax-highlighting cp command-not-found sudo)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
@@ -29,41 +29,12 @@ alias gp="git push"
 alias cp="cpv"
 alias vim="nvim"
 alias ar="php artisan"
-alias gptk="gameportingtoolkit"
-alias pn="pnpm"
+alias tailwind="bun add -D prettier prettier-plugin-tailwindcss tailwindcss postcss autoprefixer && bunx tailwindcss init -p"
 
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# FZF
-export FZF_DEFAULT_OPTS="
-	--color=fg:#908caa,bg:#191724,hl:#ebbcba
-	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-	--color=border:#403d52,header:#31748f,gutter:#191724
-	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-
-#  PNPM
-export PNPM_HOME="/Users/aileks/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
-
-
-# Herd injected PHP binary.
-export PATH="/Users/aileks/Library/Application Support/Herd/bin/":$PATH
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/82/"
-
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/aileks/Library/Application Support/Herd/config/php/83/"
