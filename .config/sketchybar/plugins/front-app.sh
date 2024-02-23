@@ -1,4 +1,4 @@
-ICON_COLOR=0xffc4a7e7
+ICON_COLOR=0xffc39ac9
 
 case $INFO in
   "Arc")
@@ -42,6 +42,9 @@ case $INFO in
   "Messages")
     ICON=󰍦
     ;;
+  "Obsidian")
+    ICON=󱞁
+    ;;
   "ONLYOFFICE")
     ICON_PADDING_RIGHT=5
     ICON=
@@ -63,8 +66,8 @@ case $INFO in
   "TextEdit")
     ICON=
     ;;
-  "Transmission")
-    ICON=󰶘
+  "WezTerm")
+    ICON=
     ;;
   *)
     INFO="Unknown"

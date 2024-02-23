@@ -1,6 +1,6 @@
 sketchybar --set $NAME \
   label="Loading..." \
-  icon.color=0xff9ccfd8
+  icon.color=0xff6ab0f3
 
 LOCATION="Orlando"
 WEATHER_JSON=$(curl -s "https://wttr.in/$LOCATION?format=j1")
