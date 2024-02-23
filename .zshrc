@@ -38,3 +38,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
+

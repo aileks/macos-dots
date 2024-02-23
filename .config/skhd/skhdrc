@@ -1,39 +1,39 @@
 # focus window
-ctrl - h : yabai -m window --focus west
-ctrl - j : yabai -m window --focus south
-ctrl - k : yabai -m window --focus north
-ctrl - l : yabai -m window --focus east
+ctrl - h : /opt/homebrew/bin/yabai -m window --focus west
+ctrl - j : /opt/homebrew/bin/yabai -m window --focus south
+ctrl - k : /opt/homebrew/bin/yabai -m window --focus north
+ctrl - l : /opt/homebrew/bin/yabai -m window --focus east
 
 # swap managed window
-ctrl + cmd - h : yabai -m window --swap west
-ctrl + cmd - j : yabai -m window --swap south
-ctrl + cmd - k : yabai -m window --swap north
-ctrl + cmd - l : yabai -m window --swap east
+ctrl + cmd - h : /opt/homebrew/bin/yabai -m window --swap west
+ctrl + cmd - j : /opt/homebrew/bin/yabai -m window --swap south
+ctrl + cmd - k : /opt/homebrew/bin/yabai -m window --swap north
+ctrl + cmd - l : /opt/homebrew/bin/yabai -m window --swap east
 
 # resize window
-shift + alt - h : yabai -m window --resize left:-100:0
-shift + alt - j : yabai -m window --resize bottom:0:100
-shift + alt - k : yabai -m window --resize top:0:-100
-shift + alt - l : yabai -m window --resize right:100:0
-ctrl + alt - h : yabai -m window --resize left:100:0
-ctrl + alt - j : yabai -m window --resize bottom:0:-100
-ctrl + alt - k : yabai -m window --resize top:0:100
-ctrl + alt - l : yabai -m window --resize right:-100:0
+shift + alt - h : /opt/homebrew/bin/yabai -m window --resize left:-100:0
+shift + alt - j : /opt/homebrew/bin/yabai -m window --resize bottom:0:100
+shift + alt - k : /opt/homebrew/bin/yabai -m window --resize top:0:-100
+shift + alt - l : /opt/homebrew/bin/yabai -m window --resize right:100:0
+ctrl + alt - h : /opt/homebrew/bin/yabai -m window --resize left:100:0
+ctrl + alt - j : /opt/homebrew/bin/yabai -m window --resize bottom:0:-100
+ctrl + alt - k : /opt/homebrew/bin/yabai -m window --resize top:0:100
+ctrl + alt - l : /opt/homebrew/bin/yabai -m window --resize right:-100:0
 
 # balance size of windows
-shift + alt - 0 : yabai -m space --balance
+shift + alt - 0 : /opt/homebrew/bin/yabai -m space --balance
 
 # send window to desktop
-shift + alt - 1 : yabai -m window --space  1
-shift + alt - 2 : yabai -m window --space  2
-shift + alt - 3 : yabai -m window --space  3
-shift + alt - 4 : yabai -m window --space  4
-shift + alt - 5 : yabai -m window --space  5
+shift + alt - 1 : /opt/homebrew/bin/yabai -m window --space  1
+shift + alt - 2 : /opt/homebrew/bin/yabai -m window --space  2
+shift + alt - 3 : /opt/homebrew/bin/yabai -m window --space  3
+shift + alt - 4 : /opt/homebrew/bin/yabai -m window --space  4
+shift + alt - 5 : /opt/homebrew/bin/yabai -m window --space  5
 
 # float / unfloat window and center on screen
-cmd + shift - space : yabai -m window --toggle float --grid 6:6:1:1:4:4
+cmd + shift - space : /opt/homebrew/bin/yabai -m window --toggle float --grid 6:6:1:1:4:4
 
 # apps
 alt - t: /Applications/WezTerm.app/Contents/MacOS/wezterm
-alt - v : open -a /Applications/Visual\ Studio\ Code.app
-alt - w: open -a /Applications/Arc.app
+alt - v : open -na "PhpStorm.app"
+alt - w: open -a "Arc.app"
