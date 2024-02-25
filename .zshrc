@@ -29,6 +29,7 @@ alias gp="git push"
 alias cp="cpv"
 alias vim="nvim"
 alias ar="php artisan"
+alias gptk="gameportingtoolkit-no-hud"
 alias tailwind="bun add -D prettier prettier-plugin-tailwindcss tailwindcss postcss autoprefixer && bunx tailwindcss init -p"
 
 # NVM
@@ -39,3 +40,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
 
+# Switch Homebrew path based on architecture (gptk stuff)
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi

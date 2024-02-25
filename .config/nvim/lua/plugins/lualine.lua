@@ -10,7 +10,7 @@ return {
       section_separators = '',
       component_separators = '',
       globalstatus = true,
-      theme = 'monokai-pro'
+      theme = 'catppuccin',
     },
     sections = {
       lualine_a = {

@@ -2,11 +2,11 @@ BG=0x00000000
 
 FONT="RecMonoLinear Nerd Font"
 FONT_SIZE=13
-FONT_COLOR=0xffe0def4
+FONT_COLOR=0xffcdd6f4
 ICON_FONT_SIZE=16
 
 ITEM_PADDING=8
-ITEM_COLOR=0x23213653
+ITEM_COLOR=0x801e1e2e
 GAP=6
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
@@ -29,7 +29,7 @@ sketchybar --default \
 
 sketchybar --add item os left \
   --set os \
-  icon= icon.color=0xffeaf2f1 \
+  icon= icon.color=0xffbac2de \
   icon.font.size=21 icon.y_offset=2 \
   icon.padding_left=0 icon.padding_right=0 \
   label.padding_left=0 label.padding_right=6 \
@@ -38,7 +38,7 @@ sketchybar --add item os left \
 sketchybar --add item user left \
   --set user \
   label="$(whoami)" label.font.style="Bold" \
-  icon=󰭟 icon.color=0xff696d77
+  icon=󰭟 icon.color=0xffcba6f7
 
 sketchybar --add item weather left \
   --set weather \

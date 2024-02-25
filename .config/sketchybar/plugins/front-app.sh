@@ -1,4 +1,4 @@
-ICON_COLOR=0xffc39ac9
+ICON_COLOR=0xff89b4fa
 
 case $INFO in
   "Arc")
@@ -71,7 +71,7 @@ case $INFO in
     ;;
   *)
     INFO="Unknown"
-    ICON_COLOR=0xffff94c6
+    ICON_COLOR=0xffeba0ac
     ICON=﯂
     ;;
 esac
