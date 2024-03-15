@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin:/Applications/WezTerm.app/Contents/MacOS:$HOME/Library/Application Support/Herd/bin/"
+export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -12,13 +12,13 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="bira"
 
 # Plugins
-plugins=(zsh-autosuggestions brew thefuck git fast-syntax-highlighting cp command-not-found sudo)
+plugins=(asdf zsh-autosuggestions archlinux git F-Sy-H cp command-not-found sudo)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias ls="eza -lh --color=always --icons --group-directories-first"
+alias ls="eza --color=always --icons --group-directories-first"
 alias la="eza -lah --color=always --icons --group-directories-first"
 alias lt="eza -aT --color=always --icons --group-directories-first"
 alias lh="eza -la --color=always --icons --group-directories-first | grep '^\.'"
@@ -39,10 +39,3 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
-
-# Switch Homebrew path based on architecture (gptk stuff)
-if [ "$(arch)" = "arm64" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-    eval "$(/usr/local/bin/brew shellenv)"
-fi

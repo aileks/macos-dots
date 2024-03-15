@@ -1,3 +1,3 @@
 # Dotfiles for macOS
 
-Dotfiles for my yabai, skhd, and sketchybar configs. Plus a couple extras.
+Arch Linux dotfiles for wezterm, tmux, neovim, and hyprland.

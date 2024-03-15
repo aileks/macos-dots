@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+THEME='Rick'
+ICONS='Papirus-Dark'
+FONT='Recursive Sans Linear Static 10'
+CURSOR='Capitaine-Cursors'
+
+SCHEMA='gsettings set org.gnome.desktop.interface'
+
+apply_themes () {
+	${SCHEMA} gtk-theme "$THEME"
+	${SCHEMA} icon-theme "$ICONS"
+	${SCHEMA} cursor-theme "$CURSOR"
+	${SCHEMA} font-name "$FONT"
+}
+
+apply_themes

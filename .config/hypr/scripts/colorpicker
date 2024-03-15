@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+color=$(grim -g "`slurp -b 00000000 -p`" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n1 | cut -d' ' -f4)
+image=/tmp/${color}.png
+
+main() {
+  if [[ "$color" ]]; then
+    echo $color | tr -d "\n" | wl-copy
+    convert -size 48x48 xc:"$color" ${image}
+    notify-send -h string:x-canonical-private-synchronous:sys-notify-picker -u low -i ${image} "$color, copied to clipboard."
+  fi
+}
+
+main
