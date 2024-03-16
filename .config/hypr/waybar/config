@@ -6,9 +6,9 @@
     "exclusive": true,
     "passthrough": false,
     "position": "top",
-    "height": 34,
+    "height": 32,
     "width": "",
-    "spacing": 0,
+    "spacing": 6,
     "margin": 0,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -16,7 +16,8 @@
     "margin-right": 0,
     "fixed-center": true,
     "ipc": true,
-    "modules-left": ["hyprland/workspaces", "tray", "custom/spotify"],
-    "modules-center": [ "cpu", "cpu#2", "memory", "memory#2", "disk", "disk#2" ],
-    "modules-right": ["pulseaudio", "pulseaudio#2", "bluetooth", "bluetooth#2", "network", "network#2", "clock", "clock#2", "custom/power"],
+
+    "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk"],
+    "modules-center": ["custom/spotify", "tray"],
+    "modules-right": ["pulseaudio",  "bluetooth", "network", "clock", "custom/power"],
 }

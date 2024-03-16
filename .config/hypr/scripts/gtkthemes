@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-THEME='Rick'
+THEME='Catppuccin-Mocha'
 ICONS='Papirus-Dark'
 FONT='Recursive Sans Linear Static 10'
-CURSOR='Capitaine-Cursors'
+CURSOR='Capitain-Cursors'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
