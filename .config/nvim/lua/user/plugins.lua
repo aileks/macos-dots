@@ -27,7 +27,6 @@ require("lazy").setup({
   { import = 'user.plugins.lspconfig' },
   { import = 'user.plugins.lualine' },
   { import = 'user.plugins.mini' },
-  -- { import = 'user.plugins.noice' },
   { import = 'user.plugins.phpactor' },
   { import = 'user.plugins.projectionist' },
   { import = 'user.plugins.telescope' },

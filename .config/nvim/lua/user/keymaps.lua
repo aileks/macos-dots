@@ -50,5 +50,9 @@ vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
 -- Format buffer
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
+-- Easier save & quit
+vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>q', ':q<CR>')
+
 -- Emmet leader remap
 vim.g.user_emmet_leader_key = '<A-e>'
