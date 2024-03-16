@@ -1,14 +1,15 @@
 @import "./colors.css";
 
 * {
-    font-family: "JetBrainsMonoNF Nerd Font Mono", "Iosevka Nerd Font", sans-serif;
-    font-size: 14px;
+    font-family: "JetBrains Mono", "Iosevka Nerd Font", sans-serif;
+    font-size: 13px;
 }
 
 window#waybar {
     background-color: @background;
-	color: @foreground;
-    border-bottom: 2px solid @background-alt1;
+  color: @background;
+    border-bottom: 0px solid @background-alt1;
+  border-radius: 0px 0px 20px 20px;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -17,36 +18,24 @@ window#waybar.hidden {
     opacity: 0.5;
 }
 
-#custom-menu {
-	background-color: @background-alt1;
-	color: @magenta;
-	font-size: 18px;
-	border-radius: 0px 14px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	padding: 2px 8px 2px 8px;
+#clock {
+  background-color: @yellow;
 }
 
-#custom-themes {
-    background-color: @selected;
+#cpu {
+  background-color: @cyan;
 }
 
-#custom-power {
-	background-color: @red;
-	font-size: 16px;
+#memory {
+  background-color: @magenta;
 }
 
-#custom-power, #custom-themes {
-	color: @background;
-	border-radius: 10px;
-	margin: 6px 6px 6px 0px;
-	padding: 2px 8px 2px 8px;
+#disk {
+  background-color: @blue;
 }
 
 #tray {
-	background-color: @background-alt1;
-	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 6px;
+  background-color: @background-alt2;
 }
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -58,17 +47,13 @@ window#waybar.hidden {
 }
 
 #custom-spotify {
-	background-color: @background-alt1;
-	color: @foreground;
-	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 8px;
-	font-size: 12px;
-	font-weight: bold;
+  background-color: @background-alt1;
+  color: @foreground;
 }
 
 #custom-spotify.paused {
-	color: @foreground;
+  background-color: @background-alt1;
+  color: @foreground;
 }
 
 #custom-spotify.playing {
@@ -79,72 +64,29 @@ window#waybar.hidden {
 }
 
 #custom-spotify.offline {
-	color: @red;
-}
-
-#cpu {
-	color: @red;
-}
-
-#memory {
-	color: @green;
-}
-
-#disk {
-	color: @yellow;
+  background-color: @red;
+  color: @background;
 }
 
 #pulseaudio {
-	color: @blue;
+  background-color: @yellow;
 }
+
 #pulseaudio.bluetooth {
-	color: @cyan;
+  background-color: @yellow;
 }
 #pulseaudio.muted {
-	color: @red;
-}
-
-#pulseaudio.2 {
-}
-#pulseaudio.2.bluetooth {
-}
-#pulseaudio.2.muted {
-}
-
-#backlight {
-	color: @magenta;
-}
-
-#battery {
-	color: @cyan;
-}
-#battery.charging {
-}
-#battery.plugged {
-}
-@keyframes blink {
-    to {
-        color: @foreground;
-    }
-}
-#battery.critical:not(.charging) {
-	background-color: @background-alt2;
-}
-#battery.2.critical:not(.charging) {
-	background-color: @background-alt1;
-    color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: @red;
+  color: @background;
 }
 
 #network {
-	color: @yellow;
+  background-color: @magenta;
 }
+
 #network.disconnected,#network.disabled {
-	color: @red;
+  background-color: @background-alt1;
+  color: @foreground;
 }
 #network.linked {
 }
@@ -154,13 +96,15 @@ window#waybar.hidden {
 }
 
 #bluetooth {
-	color: @green;
+  background-color: @cyan;
 }
 #bluetooth.disabled{
-	color: @red;
+  background-color: @background-alt1;
+  color: @foreground;
 }
 #bluetooth.off{
-	color: @red;
+  background-color: @background-alt1;
+  color: @foreground;
 }
 #bluetooth.on{
 }
@@ -173,55 +117,47 @@ window#waybar.hidden {
 #bluetooth.pairable{
 }
 
-#clock {
-	color: @blue;
-}
-
 #workspaces {
-	background-color: @background;
-	border-radius: 10px;
-	margin-left: 6px ;
-	margin-bottom: 2px ;
-	padding: 0px;
+  background-color: @background;
+  border-radius: 4px;
+  margin: 0px 0px;
+  padding: 0px 0px;
 }
 #workspaces button{
-	color: @foreground;
+  color: @foreground;
 }
 #workspaces button.active{
-	color: @red;
+  color: @selected;
 }
 #workspaces button.urgent{
-	color: @green;
+  color: @red;
 }
 #workspaces button.hidden{
-	color: @yellow;
+  color: @yellow;
+}
+
+#custom-power {
+  border-radius: 12px;
+  margin: 6px 0px;
+  padding: 2px 10px;
+  background-color: @red;
+  margin-right: 6px;
+  padding: 2px 8px;
+  font-size: 16px;
 }
 
 #clock,
 #cpu,
 #disk,
+#mode,
 #memory,
+#custom-spotify,
+#idle_inhibitor,
+#tray,
 #pulseaudio,
 #network,
 #bluetooth {
-	background-color: @background-alt2;
-	border-radius: 10px 0px 0px 10px;
-	margin: 6px 0px 6px 0px ;
-	padding: 4px 6px;
-}
-
-#clock.2,
-#cpu.2,
-#disk.2,
-#memory.2,
-#pulseaudio.2,
-#network.2,
-#bluetooth.2 {
-	background-color: @background-alt1;
-	color: @foreground;
-	font-size: 12px;
-	font-weight: bold;
-	border-radius: 0px 10px 10px 0px;
-	margin: 6px 6px 6px 0px ;
-	padding: 5px 6px 4px 6px;
+  border-radius: 12px;
+  margin: 6px 0px;
+  padding: 2px 10px;
 }
