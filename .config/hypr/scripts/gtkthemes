@@ -2,7 +2,7 @@
 
 THEME='Catppuccin-Mocha'
 ICONS='Papirus-Dark'
-FONT='Recursive Sans Linear Static 10'
+FONT='Ubunut 10'
 CURSOR='Capitain-Cursors'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'

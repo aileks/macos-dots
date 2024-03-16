@@ -17,4 +17,4 @@ color13='#F5C2E7'
 color14='#94E2D5'
 color15='#A6ADC8'
 
-wallpaper="$HOME/Pictures/wallpapers/wallpaper.jpg"
+wallpaper="$HOME/Pictures/wallpapers/wallpaper.png"

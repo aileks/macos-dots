@@ -1,7 +1,7 @@
 # Path
 export PATH="$PATH:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin"
 
-# Path to your oh-my-zsh installation.
+# Path to OMZ installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Editor env variables
@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="bira"
 
 # Plugins
-plugins=(asdf zsh-autosuggestions archlinux git F-Sy-H cp command-not-found sudo)
+plugins=(archlinux asdf command-not-found cp fast-syntax-highlighting git zsh-autosuggestions)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
@@ -29,8 +29,6 @@ alias gp="git push"
 alias cp="cpv"
 alias vim="nvim"
 alias ar="php artisan"
-alias gptk="gameportingtoolkit-no-hud"
-alias tailwind="bun add -D prettier prettier-plugin-tailwindcss tailwindcss postcss autoprefixer && bunx tailwindcss init -p"
 
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -39,3 +37,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
+
+# fzf theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
