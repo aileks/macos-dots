@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DIR="$HOME/.config/hypr"
-source "$DIR"/theme/current.bash
+source "$DIR"/theme/default.bash
 
 bg=${background:1}  fg=${foreground:1}
 red=${color1:1}     green=${color2:1}    yellow=${color3:1}

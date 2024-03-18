@@ -30,7 +30,6 @@ elif [[ "$1" == '--lock' ]]; then
 elif [[ "$1" == '--suspend' ]]; then
   cdialog
   if [[ "$?" == 0 ]]; then
-    mpc -q pause
     pulsemixer --mute
     ~/.config/hypr/scripts/lockscreen
     systemctl suspend
