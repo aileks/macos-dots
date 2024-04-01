@@ -1,5 +1,4 @@
 # Dotfiles
 
-### Arch Linux dotfiles for WezTerm, Tmux, Neovim, and Hyprland.
+### Void Linux dotfiles for i3, WezTerm, Tmux, and Neovim.
 
-(Yes, I know WezTerm has multiplexing. I'm used to Tmux.)
