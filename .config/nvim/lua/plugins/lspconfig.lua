@@ -90,8 +90,8 @@ return {
       }
     })
 
-    -- Volar
-    require('lspconfig').volar.setup({
+    -- TSServer
+    require('lspconfig').tsserver.setup({
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
