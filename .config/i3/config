@@ -182,7 +182,8 @@ bar {
 }
 
 # startup
+exec --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id pipewire &
 exec --no-startup-id picom  -b
-exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/green_void.png
+exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/galaxies.png
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --set TearFree on --rate 165

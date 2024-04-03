@@ -22,7 +22,7 @@ format=json
 interval=30
 
 [powermenu]
-full_text=  
+full_text= 
 ROFI_TEXT=Menu:
 ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
 ENABLE_CONFIRMATIONS=true (must be true or false)

@@ -28,6 +28,7 @@ require("lazy").setup({
   { import = 'user.plugins.lualine' },
   { import = 'user.plugins.mini' },
   { import = 'user.plugins.phpactor' },
+  { import = 'user.plugins.presence' },
   { import = 'user.plugins.projectionist' },
   { import = 'user.plugins.telescope' },
   { import = 'user.plugins.treesitter' },

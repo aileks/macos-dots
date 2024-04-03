@@ -115,10 +115,8 @@ typeset -A menu
 menu=(
   [Shutdown]="loginctl poweroff"
   [Reboot]="loginctl reboot"
-  [Hibernate]="loginctl hibernate"
   [Suspend]="loginctl suspend"
-  [Halt]="loginctl halt"
-  [Lock]="${LOCKSCRIPT:-i3lock --color=${BG_COLOR#"#"}}"
+  [Lock]="i3lock-fancy -p"
   [Logout]="i3-msg exit"
   [Cancel]=""
 )

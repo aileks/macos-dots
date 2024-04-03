@@ -4,7 +4,7 @@ return {
     config = function()
       require("presence").setup({
         auto_update = true,
-        neovim_image_text = "Confirmed not a soydev",
+        neovim_image_text = "No peaking!",
         main_image = "file",
         log_level = nil,
         debounce_timeout = 10,
