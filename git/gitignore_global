@@ -1,0 +1,14 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+tags
+vendor-tags
+.ssh
+_ide_helper.php
+.lvimrc
+.projections.json
+.phpactor.json

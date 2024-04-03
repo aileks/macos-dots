@@ -1,0 +1,29 @@
+[user]
+  name = aileks
+  email = aeverly14@pm.me
+[color]
+    ui = auto
+[commit]
+    gpgsign = true
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore_global
+    pager = delta
+[diff]
+    tool = vimdiff
+[fetch]
+    prune = true
+[help]
+    autocorrect = 10
+[push]
+    default = current
+[rerere]
+    enabled = true
+[merge]
+    conflictstyle = diff3
+[interactive]
+    diffFilter = delta --color-only
+[pull]
+    rebase = false
+[init]
+    defaultBranch = main
