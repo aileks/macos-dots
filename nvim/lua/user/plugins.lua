@@ -29,7 +29,7 @@ require("lazy").setup({
   { import = 'user.plugins.nvim-dap' },
   { import = 'user.plugins.nvim-dap-ui' },
   { import = 'user.plugins.phpactor' },
-  { import = 'user.plugins.presence' },
+  -- { import = 'user.plugins.presence' },
   { import = 'user.plugins.projectionist' },
   { import = 'user.plugins.telescope' },
   { import = 'user.plugins.treesitter' },
