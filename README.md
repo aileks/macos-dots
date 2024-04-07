@@ -26,3 +26,4 @@ Sway extras:
 - swaylock
 - swayimg
 - grimshot
+
