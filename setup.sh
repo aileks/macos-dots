@@ -9,6 +9,8 @@ rm -rf $HOME/.config/nvim
 ln -s $DOTDIR/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/i3
 ln -s $DOTDIR/i3 $HOME/.config/i3
+rm -rf $HOME/.config/sway
+ln -s $DOTDIR/sway $HOME/.config/sway
 rm -rf $HOME/.config/i3blocks
 ln -s $DOTDIR/i3blocks $HOME/.config/i3blocks
 rm -rf $HOME/.config/picom
