@@ -44,7 +44,7 @@ for_window [class=".*"] border pixel 2
 gaps inner 6
 
 # font
-font pango:Jetbrains Mono NF 10
+font pango:Rec Mono Duotone 10
 
 # input config
 input type:keyboard {

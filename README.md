@@ -17,3 +17,12 @@ Needed packages:
 - feh
 - picom
 - zsh
+- thunar
+
+Sway extras:
+- sway
+- swayidle
+- swaybg
+- swaylock
+- grim
+- slurp
