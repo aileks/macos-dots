@@ -20,9 +20,9 @@ Needed packages:
 - thunar
 
 Sway extras:
-- sway
+- sway/swayfx
 - swayidle
 - swaybg
 - swaylock
-- grim
-- slurp
+- swayimg
+- grimshot

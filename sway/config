@@ -61,7 +61,6 @@ set $down j
 set $up k
 set $right l
 set $term wezterm
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # monitor and wallpaper
 output DP-1 resolution 2560x1440@165Hz adaptive_sync on
@@ -165,10 +164,10 @@ bindsym $mod+w exec firefox
 bindsym $mod+y exec $HOME/Apps/keymapp
 
 # screenshot bindings
-bindsym Print exec grim "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
-bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
-bindsym Shift+Print exec grim $(slurp) "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
-bindsym Ctrl+Print exec grim $(slurp) | wl-copy
+bindsym Print exec grimshot --notify save "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
+bindsym $mod+Print exec grimshot --notify save window "/home/$USER/Pictures/$(date +'%Y%m%d-%T').png"
+bindsym Shift+Print exec grimshot --notify save area "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
+bindsym Ctrl+Print exec grimshot --notify copy area
 
 # bar settings
 bar {
@@ -198,6 +197,7 @@ exec export QT_IM_MODULES="wayland;fcitx;ibus"
 
 # autostart
 exec_always fcitx5 -d --replace
+exec_always dunst &
 exec xrdb -merge $HOME/.Xresources
 exec pipewire &
 exec dex --autostart --environment sway
