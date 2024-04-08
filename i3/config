@@ -51,7 +51,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # lockscreen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy -p --nofork
-bindsym Mod1+Ctrl+l exec --no-startup-id i3lock-fancy -p
+bindsym Mod4+Ctrl+l exec --no-startup-id i3lock-fancy -p
 
 # audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
