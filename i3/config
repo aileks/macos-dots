@@ -44,7 +44,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Jetbrains Mono NF 10
+font pango:Rec Mono Semicasual 10
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
@@ -75,9 +75,9 @@ bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+y exec --no-startup-id $HOME/Apps/keymapp
 
 # screenshot bindings
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(uuidgen).png"
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
 bindsym Ctrl+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # change focus
@@ -148,14 +148,14 @@ bindsym $mod+Shift+x exec $HOME/.config/i3blocks/scripts/powermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -165,22 +165,22 @@ bar {
   position top
   height 25
   colors {
-      background         $base
-      statusline         $text
-      focused_statusline $text
-      active_workspace   $base $text $blue
-      focused_separator  $base
-      focused_workspace  $base $base $green
-      active_workspace   $base $base $blue
-      inactive_workspace $base $base $surface1
-      urgent_workspace   $base $base $surface1
-      binding_mode       $base $base $surface1
+    background         $base
+    statusline         $text
+    focused_statusline $text
+    active_workspace   $base $text $blue
+    focused_separator  $base
+    focused_workspace  $base $base $green
+    active_workspace   $base $base $blue
+    inactive_workspace $base $base $surface1
+    urgent_workspace   $base $base $surface1
+    binding_mode       $base $base $surface1
   }
 }
 
 # startup
-exec --no-startup-id xrdb -merge $HOME/.Xresources
-exec --no-startup-id pipewire &
-exec --no-startup-id picom  -b
+exec_always --no-startup-id xrdb -merge $HOME/.Xresources
+exec --no-startup-id pipewire
+exec --no-startup-id picom -b
 exec --no-startup-id feh --bg-center ~/Pictures/Wallpapers/galaxies.png --no-fehbg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165

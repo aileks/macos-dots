@@ -1,6 +1,10 @@
 [global]
-frame_color = "#89B4FA"
-separator_color= frame
+frame_color = "#EBA0AC"
+separator_color = frame
+font = "Jetbrains Mono NF 10"
+corner_radius = 4
+scale = 2
+force_xwayland = true
 
 [urgency_low]
 background = "#1E1E2E"

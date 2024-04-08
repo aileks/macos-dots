@@ -18,12 +18,12 @@ Needed packages:
 - picom
 - zsh
 - thunar
+- dunst
 
 Sway extras:
-- sway/swayfx
+- swayfx
 - swayidle
 - swaybg
 - swaylock
 - swayimg
 - grimshot
-

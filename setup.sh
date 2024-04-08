@@ -17,6 +17,8 @@ rm -rf $HOME/.config/picom
 ln -s $DOTDIR/picom $HOME/.config/picom
 rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
+rm -rf $HOME/.config/mako
+ln -s $DOTDIR/mako $HOME/.config/mako
 
 # theme stuff
 cp -r $DOTDIR/.local $HOME

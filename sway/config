@@ -39,9 +39,16 @@ exec_always {
   gsettings set org.gnome.desktop.interface cursor-theme "Catppuccin-Mocha-Dark-Cursors"
 }
 
-# disable title bars and enable gaps
+# eye candy
 for_window [class=".*"] border pixel 2
-gaps inner 6
+gaps inner 8
+blur enable
+blur_passes 3
+blur_radius 5
+shadows enable
+corner_radius 4
+layer_effects 'panel' 'shadows enable'
+layer_effects 'notifications' 'blur enable; shadows enable; corner_radius 4'
 
 # font
 font pango:Rec Mono Duotone 10
@@ -64,7 +71,7 @@ set $term wezterm
 
 # monitor and wallpaper
 output DP-1 resolution 2560x1440@165Hz adaptive_sync on
-output * bg $HOME/Pictures/Wallpapers/void-colors.png fill
+output * bg $HOME/Pictures/Wallpapers/galaxies.png fill
 
 # idle management
 exec swayidle -w \
@@ -197,7 +204,7 @@ exec export QT_IM_MODULES="wayland;fcitx;ibus"
 
 # autostart
 exec_always fcitx5 -d --replace
-exec_always dunst &
+exec dunst
 exec xrdb -merge $HOME/.Xresources
-exec pipewire &
+exec pipewire
 exec dex --autostart --environment sway
