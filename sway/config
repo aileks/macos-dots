@@ -51,7 +51,7 @@ layer_effects 'panel' 'shadows enable'
 layer_effects 'notifications' 'blur enable; shadows enable; corner_radius 4'
 
 # font
-font pango:Rec Mono Duotone 10
+font pango:FiraCode Nerd Font Propo 10
 
 # input config
 input type:keyboard {
