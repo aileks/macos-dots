@@ -1,10 +1,11 @@
 [global]
 frame_color = "#EBA0AC"
 separator_color = frame
-font = "Jetbrains Mono NF 10"
+font = "Rec Mono Semicasual 11"
 corner_radius = 4
-scale = 2
+scale = 1.5
 force_xwayland = true
+frame_width = 1
 
 [urgency_low]
 background = "#1E1E2E"
