@@ -44,7 +44,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:FiraCode Nerd Font Propo 10
+font pango:Ubuntu Nerd Font Propo 10
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
@@ -164,6 +164,7 @@ bar {
   status_command i3blocks
   position top
   height 25
+  font pango:FiraCode Nerd Font Mono 11
   colors {
     background         $base
     statusline         $text
