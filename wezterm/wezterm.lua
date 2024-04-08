@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- actual config
-config.font = wezterm.font('Rec Mono Linear')
+config.font = wezterm.font('RecMonoLinear Nerd Font')
 config.font_size = 12.0
 config.color_scheme = 'Catppuccin Mocha'
 config.enable_tab_bar = false
