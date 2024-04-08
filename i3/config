@@ -44,7 +44,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Rec Mono Semicasual 10
+font pango:FiraCode Nerd Font 10
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
