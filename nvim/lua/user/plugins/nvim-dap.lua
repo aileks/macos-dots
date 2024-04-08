@@ -2,11 +2,11 @@ return {
   {
     'mfussenegger/nvim-dap',
     config = function()
-      vim.keymap.set('n', '<leader>bp', ":lua require'dap'.toggle_breakpoint()<cr>")
-      vim.keymap.set('n', '<leader>bc', ":lua require'dap'.continue()<cr>")
-      vim.keymap.set('n', '<leader>bo', ":lua require'dap'.step_over()<cr>")
-      vim.keymap.set('n', '<leader>bi', ":lua require'dap'.set_into()<cr>")
-      vim.keymap.set('n', '<leader>bq', ":lua require'dap'.set_out()<cr>")
+      vim.keymap.set('n', '<leader>nb', ":lua require'dap'.toggle_breakpoint()<cr>")
+      vim.keymap.set('n', '<leader>nc', ":lua require'dap'.continue()<cr>")
+      vim.keymap.set('n', '<leader>no', ":lua require'dap'.step_over()<cr>")
+      vim.keymap.set('n', '<leader>ni', ":lua require'dap'.step_into()<cr>")
+      vim.keymap.set('n', '<leader>nq', ":lua require'dap'.step_out()<cr>")
       vim.keymap.set('n', '<leader>B', function()
         require 'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))
       end)
