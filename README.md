@@ -1,6 +1,6 @@
 # Dotfiles
 
-### Void Linux dotfiles for i3, WezTerm, Tmux, and Neovim.
+### Void Linux dotfiles for i3, WezTerm, Tmux, and Neovim. (Feat. SwayFX)
 
 #### NOTE: Use the setup script at your own risk! It's specific to my needs and setup (i.e. doesn't install any packages).
 
