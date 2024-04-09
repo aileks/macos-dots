@@ -167,7 +167,7 @@ bindsym $mod+q kill
 bindsym $mod+Return exec $term
 bindsym $mod+d exec i3-dmenu-desktop
 bindsym $mod+e exec Thunar
-bindsym $mod+w exec firefox
+bindsym $mod+w exec brave-browser-stable
 bindsym $mod+y exec $HOME/Apps/keymapp
 
 # screenshot bindings
