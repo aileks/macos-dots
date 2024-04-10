@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   'xiyaowong/transparent.nvim',
   'mattn/emmet-vim',
+  'tpope/vim-fugitive',
   {'christoomey/vim-tmux-navigator', lazy = false},
   { import = 'user.plugins.autopairs' },
   { import = 'user.plugins.cmp' },

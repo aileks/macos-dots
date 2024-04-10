@@ -186,5 +186,5 @@ exec xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id pipewire
 exec --no-startup-id picom -b
-exec --no-startup-id feh --bg-center ~/Pictures/Wallpapers/galaxies.png --no-fehbg
+exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/girl.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
