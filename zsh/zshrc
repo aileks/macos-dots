@@ -9,7 +9,7 @@ export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # Theme
-ZSH_THEME="af-magic"
+ZSH_THEME="jnrowe"
 
 # Plugins
 plugins=(command-not-found cp fast-syntax-highlighting git zsh-autosuggestions)
