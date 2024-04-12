@@ -117,27 +117,6 @@ return {
       },
     })
 
-    -- FIXME: CMP currently broken
-    -- Emmet
-    -- require('lspconfig').emmet_ls.setup({
-    --   on_attach = function(client, bufnr)
-    --     client.server_capabilities.documentFormattingProvider = false
-    --     client.server_capabilities.documentRangeFormattingProvider = false
-    --     if client.server_capabilities.inlayHintProvider then
-    --       vim.lsp.buf.inlay_hint(bufnr, true)
-    --     end
-    --   end,
-    --   capabilities = capabilities,
-    --   filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "typescriptreact", "vue" },
-    --   init_options = {
-    --     html = {
-    --       options = {
-    --         ["bem.enabled"] = true
-    --       },
-    --     },
-    --   }
-    -- })
-
     -- none-ls
     local null_ls = require('null-ls')
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
