@@ -44,7 +44,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Ubuntu 10
+font pango:Ubuntu Nerd Font Propo 10
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
@@ -179,12 +179,9 @@ bar {
   }
 }
 
-# disable mous accel
-exec xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
-
 # startup
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
-exec --no-startup-id pipewire
+exec --no-startup-id nm-applet &
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/girl.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
