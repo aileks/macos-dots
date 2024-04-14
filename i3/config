@@ -44,7 +44,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Ubuntu Nerd Font Propo 10
+font pango:Ubuntu Nerd Font Propo 11
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
@@ -71,7 +71,7 @@ bindsym $mod+q kill
 bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
-bindsym $mod+w exec --no-startup-id brave-browser-stable
+bindsym $mod+w exec --no-startup-id brave
 bindsym $mod+y exec --no-startup-id $HOME/Apps/keymapp
 
 # screenshot bindings
@@ -144,7 +144,7 @@ bindsym $mod+Shift+c reload
 # restart i3 in place
 bindsym $mod+Shift+r restart
 # powermenu
-bindsym $mod+Shift+x exec $HOME/.config/i3blocks/scripts/powermenu
+bindsym $mod+Shift+x exec --no-startup-id $HOME/.config/i3blocks/scripts/powermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -178,6 +178,9 @@ bar {
     binding_mode       $base $base $surface1
   }
 }
+
+# disable mouse accel
+exec --no-startup-id xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
 
 # startup
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
