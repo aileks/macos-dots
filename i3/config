@@ -179,9 +179,6 @@ bar {
   }
 }
 
-# disable mouse accel
-exec --no-startup-id xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
-
 # startup
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id nm-applet &

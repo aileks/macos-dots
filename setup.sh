@@ -25,6 +25,7 @@ ln -s $DOTDIR/git/gitignore_global $HOME/.gitignore_global
 # theme stuff
 cp -r $DOTDIR/.local $HOME
 cp -r $DOTDIR/themes/* $HOME/.config
+cp $DOTDIR/.Xresources $HOME
 
 echo ""
 echo "ALL DONE!"
