@@ -16,6 +16,7 @@ return {
     'mxsdev/nvim-dap-vscode-js',
     config = function()
       require('dap-vscode-js').setup({
+        debugger_path = vim.fn.stdpath('data') .. "/lazy/vscode-js-debug",
         adapters = { 'chrome', 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node'}
       })
       for _, language in ipairs({ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact' }) do
