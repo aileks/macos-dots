@@ -3,17 +3,16 @@ separator_block_width=15
 markup=pango
 
 [cpu_usage]
-label=󰻠 
+label=󰻠
 interval=10
 separator=true
 
 [memory]
-label=󰍛 
+label=󰍛
 separator=false
 interval=30
 
 [volume-pw]
-#label= 
 command=env AUDIO_DELTA=5 $HOME/.config/i3blocks/scripts/volume-pw
 interval=persist
 format=json
@@ -22,7 +21,7 @@ format=json
 interval=30
 
 [powermenu]
-full_text= 
+full_text=
 ROFI_TEXT=Menu:
 ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
 ENABLE_CONFIRMATIONS=true (must be true or false)

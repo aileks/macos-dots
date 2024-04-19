@@ -2,9 +2,8 @@ font-family = "RecMonoLinear Nerd Font"
 theme = catppuccin-mocha
 window-decoration = false
 background-opacity = 0.9
-confirm-close-surface = true
+confirm-close-surface = false
+clipboard-paste-protection = false
 
-keybind = clear
-keybind = ctrl+z=close_surface
 keybind = ctrl+d=new_split:right
 keybind = ctrl+h=new_split:down
