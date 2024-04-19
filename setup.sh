@@ -15,6 +15,8 @@ rm -rf $HOME/.config/picom
 ln -s $DOTDIR/picom $HOME/.config/picom
 rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
+rm -rf $HOME/.config/ghostty
+ln -s $DOTDIR/ghostty $HOME/.config/ghostty
 rm -rf $HOME/.config/dunst
 ln -s $DOTDIR/dunst $HOME/.config/dunst
 rm -rf $HOME/.gitconfig

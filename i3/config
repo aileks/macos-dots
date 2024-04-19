@@ -68,7 +68,7 @@ tiling_drag modifier titlebar
 
 # application bindings
 bindsym $mod+q kill
-bindsym $mod+Return exec --no-startup-id wezterm
+bindsym $mod+Return exec --no-startup-id $HOME/.local/bin/ghostty
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
 bindsym $mod+w exec --no-startup-id floorp
