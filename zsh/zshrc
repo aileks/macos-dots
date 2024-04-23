@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jnrowe"
 
 # Plugins
-plugins=(archlinux command-not-found cp fast-syntax-highlighting git zsh-autosuggestions)
+plugins=(command-not-found cp fast-syntax-highlighting git ubuntu zsh-autosuggestions)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
