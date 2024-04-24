@@ -54,3 +54,8 @@ export GPG_TTY
 # Misc
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
+
+export PATH=$PATH:/home/aileks/.spicetify
+
+# bun completions
+[ -s "/home/aileks/.bun/_bun" ] && source "/home/aileks/.bun/_bun"

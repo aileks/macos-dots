@@ -28,6 +28,7 @@ require("lazy").setup({
   { import = 'user.plugins.lspconfig' },
   { import = 'user.plugins.lualine' },
   { import = 'user.plugins.mini' },
+  { import = 'user.plugins.noice' },
   { import = 'user.plugins.nvim-dap' },
   { import = 'user.plugins.nvim-dap-ui' },
   { import = 'user.plugins.phpactor' },
