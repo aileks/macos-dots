@@ -22,7 +22,7 @@ require("lazy").setup({
   { import = 'user.plugins.colorizer' },
   { import = 'user.plugins.colorscheme' },
   { import = 'user.plugins.floaterm' },
-  { import = 'user.plugins.go' },
+  -- { import = 'user.plugins.go' },
   { import = 'user.plugins.harpoon' },
   { import = 'user.plugins.illuminate' },
   { import = 'user.plugins.indent-blankline' },

@@ -37,8 +37,8 @@ client.background        $base
 # disable title bars and enable gaps
 for_window [class=".*"] border pixel 2
 hide_edge_borders both
-gaps inner 6
-gaps outer 3
+# gaps inner 6
+# gaps outer 3
 
 # mod key
 set $mod Mod4
@@ -64,12 +64,12 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # application bindings
 bindsym $mod+q kill
 bindsym $mod+Return exec --no-startup-id wezterm
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
 bindsym $mod+w exec --no-startup-id floorp
 bindsym $mod+y exec --no-startup-id $HOME/Apps/keymapp
@@ -102,9 +102,6 @@ bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
 
 # workspaces
 set $ws1 "1"
@@ -163,7 +160,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3blocks
   position top
-  height 25
+  # height 25
   font pango:FiraCode Nerd Font Mono 11
   colors {
     background         $base
@@ -182,7 +179,7 @@ bar {
 # startup
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id nm-applet &
-exec --no-startup-id fcitx5
+# exec --no-startup-id fcitx5
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -b
 exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/girl.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
