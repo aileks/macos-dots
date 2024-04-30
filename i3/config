@@ -73,6 +73,7 @@ bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
 bindsym $mod+w exec --no-startup-id floorp
 bindsym $mod+y exec --no-startup-id $HOME/Apps/keymapp
+bindsym $mod+v exec --no-startup-id emacsclient -n -c -a ''
 
 # screenshot bindings
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +'%Y%m%d-%T').png"
@@ -94,11 +95,6 @@ bindsym $mod+Shift+l move right
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+t layout tabbed
-bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -179,6 +175,7 @@ bar {
 # startup
 exec_always --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id nm-applet &
+exec --no-startup-id dunst &
 exec --no-startup-id emacs --bg-daemon
 # exec --no-startup-id fcitx5
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -b
