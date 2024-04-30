@@ -35,8 +35,8 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 # disable title bars and enable gaps
-for_window [class=".*"] border pixel 2
-hide_edge_borders both
+# for_window [class=".*"] border pixel 2
+# hide_edge_borders both
 # gaps inner 6
 # gaps outer 3
 
