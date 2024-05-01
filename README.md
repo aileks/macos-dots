@@ -5,7 +5,7 @@
 #### NOTE: Use the setup script at your own risk! It's specific to my needs and setup (i.e. doesn't install any packages).
 
 Needed packages:
-- i3-gaps
+- i3
 - i3lock-fancy
 - i3blocks
 - dmenu
@@ -20,3 +20,5 @@ Needed packages:
 - thunar
 - dunst
 - xclip
+- yad
+- playerctl
