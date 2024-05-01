@@ -5,3 +5,5 @@ window-decoration = false
 background-opacity = 0.9
 confirm-close-surface = false
 clipboard-paste-protection = false
+shell-integration-features = no-cursor
+cursor-style = block
