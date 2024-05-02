@@ -115,7 +115,7 @@ typeset -A menu
 menu=(
   [Shutdown]="systemctl poweroff"
   [Reboot]="systemctl reboot"
-  [Suspend]="$LOCKSCRIPT && systemctl suspend"
+  [Suspend]="systemctl suspend && $LOCKSCRIPT"
   [Lock]="$LOCKSCRIPT"
   [Logout]="i3-msg exit"
   [Cancel]=""

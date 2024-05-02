@@ -6,11 +6,13 @@ local augroup = vim.api.nvim_create_augroup
 local aileks = augroup('aileks', {})
 
 local autocmd = vim.api.nvim_create_autocmd
+
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = AileksGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
+
 autocmd('LspAttach', {
 group = aileks,
 callback = function(e)
@@ -24,4 +26,13 @@ callback = function(e)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end
+})
+
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+   require('go.format').goimports()
+  end,
+  group = format_sync_grp,
 })

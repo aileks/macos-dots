@@ -20,6 +20,18 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+    -- Go
+    require('lspconfig').gopls.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        client.server_capabilities.documentRangeFormattingProvider = true
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
+      end,
+    })
+
     -- Lua
     require('lspconfig').lua_ls.setup({
       capabilities = capabilities,
