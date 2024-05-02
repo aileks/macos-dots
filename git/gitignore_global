@@ -12,3 +12,4 @@ _ide_helper.php
 .lvimrc
 .projections.json
 .phpactor.json
+node_modules/

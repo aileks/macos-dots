@@ -33,12 +33,7 @@ client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
-set $ctp-version v0.7.3
-exec_always if [ ! -e ~/.local/share/themes/Catppuccin-Mocha-Standard-Maroon-dark ]; then \
-  curl -L https://github.com/catppuccin/gtk/releases/download/$ctp-version/Catppuccin-Mocha-Standard-Maroon-dark.zip -o ~/.local/share/themes/catppuccin.zip \
-  && unzip ~/.local/share/themes/catppuccin.zip -d ~/.local/share/themes/ \
-  && rm -rf ~/.themes/catppuccin.zip; fi
-exec_always --no-startup-id export GTK_THEME='Catppuccin-Mocha-Standard-Maroon-dark:dark'
+
 
 # disable title bars and enable gaps
 for_window [class=".*"] border pixel 2
@@ -50,7 +45,7 @@ for_window [class=".*"] border pixel 2
 set $mod Mod4
 
 # font
-font pango:Ubuntu Nerd Font Propo 11
+font pango:Recursive Sans Linear Static 11
 
 # autostart apps that support it
 exec --no-startup-id dex --autostart --environment i3
@@ -99,7 +94,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# enter fullscreen mode for the focused container
+# enter fullscreen mode for the focused window
 bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
@@ -162,7 +157,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3blocks
   position top
-  font pango:FiraCode Nerd Font Mono 11
+  font pango:FiraCode Nerd Font Propo 10
   colors {
     background         $base
     statusline         $text
@@ -178,12 +173,13 @@ bar {
 }
 
 # startup
-exec_always --no-startup-id xrdb -merge $HOME/.Xresources
+exec --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id emacs --daemon
-# exec --no-startup-id fcitx5
+exec --no-startup-id fcitx5
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -b
 exec --no-startup-id feh --no-fehbg --bg-center ~/Pictures/Wallpapers/girl.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
+exec --no-startup-id export GTK_THEME='Catppuccin-Mocha-Standard-Maroon-dark:dark'
