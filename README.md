@@ -1,8 +1,9 @@
 # Dotfiles
 
-### Arch Linux dotfiles for i3, WezTerm, Tmux, and Neovim.
+### Linux dotfiles for i3, Ghostty, Tmux, and Neovim.
 
-#### NOTE: Use the setup script at your own risk! It's specific to my needs and setup (i.e. doesn't install any packages).
+#### NOTE: The setup script doesn't install any packages.
+#### NOTE: Ghostty requires access to the repo. I also have a wezterm config in this repo if you don't access.
 
 Needed packages:
 - i3
@@ -13,7 +14,7 @@ Needed packages:
 - maim
 - neovim
 - tmux
-- wezterm
+- ghostty
 - feh
 - picom
 - zsh
