@@ -1,7 +1,7 @@
 [global]
 frame_color = "#EBA0AC"
 separator_color = frame
-font = "FiraCode Nerd Font Propo 10"
+font = "Fira Code Retina 9"
 corner_radius = 4
 scale = 1.5
 force_xwayland = true

@@ -157,7 +157,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3blocks
   position top
-  font pango:Fira Code Retina 10
+  font pango:RecMonoLinear Nerd Font 10
   colors {
     background         $base
     statusline         $text
@@ -178,7 +178,6 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id emacs --daemon
 # exec --no-startup-id fcitx5
-exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
