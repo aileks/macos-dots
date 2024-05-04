@@ -104,7 +104,7 @@ function command_exists() {
   command -v "$1" &> /dev/null 2>&1
 }
 
-if ! command_exists systemctl ; then
+if ! command_exists loginctl ; then
   exit 1
 fi
 
@@ -113,9 +113,9 @@ typeset -A menu
 
 # Menu with keys/commands
 menu=(
-  [Shutdown]="systemctl poweroff"
-  [Reboot]="systemctl reboot"
-  [Suspend]="systemctl suspend && $LOCKSCRIPT"
+  [Shutdown]="loginctl poweroff"
+  [Reboot]="loginctl reboot"
+  [Suspend]="loginctl suspend && $LOCKSCRIPT"
   [Lock]="$LOCKSCRIPT"
   [Logout]="i3-msg exit"
   [Cancel]=""
