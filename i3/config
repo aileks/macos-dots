@@ -69,10 +69,10 @@ tiling_drag modifier titlebar
 
 # application bindings
 bindsym $mod+q kill
-bindsym $mod+Return exec --no-startup-id $HOME/.local/bin/ghostty
+bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
-bindsym $mod+w exec --no-startup-id flatpak run one.ablaze.floorp
+bindsym $mod+w exec --no-startup-id $HOME/.local/bin/floorp/floorp
 bindsym $mod+y exec --no-startup-id $HOME/Apps/Bazecor.AppImage
 bindsym $mod+v exec --no-startup-id emacsclient -n -c -a ''
 
@@ -157,7 +157,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3blocks
   position top
-  font pango:FiraCode Nerd Font Propo 10
+  font pango:Fira Code Retina 10
   colors {
     background         $base
     statusline         $text
@@ -177,9 +177,9 @@ exec --no-startup-id xrdb -merge $HOME/.Xresources
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id emacs --daemon
-exec --no-startup-id fcitx5
+# exec --no-startup-id fcitx5
 exec --no-startup-id /usr/libexec/gsd-xsettings
-exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -b
+exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
 exec --no-startup-id export GTK_THEME='Catppuccin-Mocha-Standard-Maroon-dark:dark'
