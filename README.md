@@ -12,6 +12,7 @@ Needed packages:
 - dmenu
 - rofi
 - maim
+- eza
 - neovim
 - tmux
 - ghostty
