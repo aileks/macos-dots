@@ -45,7 +45,8 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Ubuntu Nerd Font Propo 12
+# font pango:Ubuntu Nerd Font Propo 12
+font pango:Nimbus Sans 11
 
 # autostart apps that support it
 # exec --no-startup-id dex --autostart --environment i3

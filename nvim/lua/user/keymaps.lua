@@ -2,6 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Clear highlight on esc
+vim.keymap.set('n', '<Esc>', '<cmd>noh<CR>')
+
 -- Keep selection highlighted after indent
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
@@ -39,9 +42,6 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Open netrw
 vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
-
--- Format buffer
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
 -- Easier save & quit
 vim.keymap.set('n', '<leader>w', ':w<CR>')

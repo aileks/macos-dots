@@ -197,6 +197,7 @@ return {
     vim.keymap.set('n', '<leader>lr', ':LspRestart<CR>', { silent = true })
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+    vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
     -- Commands
     vim.api.nvim_create_user_command('Format', function() vim.lsp.buf.format({ timeout_ms = 5000 }) end, {})
