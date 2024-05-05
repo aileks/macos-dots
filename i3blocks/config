@@ -2,28 +2,36 @@ command=scripts/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
+[focused-window]
+label=
+command=scripts/$BLOCK_NAME
+interval=persist
+
 [cpu_usage]
-label=󰻠 
+label=󰻠
 interval=10
-separator=true
+separator=false
 
 [memory]
-label=󰍛 
+label=󰍛
 separator=false
 interval=30
 
 [volume-pw]
 command=env AUDIO_DELTA=5 $HOME/.config/i3blocks/scripts/volume-pw
+separator=false
 interval=persist
 format=json
 
 [calendar]
+separator=false
 interval=30
 
 [powermenu]
-full_text= 
+full_text=
 ROFI_TEXT=Menu:
 ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
 ENABLE_CONFIRMATIONS=true (must be true or false)
 LAUNCHER=rofi
 LOCKSCRIPT=i3lock-fancy -p
+separator=false

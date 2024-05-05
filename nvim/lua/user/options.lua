@@ -33,7 +33,7 @@ vim.opt.backupdir:remove('.')
 vim.opt.shortmess:append({ I = true })
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.completeopt = 'menuone,longest,preview'
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '100'
 vim.opt.signcolumn = 'yes:2'
 vim.opt.showmode = false
 vim.opt.updatetime = 4001
