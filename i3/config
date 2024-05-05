@@ -45,7 +45,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-font pango:Recursive Sans Linear Static 11
+font pango:Ubuntu Nerd Font Propo 12
 
 # autostart apps that support it
 # exec --no-startup-id dex --autostart --environment i3
@@ -157,7 +157,8 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3blocks
   position top
-  font pango:RecMonoLinear Nerd Font 10
+  height 25
+  font pango:Agave Nerd Font Propo 12
   colors {
     background         $base
     statusline         $text
@@ -173,9 +174,9 @@ bar {
 }
 
 # startup
-exec --no-startup-id dunst
-exec --no-startup-id emacs --daemon
 # exec --no-startup-id fcitx5
+exec --no-startup-id dunst
+exec --no-startup-id emacs --bg-daemon
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
