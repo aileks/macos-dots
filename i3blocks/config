@@ -8,7 +8,7 @@ command=scripts/$BLOCK_NAME
 interval=persist
 
 [media-player]
-label=
+label= 
 instance=spotify
 interval=5
 signal=10
