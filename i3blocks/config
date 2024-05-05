@@ -2,11 +2,6 @@ command=scripts/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
-[focused-window]
-label= 
-command=scripts/$BLOCK_NAME
-interval=persist
-
 [media-player]
 label= 
 instance=spotify
