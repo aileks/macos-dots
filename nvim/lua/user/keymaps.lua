@@ -17,12 +17,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 -- Better paste
 vim.keymap.set('v', 'p', '"_dP')
 
--- Easily add , or ; to end of lines
-vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
-vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
-vim.keymap.set('n', ';;', 'A;<Esc>')
-vim.keymap.set('n', ',,', 'A,<Esc>')
-
 -- Move lines easier
 vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
 vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR>==gi')
@@ -33,7 +27,6 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 -- Better <esc>
 vim.keymap.set('i', 'jj', '<Esc>')
-vim.keymap.set('i', 'jk', '<Esc>')
 
 -- Niceties for movement
 vim.keymap.set('n', 'n', 'nzzzv')
