@@ -176,6 +176,7 @@ bar {
 # startup
 # exec --no-startup-id fcitx5
 exec --no-startup-id dunst
+exec --no-startup-id emacs --daemon
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
