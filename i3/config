@@ -45,8 +45,7 @@ gaps outer 3
 set $mod Mod4
 
 # font
-# font pango:Ubuntu Nerd Font Propo 12
-font pango:Nimbus Sans 11
+font pango:Ubuntu Nerd Font Propo 12
 
 # autostart apps that support it
 # exec --no-startup-id dex --autostart --environment i3
@@ -70,8 +69,8 @@ tiling_drag modifier titlebar
 
 # application bindings
 bindsym $mod+q kill
-bindsym $mod+Return exec --no-startup-id $HOME/.local/bin/ghostty
-bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+t exec --no-startup-id $HOME/.local/bin/ghostty
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
 bindsym $mod+w exec --no-startup-id brave-bin
 bindsym $mod+y exec --no-startup-id $HOME/Apps/Bazecor.AppImage

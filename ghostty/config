@@ -1,9 +1,9 @@
 font-family = "MonoLisa"
-font-size = 14
+font-size = 13
 theme = catppuccin-mocha
 window-decoration = false
 background-opacity = 0.95
 confirm-close-surface = false
 clipboard-paste-protection = false
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor, sudo
 cursor-style = block
