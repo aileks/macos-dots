@@ -72,7 +72,7 @@ bindsym $mod+q kill
 bindsym $mod+t exec --no-startup-id $HOME/.local/bin/ghostty
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
-bindsym $mod+w exec --no-startup-id brave-bin
+bindsym $mod+w exec --no-startup-id brave-browser
 bindsym $mod+y exec --no-startup-id $HOME/Apps/Bazecor.AppImage
 bindsym $mod+v exec --no-startup-id emacsclient -n -c -a ''
 
