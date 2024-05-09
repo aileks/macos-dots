@@ -47,12 +47,9 @@ set $mod Mod4
 # font
 font pango:Ubuntu Nerd Font Propo 12
 
-# autostart apps that support it
-# exec --no-startup-id dex --autostart --environment i3
-
 # lockscreen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy -p --nofork
-bindsym Mod4+Ctrl+l exec --no-startup-id i3lock-fancy -p
+bindsym $mod+l exec --no-startup-id i3lock-fancy -p
 
 # audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -63,8 +60,8 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# use Mouse+Alt to drag floating windows to their wanted position
+floating_modifier Mod1
 tiling_drag modifier titlebar
 
 # application bindings
@@ -73,7 +70,6 @@ bindsym $mod+t exec --no-startup-id $HOME/.local/bin/ghostty
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+e exec --no-startup-id Thunar
 bindsym $mod+w exec --no-startup-id brave-browser
-bindsym $mod+y exec --no-startup-id $HOME/Apps/Bazecor.AppImage
 bindsym $mod+v exec --no-startup-id emacsclient -n -c -a ''
 
 # screenshot bindings
@@ -83,16 +79,16 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Scr
 bindsym Ctrl+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym Mod1+h focus left
+bindsym Mod1+j focus down
+bindsym Mod1+k focus up
+bindsym Mod1+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym Mod1+Shift+h move left
+bindsym Mod1+Shift+j move down
+bindsym Mod1+Shift+k move up
+bindsym Mod1+Shift+l move right
 
 # enter fullscreen mode for the focused window
 bindsym $mod+f fullscreen toggle
@@ -149,9 +145,9 @@ mode "resize" {
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
-  bindsym $mod+r mode "default"
+  bindsym Mod1+r mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym Mod1+r mode "resize"
 
 # bar settings
 bar {
@@ -180,5 +176,4 @@ exec --no-startup-id emacs --daemon
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
-exec --no-startup-id gentoo-pipewire-launcher &
 exec_always --no-startup-id xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
