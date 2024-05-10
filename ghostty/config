@@ -1,5 +1,5 @@
 font-family = "MonoLisa"
-font-size = 13
+font-size = 14
 theme = catppuccin-mocha
 window-decoration = false
 background-opacity = 0.95
