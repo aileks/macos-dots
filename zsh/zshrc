@@ -53,4 +53,5 @@ export GPG_TTY
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
 
-export PATH=$PATH:/home/aileks/.spicetify
+# GHCup
+[ -f "/home/aileks/.ghcup/env" ] && . "/home/aileks/.ghcup/env"
