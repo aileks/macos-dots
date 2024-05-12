@@ -17,8 +17,6 @@
     autocorrect = 10
 [push]
     default = current
-[rerere]
-    enabled = true
 [merge]
     conflictstyle = diff3
 [interactive]
@@ -26,10 +24,12 @@
 [pull]
     rebase = false
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [credential]
 	helper = 
 	helper = /usr/local/bin/git-credential-manager
 	credentialStore = gpg
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[fem]
+	dev = owo

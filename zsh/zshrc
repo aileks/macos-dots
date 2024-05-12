@@ -54,4 +54,5 @@ eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
 
 # GHCup
+
 [ -f "/home/aileks/.ghcup/env" ] && . "/home/aileks/.ghcup/env"
