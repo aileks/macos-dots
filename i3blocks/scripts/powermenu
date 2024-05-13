@@ -30,11 +30,11 @@
 LOCKSCRIPT="i3lock-fancy -p"
 
 # Colors: FG (foreground), BG (background), HL (highlighted)
-# FG_COLOR="${FG_COLOR:-#bbbbbb}"
-# BG_COLOR="${BG_COLOR:-#111111}"
-# HLFG_COLOR="${HLFG_COLOR:-#111111}"
-# HLBG_COLOR="${HLBG_COLOR:-#bbbbbb}"
-# BORDER_COLOR="${BORDER_COLOR:-#222222}"
+# FG_COLOR="${FG_COLOR:-#cdd6f4}"
+# BG_COLOR="${BG_COLOR:-#1e1e2e}"
+# HLFG_COLOR="${HLFG_COLOR:-#cdd6f4}"
+# HLBG_COLOR="${HLBG_COLOR:-#585b70}"
+# BORDER_COLOR="${BORDER_COLOR:-#eba0ac}"
 
 # Options not related to colors
 ROFI_TEXT="${ROFI_TEXT:-Menu:}"
