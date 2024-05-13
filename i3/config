@@ -27,7 +27,7 @@ set $mantle #181825
 set $crust #11111b
 
 # theme
-client.focused           $maroon   $base $text  $rosewater $maroon
+client.focused           $lavender $base $text  $rosewater $lavender
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
 client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
@@ -169,7 +169,6 @@ bar {
 }
 
 # startup
-# exec --no-startup-id fcitx5
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id emacs --bg-daemon
@@ -177,3 +176,4 @@ exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
 exec_always --no-startup-id xinput set-prop "8" "libinput Accel Profile Enabled" 0 1 0
+exec --no-startup-id xrdb -merge $HOME/.Xresources

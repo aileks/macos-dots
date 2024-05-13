@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- actual config
-config.font = wezterm.font('MonoLisa')
+config.font = wezterm.font('MonoLisa', { weight = 'Medium' })
 config.font_size = 14
 config.color_scheme = 'Catppuccin Mocha'
 config.enable_tab_bar = false

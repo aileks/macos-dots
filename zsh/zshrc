@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jnrowe"
 
 # Plugins
-plugins=(command-not-found cp fast-syntax-highlighting git golang python ubuntu zsh-autosuggestions)
+plugins=(archlinux command-not-found cp fast-syntax-highlighting git python zsh-autosuggestions)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
@@ -36,9 +36,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Bun completions
-[ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
-
 # FZF theme
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -51,6 +48,4 @@ export GPG_TTY
 
 # Misc
 eval "$(zoxide init zsh)"
-
-# GHCup
 [ -f "/home/aileks/.ghcup/env" ] && . "/home/aileks/.ghcup/env"
