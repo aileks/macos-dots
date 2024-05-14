@@ -12,8 +12,10 @@
     ripgrep
     spotify
     eza
+    tmux
     zoxide
     discord
+    emacs-git
     freetube
     git
     neovim
