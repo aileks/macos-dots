@@ -1,10 +1,10 @@
 # Dotfiles
 
-### Welcome to my dotfiles repo!
+## Welcome to my dotfiles repo!
 
 ---
 
-#### Configuration files for:
+### Configuration files for:
 - i3wm
 - i3blocks
 - WezTerm
