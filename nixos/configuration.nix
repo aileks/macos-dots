@@ -23,6 +23,7 @@
       "mitigations=off"
     ];
     kernel.sysctl = { "vm.max_map_count" = 2147483642; };
+    initrd.kernelModules = [ "amdgpu" ];
   };
 
   nixpkgs = {
@@ -253,6 +254,7 @@
     opengl = {
       enable = true;
       driSupport = true;
+      driSupport32Bit = true;
       extraPackages = with pkgs; [
         vaapiVdpau
         libvdpau-va-gl
