@@ -112,6 +112,7 @@
     eza
     unrar
     unzip
+    lua
     dunst
     xclip
     yad
