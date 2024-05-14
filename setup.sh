@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 
+# nix stuff
+sudo rm /etc/nixos/configuration.nix
+sudo rm /etc/nixos/home.nix
+
+sudo cp nixos/configuration.nix /etc/nixos/
+sudo cp nixos/home.nix /etc/nixos/
+
+
+## -------------------------------------------- ##
+## TODO: Move most/all of this to home manager. ##
+## -------------------------------------------- ##
+# get dotdir (this directory)
 DOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# theme stuff
+cp -r $DOTDIR/.local $HOME
+cp -r $DOTDIR/themes/* $HOME/.config
+cp $DOTDIR/.Xresources $HOME
 
 # symlinks
 ln -sf $DOTDIR/tmux/tmux.conf $HOME/.tmux.conf
@@ -24,12 +41,7 @@ ln -s $DOTDIR/git/gitconfig $HOME/.gitconfig
 rm -rf $HOME/.gitignore_global
 ln -s $DOTDIR/git/gitignore_global $HOME/.gitignore_global
 
-# theme stuff
-cp -r $DOTDIR/.local $HOME
-cp -r $DOTDIR/themes/* $HOME/.config
-cp $DOTDIR/.Xresources $HOME
-
 echo ""
 echo "ALL DONE!"
-echo "NOW INSTALL YOUR PACKAGES!"
+echo "NOW REBUILD!"
 echo ""
