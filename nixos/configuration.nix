@@ -91,6 +91,7 @@
   environment.systemPackages = with pkgs; [
     git
     wget
+    killall
     pavucontrol
     curl
     dmenu
@@ -141,6 +142,7 @@
     lm_sensors
     pciutils
     usbutils
+    viewnior
   ];
 
   # Automated garbage collection
