@@ -15,7 +15,7 @@
     tmux
     zoxide
     discord
-    emacs-git
+    emacs
     freetube
     git
     neovim
