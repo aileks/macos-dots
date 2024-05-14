@@ -15,6 +15,14 @@
     zoxide
     discord
     freetube
+    git
+    neovim
+    zsh
+  ];
+
+  programs.git = [
+    enable = true;
+    userName =
   ];
 
   home.stateVersion = "23.11";
