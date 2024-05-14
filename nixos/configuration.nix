@@ -10,20 +10,27 @@
     ./hardware-configuration.nix
   ];
 
-  # Get newer kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  # Kernel boot params
-  boot.kernelParams = [
-    "loglevel=3"
-    "quiet"
-    "mitigations=off"
-  ];
+  # Boot options
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [
+      "loglevel=3"
+      "quiet"
+      "mitigations=off"
+    ];
+    kernel.sysctl = { "vm.max_map_count" = 2147483642; };
+  };
 
   nixpkgs = {
     # Community Emacs overlay for gccemacs
     overlays = [
       (import (builtins.fetchTarball {
         url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+        sha256 = "0pr6issj2h707xfpysh1s9cjwhci4kai8pz3av6nvgm33m7s6r7f";
       }))
     ];
     config = {
@@ -34,38 +41,39 @@
   # Set locale options
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8"
-    LC_IDENTIFICATION = "en_US.UTF-8"
-    LC_MEASUREMENT = "en_US.UTF-8"
-    LC_MONETARY = "en_US.UTF-8"
-    LC_NAME = "en_US.UTF-8"
-    LC_NUMERIC = "en_US.UTF-8"
-    LC_PAPER = "en_US.UTF-8"
-    LC_TELEPHONE = "en_US.UTF-8"
-    LC_TIME = "en_US.UTF-8"
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable flakes
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
+  nix = {
+    # Enable garbage collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
     settings = {
       experimental-features = "nix-command flakes";
       flake-registry = "";
       nix-path = config.nix.nixPath;
+      auto-optimise-store = true;
     };
-    channel.enable = false;
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
   # Set timezone
   time.timeZone = "America/New_York";
 
   # Set hostname and enable NM
-  networking {
+  networking = {
     hostName = "fbi-loft";
-    networkManger.enable = true;
+    networkmanager.enable = true;
   };
 
   # Create user
@@ -73,6 +81,7 @@
     isNormalUser = true;
     description = "aileks";
     extraGroups = [ "networkmanager" "wheel" "power" "disk" ];
+    shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAqYLXFqShbbZtnJaTuNsWPmYCL1E8z9+skiI9WZuNxn aeverly14@pm.me"
     ];
@@ -82,20 +91,25 @@
   environment.systemPackages = with pkgs; [
     git
     wget
+    pavucontrol
     curl
     dmenu
+    php83Packages.composer
     gnome.gnome-keyring
     btop
     networkmanagerapplet
+    lxappearance
+    trash-cli
     wezterm
     feh
     picom
     polkit_gnome
     rofi
+    papirus-icon-theme
     neovim
+    eza
     unrar
     unzip
-    zsh
     dunst
     xclip
     yad
@@ -129,20 +143,7 @@
     usbutils
   ];
 
-  # Install only specific nerd fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override = { fonts = [ "Agave" "Ubuntu" "JetBrainsMono" ]; })
-  ];
-
   # Automated garbage collection
-  nix = {
-    settings.auto-optimise-store == true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-  };
 
   # Env vars
   environment.variables = {
@@ -160,15 +161,11 @@
 
   # System services
   services = {
-    fstrim.enable = true;
     xserver = {
       enable = true;
-      layout = "us";
-      libinput.enable = true;
+      xkb.layout = "us";
       desktopManager = {
-        default = "none";
         xterm.enable = false;
-        sddm.enable = true;
       };
       windowManager.i3 = {
         enable = true;
@@ -177,7 +174,15 @@
           i3lock-fancy
         ];
       };
+      videoDrivers = [ "amdgpu" ];
     };
+    displayManager = {
+      defaultSession = "none+i3";
+      sddm.enable = true;
+    };
+    libinput.enable = true;
+    blueman.enable = true;
+    fstrim.enable = true;
     openssh = {
       enable = true;
       settings = {
@@ -187,7 +192,6 @@
       };
       openFirewall = true;
     };
-    blueman.enable = true;
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
     pipewire = {
@@ -195,6 +199,7 @@
       alsa.enable = true;
       pulse.enable = true;
     };
+    tumbler.enable = true;
     emacs = {
       enable = true;
       package = pkgs.emacs-git;
@@ -206,6 +211,7 @@
     thunar.enable = true;
     dconf.enable = true;
     mtr.enable = true;
+    zsh.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -238,11 +244,18 @@
 
   # Enable hardware features and services
   hardware = {
-    pulseaudio = true;
-    bluetooth.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
     opengl = {
       enable = true;
       driSupport = true;
+      extraPackages = with pkgs; [
+        vaapiVdpau
+        libvdpau-va-gl
+        amdvlk
+      ];
     };
   };
 
