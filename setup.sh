@@ -1,19 +1,4 @@
 #!/usr/bin/env bash
-
-# nix stuff
-sudo rm /etc/nixos/configuration.nix
-sudo rm /etc/nixos/flake.nix
-sudo rm /etc/nixos/home.nix
-
-sudo cp nixos/configuration.nix /etc/nixos/
-sudo cp nixos/flake.nix /etc/nixos
-sudo cp nixos/home.nix /etc/nixos/
-
-
-## -------------------------------------------- ##
-## TODO: Move most/all of this to home manager. ##
-## -------------------------------------------- ##
-
 # get dotdir (this directory)
 DOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
