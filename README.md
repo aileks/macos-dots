@@ -14,6 +14,6 @@
 - Dunst
 - NixOS
 
-Also includes so fonts.
+Also includes some fonts.
 
 *There's still a lot work to be done, but it's everything is very usable at the moment.*
