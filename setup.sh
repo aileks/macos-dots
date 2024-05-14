@@ -37,6 +37,8 @@ rm -rf $HOME/.config/doom
 ln -s $DOTDIR/doom $HOME/.config/doom
 rm -rf $HOME/.config/dunst
 ln -s $DOTDIR/dunst $HOME/.config/dunst
+rm -rf $HOME/.config/doom
+ln -s $DOTDIR/doom $HOME/.config/doom
 
 echo ""
 echo "ALL DONE!"
