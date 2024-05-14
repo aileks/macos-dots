@@ -97,6 +97,7 @@
     curl
     libtool
     dmenu
+    libgcc
     php83Packages.composer
     gnome.gnome-keyring
     btop
@@ -147,6 +148,8 @@
     usbutils
     viewnior
     nodejs
+    xz
+    pkg-config-unwrapped
   ];
 
   # Automated garbage collection
