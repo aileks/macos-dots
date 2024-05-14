@@ -150,6 +150,7 @@
     nodejs
     fontconfig
     xz
+    python3
     pkg-config-unwrapped
     nix-search-cli
     stack
