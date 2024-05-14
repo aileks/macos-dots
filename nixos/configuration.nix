@@ -148,6 +148,7 @@
     usbutils
     viewnior
     nodejs
+    fontconfig
     xz
     pkg-config-unwrapped
     nix-search-cli
