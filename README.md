@@ -1,7 +1,18 @@
 # Dotfiles
 
-### NixOS Branch
+### Welcome to my dotfiles repo!
 
-#### Working on transitioning to nix.
+---
 
-The ultimate goal is to have a completely modular config using home manager.
+#### Configuration files for:
+- i3wm
+- i3blocks
+- WezTerm
+- Tmux
+- Zsh
+- Picom
+- Dunst
+- NixOS
+
+
+*There's still a lot work to be done, but it's everything is very usable at the moment.*

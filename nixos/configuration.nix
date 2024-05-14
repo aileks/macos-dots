@@ -95,6 +95,7 @@
     killall
     pavucontrol
     curl
+    libtool
     dmenu
     php83Packages.composer
     gnome.gnome-keyring

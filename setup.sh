@@ -11,6 +11,7 @@ sudo cp nixos/home.nix /etc/nixos/
 ## -------------------------------------------- ##
 ## TODO: Move most/all of this to home manager. ##
 ## -------------------------------------------- ##
+
 # get dotdir (this directory)
 DOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -36,12 +37,10 @@ rm -rf $HOME/.config/doom
 ln -s $DOTDIR/doom $HOME/.config/doom
 rm -rf $HOME/.config/dunst
 ln -s $DOTDIR/dunst $HOME/.config/dunst
-rm -rf $HOME/.gitconfig
-ln -s $DOTDIR/git/gitconfig $HOME/.gitconfig
-rm -rf $HOME/.gitignore_global
-ln -s $DOTDIR/git/gitignore_global $HOME/.gitignore_global
 
 echo ""
 echo "ALL DONE!"
-echo "NOW REBUILD!"
+echo "Now rebuild!"
+echo ""
+echo "Remember to copy git config files...you know who you are..."
 echo ""
