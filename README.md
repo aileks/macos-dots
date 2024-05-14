@@ -22,3 +22,4 @@ Needed packages:
 - xclip
 - yad
 - playerctl
+- trash-cli
