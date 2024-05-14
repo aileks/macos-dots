@@ -10,7 +10,17 @@
     ./hardware-configuration.nix
   ];
 
+  # Get newer kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Kernel boot params
+  boot.kernelParams = [
+    "loglevel=3"
+    "quiet"
+    "mitigations=off"
+  ];
+
   nixpkgs = {
+    # Community Emacs overlay for gccemacs
     overlays = [
       (import (builtins.fetchTarball {
         url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
@@ -21,6 +31,7 @@
     };
   };
 
+  # Set locale options
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8"
@@ -34,6 +45,7 @@
     LC_TIME = "en_US.UTF-8"
   };
 
+  # Enable flakes
   nix = let
     flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
   in {
@@ -47,13 +59,16 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  # Set timezone
   time.timeZone = "America/New_York";
 
+  # Set hostname and enable NM
   networking {
     hostName = "fbi-loft";
     networkManger.enable = true;
   };
 
+  # Create user
   users.users.aileks = {
     isNormalUser = true;
     description = "aileks";
@@ -63,6 +78,7 @@
     ];
   };
 
+  # Packages to install
   environment.systemPackages = with pkgs; [
     git
     wget
@@ -85,8 +101,6 @@
     yad
     playerctl
     maim
-    eza
-    zoxide
     xarchiver
     brave
     arandr
@@ -96,15 +110,31 @@
     cmake
     gnumake
     binutils
-    discord
     celluloid
+    jq
+    fzf
+    fd
     xorg.xinput
+    file
+    which
+    tree
+    gnused
+    gnutar
+    gawk
+    zstd
+    btop
+    sysstat
+    lm_sensors
+    pciutils
+    usbutils
   ];
 
+  # Install only specific nerd fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override = { fonts = [ "Agave" "Ubuntu" "JetBrainsMono" ]; })
   ];
 
+  # Automated garbage collection
   nix = {
     settings.auto-optimise-store == true;
     gc = {
@@ -114,17 +144,21 @@
     };
   };
 
+  # Env vars
   environment.variables = {
     EDITOR = "nvim";
+    # TODO: Finish path additions.
     PATH = [
       "\${HOME}/.local/bin"
       "\${HOME}/.cargo/bin"
       "\${HOME}/.ghcup/bin"
     ];
+    # TODO: Add some missing env vars.
     NIXPKGS_ALLOW_UNFREE = "1";
     XCURSOR_THEME = "Catppuccin-Mocha-Light";
   };
 
+  # System services
   services = {
     fstrim.enable = true;
     xserver = {
@@ -167,6 +201,7 @@
     };
   };
 
+  # Enable programs that require it outside of systemPackages
   programs = {
     thunar.enable = true;
     dconf.enable = true;
@@ -177,11 +212,13 @@
     };
   };
 
+  # Security services
   security = {
     polkit.enable = true;
     rtkit.enable = true;
   };
 
+  # Enable gnome-polkit because using Linux is annoying otherwise
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -199,6 +236,7 @@
     };
   };
 
+  # Enable hardware features and services
   hardware = {
     pulseaudio = true;
     bluetooth.enable = true;
@@ -208,8 +246,10 @@
     };
   };
 
+  # Gotta hear...
   sound.enable = true;
 
+  # System settings and auto-upgrading
   system = {
     stateVersion = "23.11";
     autoUpgrade = {
