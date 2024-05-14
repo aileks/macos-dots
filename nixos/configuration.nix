@@ -152,6 +152,9 @@
     xz
     pkg-config-unwrapped
     nix-search-cli
+    stack
+    haskell.compiler.ghc94
+    haskell-language-server
   ];
 
   # Automated garbage collection
