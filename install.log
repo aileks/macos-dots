@@ -1,0 +1,8 @@
+[12:36:28 2024-05-14] FETCHING Version 2.36.11
+[12:36:28 2024-05-14] DOWNLOADING https://github.com/spicetify/spicetify-cli/releases/download/v2.36.11/spicetify-2.36.11-linux-amd64.tar.gz
+[12:36:29 2024-05-14] EXTRACTING /home/aileks/.spicetify/spicetify.tar.gz
+[12:36:29 2024-05-14] SETTING EXECUTABLE PERMISSIONS TO /home/aileks/.spicetify/spicetify
+[12:36:29 2024-05-14] REMOVING /home/aileks/.spicetify/spicetify.tar.gz
+[12:36:29 2024-05-14] spicetify path already set in /home/aileks/.zshrc, continuing...
+[12:36:29 2024-05-14] spicetify v2.36.11 was installed successfully to /home/aileks/.spicetify
+[12:36:29 2024-05-14] Run 'spicetify --help' to get started

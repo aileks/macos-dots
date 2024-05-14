@@ -3,6 +3,8 @@
 {
   # TODO: Add more comments...
 
+  inputs.spicetify-nix.url = "github:the-argus/spicetify-nix";
+
   home.username = "aileks";
   home.homeDirectory = "/home/aileks";
 
