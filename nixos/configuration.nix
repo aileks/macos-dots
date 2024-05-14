@@ -148,7 +148,7 @@
     usbutils
     viewnior
     nodejs
-    fontconfig
+    fontforge
     xz
     python3
     pkg-config-unwrapped
