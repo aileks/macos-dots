@@ -151,6 +151,7 @@
     nodejs
     xz
     pkg-config-unwrapped
+    nix-search-cli
   ];
 
   # Automated garbage collection
