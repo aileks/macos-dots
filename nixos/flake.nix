@@ -14,12 +14,14 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          ./home.nix
-          ./spicetify.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager = {
+              extraSpecialArgs = inputs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.aileks = import ./home.nix;
+            };
           }
         ];
       };
