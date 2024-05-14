@@ -36,7 +36,6 @@
     ];
     config = {
       allowUnfree = true;
-      allowBroken = true;
     };
   };
 
@@ -155,6 +154,7 @@
     stack
     haskell.compiler.ghc94
     haskell-language-server
+    cabal-install
   ];
 
   # Automated garbage collection
