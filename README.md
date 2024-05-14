@@ -1,6 +1,6 @@
 # Dotfiles
 
-### Linux dotfiles for i3, WezTerm, Tmux, Neovim, and Doom Emacs.
+### My dotfiles for i3, WezTerm, Tmux, Neovim, and Doom Emacs.
 
 #### NOTE: The setup script doesn't install any packages.
 
