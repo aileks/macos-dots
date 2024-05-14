@@ -144,6 +144,7 @@
     pciutils
     usbutils
     viewnior
+    nodejs
   ];
 
   # Automated garbage collection
@@ -156,6 +157,7 @@
       "\${HOME}/.local/bin"
       "\${HOME}/.cargo/bin"
       "\${HOME}/.ghcup/bin"
+      "\${HOME}/.npm-global"
     ];
     # TODO: Add some missing env vars.
     NIXPKGS_ALLOW_UNFREE = "1";
