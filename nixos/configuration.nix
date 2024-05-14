@@ -157,6 +157,7 @@
     haskell.compiler.ghc94
     haskell-language-server
     cabal-install
+    noto-fonts-color-emoji
   ];
 
   # Automated garbage collection
