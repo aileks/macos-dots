@@ -16,4 +16,4 @@
 
 Also includes some fonts.
 
-*There's still a lot work to be done, but it's everything is very usable at the moment.*
+*There's still a lot of work to be done, but it's everything is very usable at the moment.*
