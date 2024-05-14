@@ -3,26 +3,24 @@
 {
   # TODO: Add more comments...
 
-  inputs.spicetify-nix.url = "github:the-argus/spicetify-nix";
-
   home.username = "aileks";
   home.homeDirectory = "/home/aileks";
 
-  # TODO: Configure things like i3, ZSH, and Tmux using home manager.
+# TODO: Configure things like i3, ZSH, and Tmux using home manager.
   home.packages = with pkgs; [
     pfetch
-    ripgrep
-    spotify
-    eza
-    tmux
-    zoxide
-    discord
-    emacs-git
-    freetube
-    git
-    neovim
-    zsh
-    dunst
+      ripgrep
+      spotify
+      eza
+      tmux
+      zoxide
+      discord
+      emacs-git
+      freetube
+      git
+      neovim
+      zsh
+      dunst
   ];
 
   home.stateVersion = "23.11";

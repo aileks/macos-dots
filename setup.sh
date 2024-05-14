@@ -3,9 +3,13 @@
 # nix stuff
 sudo rm /etc/nixos/configuration.nix
 sudo rm /etc/nixos/home.nix
+sudo rm /etc/nixos/flake.nix
+sudo rm /etc/nixos/spicetify.nix
 
 sudo cp nixos/configuration.nix /etc/nixos/
 sudo cp nixos/home.nix /etc/nixos/
+sudo cp nixos/flake.nix /etc/nixos
+sudo cp nixos/spicetify.nix /etc/nixos
 
 
 ## -------------------------------------------- ##
