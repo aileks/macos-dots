@@ -18,11 +18,7 @@
     git
     neovim
     zsh
-  ];
-
-  programs.git = [
-    enable = true;
-    userName =
+    dunst
   ];
 
   home.stateVersion = "23.11";
