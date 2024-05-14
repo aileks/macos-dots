@@ -1,6 +1,9 @@
 {
+  # TODO: Add more comments...
+
   description = "NixOS configuration";
 
+  # Enable home manager
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     home-manager = {

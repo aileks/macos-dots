@@ -1,31 +1,20 @@
 { config, pkgs, ... }:
 
 {
+  # TODO: Add more comments...
+
   home.username = "aileks";
   home.homeDirectory = "/home/aileks";
 
+  # TODO: Configure things like i3, ZSH, and Tmux using home manager.
   home.packages = with pkgs; [
     pfetch
     ripgrep
-    jq
-    fzf
-    fd
-    cowsay
-    file
-    which
-    tree
-    gnused
-    gnutar
-    gawk
-    zstd
-    btop
-    iotop
-    iftop
-    sysstat
-    lm_sensors
-    pciutils
-    usbutils
     spotify
+    eza
+    zoxide
+    discord
+    freetube
   ];
 
   home.stateVersion = "23.11";
