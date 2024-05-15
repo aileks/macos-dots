@@ -175,5 +175,5 @@ exec --no-startup-id emacs --bg-daemon
 exec --no-startup-id picom -b
 exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/clouds.jpg
 exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 165
-exec_always --no-startup-id xinput set-prop "9" "libinput Accel Profile Enabled" 0 1 0
+exec_always --no-startup-id xinput set-prop "10" "libinput Accel Profile Enabled" 0 1 0
 exec --no-startup-id xrdb -merge $HOME/.Xresources
