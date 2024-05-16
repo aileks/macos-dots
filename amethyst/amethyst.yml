@@ -75,16 +75,12 @@ display-current-layout:
   key: i
 
 toggle-tiling:
-  mod: mod1
+  mod: mod2
   key: t
 
 reevaluate-windows:
   mod: mod1
   key: z
-
-toggle-focus-follows-mouse:
-  mod: mod2
-  key: x
 
 relaunch-amethyst:
   mod: mod2
