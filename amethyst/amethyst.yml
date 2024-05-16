@@ -1,4 +1,5 @@
 layouts:
+  - tall
   - bsp
   - floating
   - fullscreen
