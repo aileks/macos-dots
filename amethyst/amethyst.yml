@@ -10,6 +10,10 @@ mod2:
   - control
   - command
 
+mod3:
+  - shift
+  - control
+
 cycle-layout:
   mod: mod1
   key: space
@@ -17,14 +21,6 @@ cycle-layout:
 cycle-layout-backward:
   mod: mod2
   key: space
-
-shrink-main:
-  mod: mod1
-  key: h
-
-expand-main:
-  mod: mod1
-  key: l
 
 focus-ccw:
   mod: mod1
@@ -34,10 +30,6 @@ focus-cw:
   mod: mod1
   key: k
 
-focus-main:
-  mod: mod1
-  key: m
-
 swap-ccw:
   mod: mod2
   key: j
@@ -46,28 +38,12 @@ swap-cw:
   mod: mod2
   key: k
 
-swap-main:
-  mod: mod2
-  key: enter
-
 select-fullscreen-layout:
   mod: mod2
   key: f
 
-select-column-layout:
-  mod: mod1
-  key: f
-
-throw-space-left:
-  mod: mod2
-  key: left
-
-throw-space-right:
-  mod: mod2
-  key: right
-
 toggle-float:
-  mod: mod1
+  mod: mod3
   key: t
 
 display-current-layout:
@@ -79,7 +55,7 @@ toggle-tiling:
   key: t
 
 reevaluate-windows:
-  mod: mod1
+  mod: mod3
   key: z
 
 relaunch-amethyst:
@@ -93,7 +69,6 @@ smart-window-margins: true
 window-margin-size: 6
 
 window-max-count: 0
-
 window-minimum-height: 0
 window-minimum-width: 0
 
