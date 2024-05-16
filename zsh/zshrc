@@ -47,6 +47,4 @@ export GPG_TTY
 
 # Misc
 eval "$(zoxide init zsh)"
-[ -f "/home/aileks/.ghcup/env" ] && . "/home/aileks/.ghcup/env"
-
-export PATH=$PATH:/home/aileks/.spicetify
+eval "$(rbenv init -)"
