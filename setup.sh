@@ -10,18 +10,15 @@ ln -sf $DOTDIR/zsh/zshrc $HOME/.zshrc
 rm -rf $HOME/.config/nvim
 ln -s $DOTDIR/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/amethyst
-mkdir -p $HOME/.config/amethyst
-ln -s $DOTDIR/nvim $HOME/.config/amethyst/amethyst.yml
+cp -r $DOTDIR/amethyst $HOME/.config/amethyst
 rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
 rm -rf $HOME/.config/doom
 ln -s $DOTDIR/doom $HOME/.config/doom
 rm -rf $HOME/.config/skhd
 ln -s $DOTDIR/skhd $HOME/.config/skhd
-rm -rf $HOME/.config/yabai
-ln -s $DOTDIR/yabai $HOME/.config/yabai
-rm -rf $HOME/.config/sketchybar/
-ln -s $DOTDIR/sketchybar $HOME/.config/sketchybar
+rm -rf $HOME/.config/sketchybar
+ln -sf $DOTDIR/sketchybar $HOME/.config/sketchybar
 
 echo ""
 echo "All done!"
