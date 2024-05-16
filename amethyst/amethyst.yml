@@ -1,6 +1,5 @@
 layouts:
   - tall
-  - bsp
   - floating
   - fullscreen
 
@@ -9,11 +8,11 @@ mod1:
 
 mod2:
   - control
-  - command
+  - shift
 
 mod3:
-  - shift
   - control
+  - command
 
 cycle-layout:
   mod: mod1
