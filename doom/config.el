@@ -89,3 +89,12 @@
          :pass "liyah:mBiD29tH"
          :channels ("#cyberspace")
          )))
+
+(setq lsp-solargraph-completion t)
+(setq lsp-solargraph-definitions t)
+(setq lsp-solargraph-diagnostics t)
+(setq lsp-solargraph-formatting t)
+(setq lsp-solargraph-hover t)
+(setq lsp-solargraph-references t)
+(setq lsp-solargraph-rename t)
+(setq lsp-solargraph-symbols t)

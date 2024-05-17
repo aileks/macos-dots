@@ -1,7 +1,7 @@
 ICON_COLOR=0xff89b4fa
 
 case $INFO in
-  "Arc")
+  "Brave Browser")
     ICON_PADDING_RIGHT=5
     ICON=󰊯
     ;;
@@ -12,10 +12,6 @@ case $INFO in
     ;;
   "Calendar")
     ICON=
-    ;;
-  "Chromium")
-    ICON_PADDING_RIGHT=5
-    ICON=󰊯
     ;;
   "Discord")
     ICON_COLOR=0xff5b5bf5
@@ -31,7 +27,7 @@ case $INFO in
     ICON_COLOR=0xff40b9ff
     ICON=󰀶
     ;;
-  "Firefox")
+  "Firefox Developer Edition")
     ICON_PADDING_RIGHT=5
     ICON=
     ;;

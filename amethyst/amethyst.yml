@@ -65,7 +65,7 @@ relaunch-amethyst:
 disable-padding-on-builtin-display: false
 
 window-margins: true
-smart-window-margins: true
+smart-window-margins: false
 window-margin-size: 6
 
 window-max-count: 0
@@ -83,7 +83,7 @@ hide-menu-bar-icon: false
 float-small-windows: true
 
 mouse-follows-focus: false
-focus-follows-mouse: true
+focus-follows-mouse: false
 mouse-swaps-windows: false
 mouse-resizes-windows: true
 
