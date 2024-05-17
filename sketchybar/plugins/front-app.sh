@@ -13,6 +13,9 @@ case $INFO in
   "Calendar")
     ICON=
     ;;
+  "Calculator")
+    ICON=
+    ;;
   "Discord")
     ICON_COLOR=0xff5b5bf5
     ICON=󰙯
