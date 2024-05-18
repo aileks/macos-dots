@@ -9,8 +9,8 @@ ln -sf $DOTDIR/tmux/tmux.conf $HOME/.tmux.conf
 ln -sf $DOTDIR/zsh/zshrc $HOME/.zshrc
 rm -rf $HOME/.config/nvim
 ln -s $DOTDIR/nvim $HOME/.config/nvim
-rm -rf $HOME/.config/amethyst
-cp -r $DOTDIR/amethyst $HOME/.config/amethyst
+rm -rf $HOME/.config/yabai
+cp -r $DOTDIR/yabai $HOME/.config/yabai
 rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
 rm -rf $HOME/.config/doom

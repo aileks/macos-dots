@@ -2,4 +2,4 @@
 
 ### macOS Edition
 
-#### Dotfiles for Amethyst, WezTerm, Sketchybar, Skhd, and Doom Emacs
+#### Dotfiles for Yabai, WezTerm, Sketchybar, Skhd, and Doom Emacs
