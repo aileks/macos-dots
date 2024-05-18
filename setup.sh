@@ -21,4 +21,5 @@ ln -sf $DOTDIR/sketchybar $HOME/.config/sketchybar
 
 echo ""
 echo "All done!"
+echo "Remember to copy git config files!"
 echo ""
