@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# !!! THIS IS THE macOS VERSION !!!
 
 # get dotdir (this directory)
 DOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
