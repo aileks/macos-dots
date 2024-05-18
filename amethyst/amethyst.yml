@@ -1,0 +1,108 @@
+layouts:
+  - tall
+  - floating
+  - fullscreen
+
+mod1:
+  - control
+
+mod2:
+  - control
+  - shift
+
+mod3:
+  - control
+  - command
+
+cycle-layout:
+  mod: mod1
+  key: space
+
+cycle-layout-backward:
+  mod: mod2
+  key: space
+
+focus-ccw:
+  mod: mod1
+  key: j
+
+focus-cw:
+  mod: mod1
+  key: k
+
+swap-ccw:
+  mod: mod2
+  key: j
+
+swap-cw:
+  mod: mod2
+  key: k
+
+select-fullscreen-layout:
+  mod: mod2
+  key: f
+
+toggle-float:
+  mod: mod3
+  key: t
+
+display-current-layout:
+  mod: mod1
+  key: i
+
+toggle-tiling:
+  mod: mod2
+  key: t
+
+reevaluate-windows:
+  mod: mod3
+  key: z
+
+relaunch-amethyst:
+  mod: mod2
+  key: z
+
+disable-padding-on-builtin-display: false
+
+window-margins: true
+smart-window-margins: false
+window-margin-size: 6
+
+window-max-count: 0
+window-minimum-height: 0
+window-minimum-width: 0
+
+floating: []
+
+floating-is-blacklist: true
+
+ignore-menu-bar: true
+
+hide-menu-bar-icon: false
+
+float-small-windows: true
+
+mouse-follows-focus: false
+focus-follows-mouse: false
+mouse-swaps-windows: false
+mouse-resizes-windows: true
+
+enables-layout-hud: true
+enables-layout-hud-on-space-change: true
+
+use-canary-build: false
+
+new-windows-to-main: false
+
+follow-space-thrown-windows: false
+
+window-resize-step: 5
+
+screen-padding-left: 0
+screen-padding-right: 0
+screen-padding-top: 40
+screen-padding-bottom: 0
+
+restore-layouts-on-launch: true
+
+debug-layout-info: false
