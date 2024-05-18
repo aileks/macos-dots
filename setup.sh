@@ -25,4 +25,5 @@ ln -s $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
 
 echo ""
 echo "All done!"
+echo "Remember to copy git config files!"
 echo ""
