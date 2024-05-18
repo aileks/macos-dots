@@ -4,7 +4,7 @@
 
 **** NOTE: The setup script doesn't install any packages.
 
-***** Needed packages:
+Needed packages:
 - i3
 - i3lock-fancy
 - i3blocks
