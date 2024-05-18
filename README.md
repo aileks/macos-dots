@@ -1,5 +1,5 @@
-# Dotfiles
+# Addicted to Configuration
 
-### macOS Edition
+### My dotfiles repo for both macOS and Linux
 
-#### Dotfiles for Yabai, WezTerm, Sketchybar, Skhd, and Doom Emacs
+#### Check branches for each OS. Main has a mix of the two.
