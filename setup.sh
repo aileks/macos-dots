@@ -29,7 +29,5 @@ cp -r $DOTDIR/doom $HOME/.config/doom
 
 echo ""
 echo "ALL DONE!"
-echo "Now rebuild!"
-echo ""
-echo "Remember to copy git config files...you know who you are..."
+echo "Remember to copy git config files!"
 echo ""
