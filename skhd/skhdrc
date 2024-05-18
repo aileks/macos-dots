@@ -28,6 +28,7 @@ shift + ctrl - 5 : yabai -m window --space  5
 shift + ctrl - 6 : yabai -m window --space  6
 shift + ctrl - 7 : yabai -m window --space  7
 
+# apps
 ctrl - t: open -n -a "WezTerm.app"
 ctrl + shift - w: open -a "Brave Browser.app"
 ctrl + shift - e: emacsclient -n -c -a ""
