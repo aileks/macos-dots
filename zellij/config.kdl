@@ -199,14 +199,12 @@ plugins {
 }
 
 theme "catppuccin-mocha"
-on_force_close "quit"
-simplified_ui false
+on_force_close "detach"
 default_shell "zsh"
 serialize_pane_viewport true
 scrollback_lines_to_serialize 5000
-default_layout "compact"
 scroll_buffer_size 10000
 copy_command "pbcopy"
 scrollback_editor "/usr/local/bin/nvim"
 mirror_session true
-disable_session_metadata true
+disable_session_metadata false
