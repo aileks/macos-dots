@@ -19,6 +19,8 @@ rm -rf $HOME/.config/yabai
 ln -s $DOTDIR/yabai $HOME/.config/yabai
 rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
+rm -rf $HOME/.config/zellij
+ln -s $DOTDIR/zellij $HOME/.config/zellij
 
 echo ""
 echo "All done!"
