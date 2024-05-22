@@ -1,0 +1,57 @@
+{
+  "theme": "Catppuccin Mocha",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "buffer_font_family": "MartianMono Nerd Font Mono",
+  "buffer_line_height": "standard",
+  "soft_wrap": "preferred_line_length",
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "terminal": {
+    "font_size": 13
+  },
+  "toolbar": {
+    "title": false
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 8,
+  "ensure_final_newline_on_save": true,
+  "tabs": {
+    "git_status": true,
+    "close_position": "right"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "project_panel": {
+    "default_width": 300
+  },
+  "notification_panel": {
+    "default_width": 100
+  },
+  "languages": {
+    "JavaScript": {
+      "tab_size": 4,
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "TypeScript": {
+        "tab_size": 4,
+        "code_actions_on_format": {
+          "source.fixAll.eslint": true
+        }
+      }
+    }
+  }
+}
