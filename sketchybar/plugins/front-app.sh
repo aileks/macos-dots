@@ -1,6 +1,9 @@
 ICON_COLOR=0xff89b4fa
 
 case $INFO in
+  "Alfred Preferences")
+    ICON=󰮤
+    ;;
   "Brave Browser")
     ICON_PADDING_RIGHT=5
     ICON=󰊯

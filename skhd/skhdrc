@@ -19,6 +19,17 @@ ctrl + cmd - l : yabai -m window --resize right:100:0
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
 
+# focus space
+ctrl - 1 : yabai -m space --focus  1
+ctrl - 2 : yabai -m space --focus  2
+ctrl - 3 : yabai -m space --focus  3
+ctrl - 4 : yabai -m space --focus  4
+ctrl - 5 : yabai -m space --focus  5
+ctrl - 6 : yabai -m space --focus  6
+ctrl - 7 : yabai -m space --focus  7
+ctrl - 8 : yabai -m space --focus  8
+ctrl - 9 : yabai -m space --focus  9
+
 # send window to space
 shift + ctrl - 1 : yabai -m window --space  1
 shift + ctrl - 2 : yabai -m window --space  2
@@ -27,7 +38,10 @@ shift + ctrl - 4 : yabai -m window --space  4
 shift + ctrl - 5 : yabai -m window --space  5
 shift + ctrl - 6 : yabai -m window --space  6
 shift + ctrl - 7 : yabai -m window --space  7
+shift + ctrl - 8 : yabai -m window --space  8
+shift + ctrl - 9 : yabai -m window --space  9
 
-ctrl - t: open -n -a "WezTerm.app"
+# apps
+ctrl - return: open -n -a "WezTerm.app"
 ctrl + shift - w: open -a "Brave Browser.app"
 ctrl + shift - e: emacsclient -n -c -a ""

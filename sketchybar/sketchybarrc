@@ -1,12 +1,12 @@
-BG=0x00000000
+BG=0x000000
 
-FONT="RecMonoLinear Nerd Font"
-FONT_SIZE=13
+FONT="MartianMono Nerd Font Mono"
+FONT_SIZE=12
 FONT_COLOR=0xffcdd6f4
-ICON_FONT_SIZE=16
+ICON_FONT_SIZE=20
 
 ITEM_PADDING=8
-ITEM_COLOR=0x801e1e2e
+ITEM_COLOR=0xb31e1e2e
 GAP=6
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
@@ -19,26 +19,18 @@ sketchybar --bar \
   color=$BG
 
 sketchybar --default \
-  label.font="$FONT:Regular:$FONT_SIZE" label.color=$FONT_COLOR \
+  label.font="$FONT:Medium:$FONT_SIZE" label.color=$FONT_COLOR \
   label.padding_left=$ITEM_PADDING label.padding_right=$ITEM_PADDING \
-  icon.font="$FONT:Regular:$ICON_FONT_SIZE"\
+  icon.font="$FONT:Bold:$ICON_FONT_SIZE"\
   icon.padding_left=$ITEM_PADDING \
   background.color=$ITEM_COLOR \
   background.padding_right=$GAP background.height=25 \
   background.corner_radius=6
 
-sketchybar --add item os left \
-  --set os \
-  icon= icon.color=0xffbac2de \
-  icon.font.size=21 icon.y_offset=2 \
-  icon.padding_left=0 icon.padding_right=0 \
-  label.padding_left=0 label.padding_right=6 \
-  background.drawing=off
-
-sketchybar --add item user left \
-  --set user \
-  label="$(whoami)" label.font.style="Bold" \
-  icon=󰭟 icon.color=0xffcba6f7
+sketchybar --add item space left \
+           --set space script="$PLUGIN_DIR/current_space.sh" \
+           icon=󰭟 icon.color=0xffcba6f7 \
+           --subscribe space space_change
 
 sketchybar --add item weather left \
   --set weather \
