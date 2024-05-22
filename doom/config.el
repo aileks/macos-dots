@@ -1,7 +1,4 @@
-(set-frame-parameter nil 'alpha-background 90)
-(add-to-list 'default-frame-alist '(alpha-background . 00))
-
-(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 14)
+(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 15)
       doom-variable-pitch-font (font-spec :family "SF Pro" :size 16))
 
 (setq doom-theme 'catppuccin)
@@ -22,3 +19,6 @@
 (setq lsp-solargraph-references t)
 (setq lsp-solargraph-rename t)
 (setq lsp-solargraph-symbols t)
+
+(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+(add-to-list 'default-frame-alist '(alpha . (95 . 95)))
