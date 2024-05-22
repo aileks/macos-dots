@@ -1,0 +1,39 @@
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space q q": "pane::CloseAllItems",
+      "space w": "workspace::Save",
+      "space c": "editor::CopyPath",
+      "space i": ["workspace::SendKeystrokes", "i enter escape"],
+      "space a": "editor::ToggleCodeActions",
+      "space d": "editor::GoToTypeDefinitionSplit",
+      "space o t": "workspace::ToggleBottomDock",
+      "space f": "file_finder::Toggle",
+      "g i": "editor::GoToImplementationSplit",
+      "g r": "editor::FindAllReferences",
+      "[ d": "editor::GoToDiagnostic",
+      "] d": "editor::GoToPrevDiagnostic"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "k": "editor::ContextMenuPrev",
+      "j": "editor::ContextMenuNext"
+    }
+  }
+]
