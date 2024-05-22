@@ -1,5 +1,5 @@
-(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 15)
-      doom-variable-pitch-font (font-spec :family "SF Pro" :size 16))
+(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 14)
+      doom-variable-pitch-font (font-spec :family "SF Pro" :size 14))
 
 (setq doom-theme 'catppuccin)
 
