@@ -1,12 +1,11 @@
 (setq doom-font (font-spec :family "MartianMono Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16))
+      doom-variable-pitch-font (font-spec :family "SF Pro" :size 16))
 (setq doom-theme 'catppuccin)
 (setq display-line-numbers-type 'relative)
 (setq org-directory "~/Documents/Org/")
 
 (set-frame-parameter (selected-frame) 'alpha '(95 95))
 (add-to-list 'default-frame-alist '(alpha 95 95))
-(add-to-list 'default-frame-alist '(undecorated . t))
 
 (require 'elcord)
 (setq elcord-editor-icon "emacs_icon")
