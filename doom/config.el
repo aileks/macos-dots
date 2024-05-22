@@ -1,8 +1,11 @@
-(modify-all-frames-parameters '((alpha-background . 95) (tool-bar-lines . 0)))
+(set-frame-parameter nil 'alpha-background 90)
+(add-to-list 'default-frame-alist '(alpha-background . 00))
 
-(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 16)
+(setq doom-font (font-spec :family "MartianMono Nerd Font" :size 14)
       doom-variable-pitch-font (font-spec :family "SF Pro" :size 16))
+
 (setq doom-theme 'catppuccin)
+
 (setq display-line-numbers-type 'relative)
 (setq org-directory "~/Documents/Org/")
 
