@@ -47,5 +47,3 @@ export GPG_TTY
 # Misc
 eval "$(zoxide init zsh)"
 eval "$(rbenv init -)"
-
-export PATH=$PATH:/Users/aileks/.spicetify
