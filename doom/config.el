@@ -78,6 +78,8 @@
 ;; they are implemented.
 
 (require 'elcord)
+(setq elcord-editor-icon "emacs_icon")
+(setq elcord-use-major-mode-as-main-icon t)
 (elcord-mode)
 
 (setq circe-network-options
