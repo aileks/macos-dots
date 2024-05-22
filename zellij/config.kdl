@@ -200,6 +200,7 @@ plugins {
 
 theme "catppuccin-mocha"
 on_force_close "detach"
+default_layout "compact"
 default_shell "zsh"
 serialize_pane_viewport true
 scrollback_lines_to_serialize 5000
