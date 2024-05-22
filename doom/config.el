@@ -1,11 +1,10 @@
+(modify-all-frames-parameters '((alpha-background . 95) (tool-bar-lines . 0)))
+
 (setq doom-font (font-spec :family "MartianMono Nerd Font" :size 16)
       doom-variable-pitch-font (font-spec :family "SF Pro" :size 16))
 (setq doom-theme 'catppuccin)
 (setq display-line-numbers-type 'relative)
 (setq org-directory "~/Documents/Org/")
-
-(set-frame-parameter (selected-frame) 'alpha '(95 95))
-(add-to-list 'default-frame-alist '(alpha 95 95))
 
 (require 'elcord)
 (setq elcord-editor-icon "emacs_icon")
