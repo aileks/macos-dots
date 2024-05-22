@@ -13,16 +13,6 @@
 (setq elcord-use-major-mode-as-main-icon t)
 (elcord-mode)
 
-(setq circe-network-options
-      '(("colonq"
-         :tls t
-         :host "colonq.computer"
-         :port 26697
-         :nick "liyah"
-         :pass "liyah:mBiD29tH"
-         :channels ("#cyberspace")
-         )))
-
 (setq lsp-solargraph-completion t)
 (setq lsp-solargraph-definitions t)
 (setq lsp-solargraph-diagnostics t)
