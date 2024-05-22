@@ -11,8 +11,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jnrowe"
 
 # Plugins
-plugins=(brew command-not-found cp fast-syntax-highlighting git python ruby zsh-autosuggestions)
-
+plugins=(brew command-not-found cp fast-syntax-highlighting git python rails ruby zsh-autosuggestions)
 # OMZ script
 source $ZSH/oh-my-zsh.sh
 
@@ -48,3 +47,5 @@ export GPG_TTY
 # Misc
 eval "$(zoxide init zsh)"
 eval "$(rbenv init -)"
+
+export PATH=$PATH:/Users/aileks/.spicetify
