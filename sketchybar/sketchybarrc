@@ -14,7 +14,7 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 sketchybar --bar \
   margin=17 y_offset=4 height=38 \
   corner_radius=6 blur_radius=5 \
-  padding_left=17 padding_right=20 \
+  padding_left=0 padding_right=0 \
   shadow.color=0x28000000 shadow.angle=0 \
   color=$BG
 
