@@ -50,3 +50,6 @@ export GPG_TTY
 # Misc
 eval "$(zoxide init zsh)"
 eval "$(rbenv init -)"
+
+# bun completions
+[ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"

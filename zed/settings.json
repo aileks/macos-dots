@@ -1,5 +1,8 @@
 {
   "theme": "Catppuccin Mocha",
+  "tab_bar": {
+    "show": false
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
