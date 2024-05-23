@@ -48,4 +48,4 @@ shift + ctrl - 9 : yabai -m window --space  9
 # apps
 ctrl - return: open -n -a "WezTerm.app"
 ctrl + shift - w: open -a "Brave Browser.app"
-ctrl + shift - e: emacsclient -n -c -a ""
+ctrl + shift - e: open -a "Zed Preview.app"
