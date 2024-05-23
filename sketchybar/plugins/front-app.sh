@@ -4,6 +4,10 @@ case $INFO in
 "Alfred Preferences")
 	ICON=󰮤
 	;;
+"Arc")
+	ICON_PADDING_RIGHT=5
+	ICON=󰊯
+	;;
 "Calendar")
 	ICON=
 	;;
