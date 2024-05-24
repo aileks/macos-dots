@@ -24,16 +24,6 @@ ln -s $DOTDIR/zed/keymap.json $HOME/.config/zed/keymap.json
 ln -s $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
 
 echo ""
-<<<<<<< HEAD
 echo "All done!"
 echo "Remember to copy git config files!"
-||||||| parent of 97c67ce (setup script wording change)
-echo "ALL DONE!"
-echo "Now rebuild!"
-echo ""
-echo "Remember to copy git config files...you know who you are..."
-=======
-echo "ALL DONE!"
-echo "Remember to copy git config files!"
->>>>>>> 97c67ce (setup script wording change)
 echo ""
