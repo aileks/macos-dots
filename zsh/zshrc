@@ -49,6 +49,7 @@ export GPG_TTY
 
 # Misc
 eval "$(zoxide init zsh)"
+<<<<<<< HEAD
 eval "$(rbenv init -)"
 
 # bun completions
