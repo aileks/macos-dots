@@ -2,4 +2,4 @@
 
 ### macOS Edition
 
-#### Dotfiles for Yabai, WezTerm, Sketchybar, Skhd, Zed, and Neovim
+#### Dotfiles for Yabai, WezTerm, Sketchybar, Skhd, Zellij, Zed, and Neovim
