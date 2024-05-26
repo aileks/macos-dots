@@ -61,6 +61,9 @@ case $INFO in
   "Proton Mail")
     ICON=󰇮
     ;;
+  "Safari")
+    ICON=󰀹
+    ;;
   "Spotify")
     ICON_COLOR=0xff24D44E
     ICON=
