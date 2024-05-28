@@ -2,4 +2,5 @@
 
 ### My dotfiles repo for both macOS and Linux
 
-#### Dotfiles for Zsh, Yabai, WezTerm, Sketchybar, Skhd, Zellij, Zed, and Neovim
+Main has dots for Zsh, Yabai, WezTerm, Sketchybar, Skhd, Zellij, Zed, and Neovim
+Checkout the [linux](https://github.com/aileks/dotfiles/tree/linux) branch for i3wm.
