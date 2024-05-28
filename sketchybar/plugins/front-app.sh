@@ -8,6 +8,9 @@ case $INFO in
     ICON_COLOR=0xff5b5bf5
     ICON=󰙯
     ;;
+  "Brave Browser")
+    ICON=󰊯
+    ;;
   "Calendar")
     ICON=
     ;;
@@ -15,11 +18,9 @@ case $INFO in
     ICON=
     ;;
   "Chromium")
-    ICON_PADDING_RIGHT=5
     ICON=󰊯
     ;;
   "Code")
-    ICON_PADDING_RIGHT=2
     ICON_COLOR=0xff22a1f0
     ICON=󰨞
     ;;
@@ -38,7 +39,6 @@ case $INFO in
     ICON=󰀶
     ;;
   "Floorp")
-    ICON_PADDING_RIGHT=5
     ICON=
     ;;
   "FreeTube")
@@ -51,7 +51,6 @@ case $INFO in
     ICON=󱞁
     ;;
   "ONLYOFFICE")
-    ICON_PADDING_RIGHT=5
     ICON=
     ;;
   "Preview")
@@ -75,7 +74,6 @@ case $INFO in
     ICON=
     ;;
   "WezTerm")
-    ICON_PADDING_RIGHT=5
     ICON=
     ;;
   "Zed")
