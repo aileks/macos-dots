@@ -4,9 +4,9 @@ case $INFO in
   "Alfred Preferences")
     ICON=󰮤
     ;;
-  "Arc")
-    ICON_PADDING_RIGHT=5
-    ICON=󰊯
+  "ArmCord")
+    ICON_COLOR=0xff5b5bf5
+    ICON=󰙯
     ;;
   "Calendar")
     ICON=
@@ -73,10 +73,6 @@ case $INFO in
     ;;
   "TextEdit")
     ICON=
-    ;;
-  "Vesktop")
-    ICON_COLOR=0xff5b5bf5
-    ICON=󰙯
     ;;
   "WezTerm")
     ICON_PADDING_RIGHT=5
