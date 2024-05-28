@@ -49,6 +49,7 @@ export GPG_TTY
 
 # Misc
 eval "$(zoxide init zsh)"
+[ -f "/home/aileks/.ghcup/env" ] && . "/home/aileks/.ghcup/env"
 eval "$(rbenv init -)"
 
 # bun completions

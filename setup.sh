@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# !!! THIS IS THE macOS VERSION !!!
 
 # get dotdir (this directory)
 DOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -26,4 +25,5 @@ ln -s $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
 
 echo ""
 echo "All done!"
+echo "Remember to copy git config files!"
 echo ""
