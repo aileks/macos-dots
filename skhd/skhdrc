@@ -5,16 +5,10 @@ ctrl - k : yabai -m window --focus north
 ctrl - l : yabai -m window --focus east
 
 # swap managed window
-ctrl + alt - h : yabai -m window --swap west
-ctrl + alt - j : yabai -m window --swap south
-ctrl + alt - k : yabai -m window --swap north
-ctrl + alt - l : yabai -m window --swap east
-
-# resize window
-ctrl + cmd - h : yabai -m window --resize right:-100:0
-ctrl + cmd - j : yabai -m window --resize bottom:0:100
-ctrl + cmd - k : yabai -m window --resize bottom:0:-100
-ctrl + cmd - l : yabai -m window --resize right:100:0
+ctrl + cmd - h : yabai -m window --swap west
+ctrl + cmd - j : yabai -m window --swap south
+ctrl + cmd - k : yabai -m window --swap north
+ctrl + cmd - l : yabai -m window --swap east
 
 # toggle floating for focused window and center
 ctrl + shift - t: yabai -m window --toggle float \
