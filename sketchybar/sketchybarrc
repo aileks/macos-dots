@@ -28,7 +28,7 @@ sketchybar --default \
   background.corner_radius=6
 
 sketchybar --add item space left \
-           --set space script="$PLUGIN_DIR/current_space.sh" \
+           --set space script="$PLUGIN_DIR/current-space.sh" \
            icon=󰭟 icon.color=0xffcba6f7 \
            --subscribe space space_change
 
