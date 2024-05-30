@@ -4,10 +4,6 @@ case $INFO in
   "Alfred Preferences")
     ICON=󰮤
     ;;
-  "ArmCord")
-    ICON_COLOR=0xff5b5bf5
-    ICON=󰙯
-    ;;
   "Brave Browser")
     ICON=󰊯
     ;;
@@ -20,12 +16,10 @@ case $INFO in
   "Chromium")
     ICON=󰊯
     ;;
-  "Code")
-    ICON_COLOR=0xff22a1f0
+  "VSCodium")
     ICON=󰨞
     ;;
   "Discord")
-    ICON_COLOR=0xff5b5bf5
     ICON=󰙯
     ;;
   "Emacs")
@@ -35,7 +29,6 @@ case $INFO in
     ICON=
     ;;
   "Finder")
-    ICON_COLOR=0xff40b9ff
     ICON=󰀶
     ;;
   "Floorp")
@@ -54,7 +47,6 @@ case $INFO in
     ICON=
     ;;
   "Preview")
-    ICON_COLOR=0xff137DF8
     ICON=
     ;;
   "Proton Mail")
@@ -64,7 +56,6 @@ case $INFO in
     ICON=󰀹
     ;;
   "Spotify")
-    ICON_COLOR=0xff24D44E
     ICON=
     ;;
   "System Settings")

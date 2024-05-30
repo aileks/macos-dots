@@ -29,7 +29,7 @@ vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 -- Better <esc>
-vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('i', 'jk', '<Esc>')
 
 -- Niceties for movement
 vim.keymap.set('n', 'n', 'nzzzv')
@@ -41,7 +41,7 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Open netrw
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>e', vim.cmd.Lex)
 
 -- Easier save & quit
 vim.keymap.set('n', '<leader>w', ':w<CR>')

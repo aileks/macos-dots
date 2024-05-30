@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   'xiyaowong/transparent.nvim',
   'folke/zen-mode.nvim',
-  {'christoomey/vim-tmux-navigator', lazy = false},
+  'tpope/vim-rails',
   { import = 'user.plugins.autopairs' },
   { import = 'user.plugins.cmp' },
   { import = 'user.plugins.colorizer' },
