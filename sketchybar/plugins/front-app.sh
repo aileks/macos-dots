@@ -19,9 +19,6 @@ case $INFO in
   "VSCodium")
     ICON=󰨞
     ;;
-  "Discord")
-    ICON=󰙯
-    ;;
   "Emacs")
     ICON=
     ;;
@@ -63,6 +60,9 @@ case $INFO in
     ;;
   "TextEdit")
     ICON=
+    ;;
+  "Vesktop")
+    ICON=󰙯
     ;;
   "WezTerm")
     ICON=
