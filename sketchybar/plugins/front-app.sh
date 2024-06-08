@@ -1,6 +1,9 @@
 ICON_COLOR=0xff89b4fa
 
 case $INFO in
+  "App Store")
+    ICON=
+    ;;
   "Alfred Preferences")
     ICON=󰮤
     ;;
@@ -15,6 +18,9 @@ case $INFO in
     ;;
   "Chromium")
     ICON=󰊯
+    ;;
+  "Discord")
+    ICON=󰙯
     ;;
   "VSCodium")
     ICON=󰨞
@@ -60,9 +66,6 @@ case $INFO in
     ;;
   "TextEdit")
     ICON=
-    ;;
-  "Vesktop")
-    ICON=󰙯
     ;;
   "WezTerm")
     ICON=
