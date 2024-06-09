@@ -25,6 +25,7 @@ require("lazy").setup({
   { import = 'user.plugins.illuminate' },
   { import = 'user.plugins.indent-blankline' },
   { import = 'user.plugins.laravel' },
+  { import = 'user.plugins.lazygit' },
   { import = 'user.plugins.lualine' },
   { import = 'user.plugins.lspconfig' },
   { import = 'user.plugins.mini' },
