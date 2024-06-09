@@ -1,4 +1,7 @@
 {
+  "features": {
+    "copilot": false
+  },
   "theme": "Catppuccin Mocha",
   "tab_bar": {
     "show": false
@@ -7,8 +10,8 @@
     "metrics": false,
     "diagnostics": false
   },
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "ui_font_size": 13,
+  "buffer_font_size": 13,
   "buffer_font_family": "MartianMono Nerd Font Mono",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
@@ -19,7 +22,7 @@
     "show_other_hints": true
   },
   "terminal": {
-    "font_size": 13
+    "font_size": 12
   },
   "toolbar": {
     "title": false
