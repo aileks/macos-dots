@@ -1,9 +1,13 @@
 return {
-  'catppuccin/nvim', name = 'catppuccin', priority = 1000,
+  "scottmckendry/cyberdream.nvim",
+  lazy = false,
+  priority = 1000,
   config = function()
-    require('catppuccin').setup({
-      transparent_background = true
-    })
-    vim.cmd.colorscheme('catppuccin-mocha')
+    require('cyberdream').setup({
+      transparent = true,
+      italic_comments = true,
+      borderless_telescope = false
+   })
+    vim.cmd.colorscheme('cyberdream')
   end,
 }
