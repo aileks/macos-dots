@@ -9,7 +9,7 @@ export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # Theme
-ZSH_THEME="fletcherm"
+ZSH_THEME="gallifrey"
 
 # Plugins
 plugins=(brew command-not-found cp fast-syntax-highlighting git python rails ruby zsh-autosuggestions)
