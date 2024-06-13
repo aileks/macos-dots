@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- actual config
-config.font = wezterm.font('MesloLGSDZ Nerd Font Mono', { weight = "Regular" })
+config.font = wezterm.font('MesloLGS Nerd Font Mono', { weight = "Regular" })
 config.font_size = 16
 config.color_scheme = 'Catppuccin Mocha'
 config.enable_tab_bar = false
