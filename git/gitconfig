@@ -1,31 +1,30 @@
 [user]
   name = aileks
   email = aeverly14@pm.me
+  signingkey = AA37B955
 [color]
-    ui = auto
+  ui = auto
 [commit]
-    gpgsign = true
+  gpgsign = true
 [core]
-    editor = nvim
-    excludesfile = ~/.gitignore_global
-    pager = delta
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  pager = delta
 [diff]
-    tool = vimdiff
+  tool = vimdiff
 [fetch]
-    prune = true
+  prune = true
 [help]
-    autocorrect = 10
+  autocorrect = 10
 [push]
-    default = current
+  default = current
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [pull]
-    rebase = false
+  rebase = false
 [init]
-	defaultBranch = main
-[fem]
-	dev = owo
+  defaultBranch = main
 [gpg]
-	program = /opt/homebrew/bin/gpg
+  program = /opt/homebrew/bin/gpg
