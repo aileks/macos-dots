@@ -27,3 +27,5 @@
 	defaultBranch = main
 [fem]
 	dev = owo
+[gpg]
+	program = /opt/homebrew/bin/gpg

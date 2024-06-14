@@ -1,13 +1,9 @@
 return {
-  "scottmckendry/cyberdream.nvim",
-  lazy = false,
-  priority = 1000,
+  'rebelot/kanagawa.nvim',
   config = function()
-    require('cyberdream').setup({
+    require('kanagawa').setup({
       transparent = true,
-      italic_comments = true,
-      borderless_telescope = false
-   })
-    vim.cmd.colorscheme('cyberdream')
-  end,
+    })
+    vim.cmd.colorscheme('kanagawa-wave')
+  end
 }

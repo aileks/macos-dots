@@ -10,9 +10,9 @@
     "metrics": false,
     "diagnostics": false
   },
-  "ui_font_size": 13,
-  "buffer_font_size": 13,
-  "buffer_font_family": "MartianMono Nerd Font Mono",
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "buffer_font_family": "MesloLGSDZ Nerd Font",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
   "inlay_hints": {
@@ -22,7 +22,7 @@
     "show_other_hints": true
   },
   "terminal": {
-    "font_size": 12
+    "font_size": 16
   },
   "toolbar": {
     "title": false
