@@ -1,45 +1,4 @@
-# focus window
-ctrl - h : yabai -m window --focus west
-ctrl - j : yabai -m window --focus south
-ctrl - k : yabai -m window --focus north
-ctrl - l : yabai -m window --focus east
-
-# swap managed window
-ctrl + cmd - h : yabai -m window --swap west
-ctrl + cmd - j : yabai -m window --swap south
-ctrl + cmd - k : yabai -m window --swap north
-ctrl + cmd - l : yabai -m window --swap east
-
-# toggle floating for focused window and center
-ctrl + shift - t: yabai -m window --toggle float \
-          yabai -m window --grid 4:4:1:1:2:2
-
-# balance size of windows
-shift + alt - 0 : yabai -m space --balance
-
-# focus space
-# ctrl - 1 : yabai -m space --focus  1
-# ctrl - 2 : yabai -m space --focus  2
-# ctrl - 3 : yabai -m space --focus  3
-# ctrl - 4 : yabai -m space --focus  4
-# ctrl - 5 : yabai -m space --focus  5
-# ctrl - 6 : yabai -m space --focus  6
-# ctrl - 7 : yabai -m space --focus  7
-# ctrl - 8 : yabai -m space --focus  8
-# ctrl - 9 : yabai -m space --focus  9
-
-# send window to space
-# shift + ctrl - 1 : yabai -m window --space  1
-# shift + ctrl - 2 : yabai -m window --space  2
-# shift + ctrl - 3 : yabai -m window --space  3
-# shift + ctrl - 4 : yabai -m window --space  4
-# shift + ctrl - 5 : yabai -m window --space  5
-# shift + ctrl - 6 : yabai -m window --space  6
-# shift + ctrl - 7 : yabai -m window --space  7
-# shift + ctrl - 8 : yabai -m window --space  8
-# shift + ctrl - 9 : yabai -m window --space  9
-
 # apps
 ctrl - return: open -n -a "WezTerm.app"
-ctrl + shift - w: open -a "Floorp.app"
+ctrl + shift - w: open -a "Safari.app"
 ctrl + shift - e: open -a "Zed Preview.app"
