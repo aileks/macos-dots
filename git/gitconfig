@@ -1,7 +1,7 @@
 [user]
   name = aileks
   email = aeverly14@pm.me
-	signingkey = 48DB2E2FFA0BCCFB0C91CE55A3F494524C867F7D
+  signingkey = 4C867F7D
 [color]
   ui = auto
 [commit]
