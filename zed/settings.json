@@ -2,7 +2,7 @@
   "features": {
     "copilot": false
   },
-  "theme": "Catppuccin Mocha",
+  "theme": "Carbonfox",
   "tab_bar": {
     "show": false
   },
@@ -15,6 +15,7 @@
   "buffer_font_family": "MesloLGSDZ Nerd Font",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 120,
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -48,12 +49,10 @@
   },
   "languages": {
     "JavaScript": {
-      "tab_size": 4,
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       },
       "TypeScript": {
-        "tab_size": 4,
         "code_actions_on_format": {
           "source.fixAll.eslint": true
         }
