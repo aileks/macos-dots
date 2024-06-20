@@ -4,7 +4,7 @@ local config = {}
 
 -- actual config
 config.font = wezterm.font('MesloLGS Nerd Font Mono', { weight = "Regular" })
-config.font_size = 20
+config.font_size = 18
 config.color_scheme = 'Kanagawa (Gogh)'
 config.enable_tab_bar = false
 config.window_background_opacity = 0.90

@@ -28,12 +28,5 @@
     "bindings": {
       // insert mode keybinds go here
     }
-  },
-  {
-    "context": "Editor && (showing_code_actions || showing_completions)",
-    "bindings": {
-      "k": "editor::ContextMenuPrev",
-      "j": "editor::ContextMenuNext"
-    }
   }
 ]

@@ -2,7 +2,7 @@
   "features": {
     "copilot": false
   },
-  "theme": "Carbonfox",
+  "theme": "Kanagawa Wave",
   "tab_bar": {
     "show": false
   },
@@ -12,7 +12,7 @@
   },
   "ui_font_size": 18,
   "buffer_font_size": 16,
-  "buffer_font_family": "MesloLGSDZ Nerd Font",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,

@@ -18,10 +18,10 @@ rm -rf $HOME/.config/wezterm
 ln -s $DOTDIR/wezterm $HOME/.config/wezterm
 
 # zed is a special case
-rm -rf $HOME/.config/zed/keymap.json
-rm -rf $HOME/.config/zed/settings.json
-ln -s $DOTDIR/zed/keymap.json $HOME/.config/zed/keymap.json
-ln -s $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
+ln -sf $DOTDIR/zed/keymap.json $HOME/.config/zed/keymap.json
+ln -sf $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
+rm -rf $HOME/.config/zed/snippets
+ln -s $DOTDIR/zed/snippets $HOME/.config/zed/snippets
 
 echo ""
 echo "All done!"
