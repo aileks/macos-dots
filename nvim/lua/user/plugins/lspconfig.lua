@@ -64,6 +64,7 @@ return {
       capabilities = capabilities
     })
 
+    -- PHPactor
     require('lspconfig').phpactor.setup({
       capabilities = capabilities,
       on_attach = function(client, bufnr)
@@ -104,9 +105,6 @@ return {
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
-    -- Tailwind CSS
-    require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
-
     -- JSON
     require('lspconfig').jsonls.setup({
       capabilities = capabilities,
@@ -117,10 +115,19 @@ return {
       },
     })
 
-
-    -- Ruby
-    require('lspconfig').solargraph.setup({ capabilities = capabilities })
-    require('lspconfig').rubocop.setup({ capabilities = capabilities })
+    -- Emmet
+    require('lspconfig').emmet_ls.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+      init_options = {
+        html = {
+          options = {
+            ["bem.enabled"] = true,
+          },
+        },
+      }
+    })
 
     -- none-ls
     local null_ls = require('null-ls')
