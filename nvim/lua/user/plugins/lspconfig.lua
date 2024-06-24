@@ -136,9 +136,9 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
-        require("none-ls.diagnostics.eslint_d").with({
+        null_ls.builtins.formatting.eslint_d.with({
           condition = function(utils)
-            return utils.root_has_file(".eslint*")
+            return utils.root_has_file('.eslint*')
           end,
         }),
         null_ls.builtins.formatting.pint.with({
