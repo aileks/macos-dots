@@ -3,5 +3,12 @@
     "prefix": "cl",
     "body": ["console.log($1)"],
     "description": "Expand `cl` to `console.log()`"
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'\n\nexport default function $1() {\n  return (\n    <div>$2</div>\n)\n}"
+    ],
+    "description": "Expand `rfc` to a React functional component"
   }
 }
