@@ -19,7 +19,7 @@ return {
     require('mason-lspconfig').setup({ automatic_installation = true })
     require('mason-null-ls').setup({ automatic_installation = true })
 
-    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     -- Lua
@@ -119,11 +119,13 @@ return {
 
     -- Emmet
     require('lspconfig').emmet_ls.setup({
-      on_attach = on_attach,
       capabilities = capabilities,
       filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
       init_options = {
         html = {
+          suggestions = {
+            emmet = true;
+          },
           options = {
             ["bem.enabled"] = true,
           },
