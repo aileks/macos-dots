@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   'xiyaowong/transparent.nvim',
   'folke/zen-mode.nvim',
-  'tpope/vim-rails',
   'aserowy/tmux.nvim',
   { import = 'user.plugins.autopairs' },
   { import = 'user.plugins.cmp' },
