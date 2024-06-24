@@ -123,9 +123,6 @@ return {
       filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
       init_options = {
         html = {
-          suggestions = {
-            emmet = true;
-          },
           options = {
             ["bem.enabled"] = true,
           },
@@ -139,11 +136,11 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
-        -- null_ls.builtins.formatting.eslint_d.with({
-        --   condition = function(utils)
-        --     return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
-        --   end,
-        -- }),
+        require("none-ls.diagnostics.eslint_d").with({
+          condition = function(utils)
+            return utils.root_has_file(".eslint*")
+          end,
+        }),
         null_ls.builtins.formatting.pint.with({
           condition = function(utils)
             return utils.root_has_file({ 'vendor/bin/pint' })

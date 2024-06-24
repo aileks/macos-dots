@@ -87,7 +87,6 @@ config = function()
     },
     mapping = {
       ["<Tab>"] = cmp.mapping(function(fallback)
-        -- print('tab...')
         if cmp.visible() then
           cmp.select_next_item()
         elseif luasnip.expand_or_jumpable() then
@@ -110,11 +109,11 @@ config = function()
       ['<CR>'] = cmp.mapping.confirm({ select = false }),
     },
     sources = {
+      { name = 'buffer' },
       { name = 'nvim_lsp' },
       { name = 'nvim_lsp_signature_help' },
-      { name = 'luasnip' },
-      { name = 'buffer' },
       { name = 'path' },
+      { name = 'luasnip' },
     },
     experimental = {
       ghost_text = true,
