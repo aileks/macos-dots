@@ -9,7 +9,7 @@ export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # Theme
-ZSH_THEME="gallifrey"
+ZSH_THEME="dst"
 
 # Plugins
 plugins=(brew command-not-found cp fast-syntax-highlighting git python rails ruby zsh-autosuggestions)
@@ -42,4 +42,3 @@ export GPG_TTY=$(tty)
 
 # Misc
 eval "$(zoxide init zsh)"
-eval "$(rbenv init -)"
