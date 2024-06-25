@@ -9,7 +9,7 @@ export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # Theme
-ZSH_THEME="dst"
+ZSH_THEME="sorin"
 
 # Plugins
 plugins=(brew command-not-found cp fast-syntax-highlighting git python rails ruby zsh-autosuggestions)
