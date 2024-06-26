@@ -117,17 +117,17 @@ return {
       },
     })
 
-    -- Emmet
-    require('lspconfig').emmet_ls.setup({
-      capabilities = capabilities,
-      filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
-      init_options = {
-        html = {
-          options = {
-            ["bem.enabled"] = true,
-          },
-        },
-      }
+    -- eslint
+    require('lspconfig').eslint.setup({
+      settings = {
+        packageManager = 'npm'
+      },
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          command = "EslintFixAll",
+        })
+      end,
     })
 
     -- none-ls
@@ -136,11 +136,6 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
-        null_ls.builtins.formatting.eslint_d.with({
-          condition = function(utils)
-            return utils.root_has_file('.eslint*')
-          end,
-        }),
         null_ls.builtins.formatting.pint.with({
           condition = function(utils)
             return utils.root_has_file({ 'vendor/bin/pint' })
