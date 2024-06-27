@@ -96,6 +96,7 @@ return {
 
     -- TypeScript
     require('lspconfig').tsserver.setup({
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
@@ -103,7 +104,6 @@ return {
           vim.lsp.buf.inlay_hint(bufnr, true)
         end
       end,
-      capabilities = capabilities,
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
@@ -115,6 +115,36 @@ return {
           schemas = require('schemastore').json.schemas(),
         },
       },
+    })
+
+    -- HTML
+    require('lspconfig').html.setup({
+      capabilities = capabilities;
+    })
+
+    -- CSS
+    require('lspconfig').cssls.setup({
+      capabilities = capabilities;
+    })
+
+    -- Emmet
+    require('lspconfig').emmet_ls.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        client.server_capabilities.documentRangeFormattingProvider = true
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
+      end,
+      filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+      init_options = {
+        html = {
+          options = {
+            ["bem.enabled"] = true,
+          },
+        },
+      }
     })
 
     -- eslint
@@ -136,6 +166,11 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
+        -- null_ls.builtins.formatting.eslint.with({
+        --   condition = function(utils)
+        --     return utils.root_has_file('.eslint*')
+        --   end,
+        -- }),
         null_ls.builtins.formatting.pint.with({
           condition = function(utils)
             return utils.root_has_file({ 'vendor/bin/pint' })
