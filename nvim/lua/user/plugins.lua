@@ -36,6 +36,7 @@ require("lazy").setup({
   { import = 'user.plugins.telescope' },
   { import = 'user.plugins.treesj' },
   { import = 'user.plugins.ts-autotag' },
+  { import = 'user.plugins.textobj' },
   { import = 'user.plugins.vim-commentary' },
   { import = 'user.plugins.vim-pasta' },
   { import = 'user.plugins.vim-rooter' },
