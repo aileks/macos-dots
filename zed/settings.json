@@ -1,5 +1,6 @@
 {
   "features": {
+    "inline_completion_provider": "none",
     "copilot": false
   },
   "theme": "Kanagawa Wave",
@@ -16,6 +17,7 @@
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,
+  "restore_on_startup": "none",
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -26,7 +28,8 @@
     "font_size": 16
   },
   "toolbar": {
-    "title": false
+    "title": false,
+    "quick_actions": false
   },
   "vim_mode": true,
   "relative_line_numbers": true,

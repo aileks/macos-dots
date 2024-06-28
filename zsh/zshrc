@@ -31,6 +31,7 @@ alias vim="nvim"
 alias ar="php artisan"
 alias rm="trash"
 alias bin="brew install"
+alias bs="brew search"
 alias c="clear"
 alias dir="cd ~ && cd \$(find * -type d | fzf)"
 
