@@ -12,8 +12,8 @@
     "diagnostics": false
   },
   "ui_font_size": 18,
-  "buffer_font_size": 16,
-  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_size": 18,
+  "buffer_font_family": "Berkeley Mono",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,
