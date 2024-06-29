@@ -1,6 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
-  event = 'VeryLazy',
+  -- event = 'VeryLazy',
   dependencies = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
@@ -19,18 +19,19 @@ return {
     require('mason-lspconfig').setup({ automatic_installation = true })
     require('mason-null-ls').setup({ automatic_installation = true })
 
+    local lspconfig = require('lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     -- Lua
-    require('lspconfig').lua_ls.setup({
+    lspconfig.lua_ls.setup({
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = true
         client.server_capabilities.documentRangeFormattingProvider = true
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
+        -- if client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.buf.inlay_hint(bufnr, true)
+        -- end
       end,
       settings = {
         Lua = {
@@ -48,7 +49,7 @@ return {
     })
 
     -- PHP
-    require('lspconfig').intelephense.setup({
+    lspconfig.intelephense.setup({
       commands = {
         IntelephenseIndex = {
           function()
@@ -59,56 +60,56 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
+        -- if client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.buf.inlay_hint(bufnr, true)
+        -- end
       end,
       capabilities = capabilities
     })
 
     -- PHPactor
-    require('lspconfig').phpactor.setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        client.server_capabilities.completionProvider = false
-        client.server_capabilities.hoverProvider = false
-        client.server_capabilities.implementationProvider = false
-        client.server_capabilities.referencesProvider = false
-        client.server_capabilities.renameProvider = false
-        client.server_capabilities.selectionRangeProvider = false
-        client.server_capabilities.signatureHelpProvider = false
-        client.server_capabilities.typeDefinitionProvider = false
-        client.server_capabilities.workspaceSymbolProvider = false
-        client.server_capabilities.definitionProvider = false
-        client.server_capabilities.documentHighlightProvider = false
-        client.server_capabilities.documentSymbolProvider = false
-        client.server_capabilities.documentFormattingProvider = false
-        client.server_capabilities.documentRangeFormattingProvider = false
-      end,
-      init_options = {
-        ["language_server_phpstan.enabled"] = false,
-        ["language_server_psalm.enabled"] = false,
-      },
-      handlers = {
-        ['textDocument/publishDiagnostics'] = function() end
-      }
-    })
+    -- lspconfig.phpactor.setup({
+    --   capabilities = capabilities,
+    --   on_attach = function(client, bufnr)
+    --     client.server_capabilities.completionProvider = false
+    --     client.server_capabilities.hoverProvider = false
+    --     client.server_capabilities.implementationProvider = false
+    --     client.server_capabilities.referencesProvider = false
+    --     client.server_capabilities.renameProvider = false
+    --     client.server_capabilities.selectionRangeProvider = false
+    --     client.server_capabilities.signatureHelpProvider = false
+    --     client.server_capabilities.typeDefinitionProvider = false
+    --     client.server_capabilities.workspaceSymbolProvider = false
+    --     client.server_capabilities.definitionProvider = false
+    --     client.server_capabilities.documentHighlightProvider = false
+    --     client.server_capabilities.documentSymbolProvider = false
+    --     client.server_capabilities.documentFormattingProvider = false
+    --     client.server_capabilities.documentRangeFormattingProvider = false
+    --   end,
+    --   init_options = {
+    --     ["language_server_phpstan.enabled"] = false,
+    --     ["language_server_psalm.enabled"] = false,
+    --   },
+    --   handlers = {
+    --     ['textDocument/publishDiagnostics'] = function() end
+    --   }
+    -- })
 
     -- TypeScript
-    require('lspconfig').tsserver.setup({
+    lspconfig.tsserver.setup({
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
+        -- if client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.buf.inlay_hint(bufnr, true)
+        -- end
       end,
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
     -- JSON
-    require('lspconfig').jsonls.setup({
+    lspconfig.jsonls.setup({
       capabilities = capabilities,
       settings = {
         json = {
@@ -117,26 +118,16 @@ return {
       },
     })
 
-    -- HTML
-    require('lspconfig').html.setup({
-      capabilities = capabilities;
-    })
-
-    -- CSS
-    require('lspconfig').cssls.setup({
-      capabilities = capabilities;
-    })
-
     -- Emmet
-    require('lspconfig').emmet_ls.setup({
-      capabilities = capabilities,
+    lspconfig.emmet_ls.setup({
       on_attach = function(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = true
-        client.server_capabilities.documentRangeFormattingProvider = true
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        -- if client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.buf.inlay_hint(bufnr, true)
+        -- end
       end,
+      capabilities = capabilities,
       filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
       init_options = {
         html = {
@@ -147,8 +138,13 @@ return {
       }
     })
 
+    -- CSS
+    lspconfig.cssls.setup({
+      capabilities = capabilities,
+    })
+
     -- eslint
-    require('lspconfig').eslint.setup({
+    lspconfig.eslint.setup({
       settings = {
         packageManager = 'npm'
       },
@@ -166,10 +162,11 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
+        -- This doesn't work for whatever reason
         -- null_ls.builtins.formatting.eslint.with({
-        --   condition = function(utils)
-        --     return utils.root_has_file('.eslint*')
-        --   end,
+        -- condition = function(utils)
+        --   return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
+        -- end,
         -- }),
         null_ls.builtins.formatting.pint.with({
           condition = function(utils)
@@ -219,8 +216,8 @@ return {
 
     -- Keymaps
     vim.keymap.set('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
-    vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
-    vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
+    -- vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
+    -- vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
     vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
