@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- actual config
-config.font = wezterm.font('Berkeley Mono')
+config.font = wezterm.font('BerkeleyMono Nerd Font')
 config.font_size = 20
 config.color_scheme = 'Kanagawa (Gogh)'
 config.enable_tab_bar = false

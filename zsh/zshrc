@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="sorin"
 
 # Plugins
-plugins=(brew command-not-found cp fast-syntax-highlighting git python rails ruby zsh-autosuggestions)
+plugins=(brew cp fast-syntax-highlighting fzf git python ruby zsh-autosuggestions)
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh

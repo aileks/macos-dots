@@ -3,20 +3,17 @@
     "inline_completion_provider": "none",
     "copilot": false
   },
-  "theme": "Kanagawa Wave",
-  "tab_bar": {
-    "show": false
-  },
+  "theme": "Tokyo Night",
   "telemetry": {
     "metrics": false,
     "diagnostics": false
   },
-  "ui_font_size": 18,
-  "buffer_font_size": 18,
-  "buffer_font_family": "Berkeley Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 120,
+  "preferred_line_length": 80,
   "restore_on_startup": "none",
   "inlay_hints": {
     "enabled": true,
@@ -25,7 +22,7 @@
     "show_other_hints": true
   },
   "terminal": {
-    "font_size": 16
+    "font_size": 17
   },
   "toolbar": {
     "title": false,
