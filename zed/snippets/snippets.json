@@ -6,20 +6,23 @@
   },
   "console.log a variable": {
     "prefix": "cv",
-    "body": "console.log('${1}:', ${1})"
+    "body": ["console.log('${1}:', ${1})"],
+    "description": "console.log with a variable"
   },
   "console.error": {
-    "prefix": "cl",
+    "prefix": "ce",
     "body": ["console.log($1)"],
-    "description": "Expand `cl` to `console.log()`"
+    "description": "Expand `ce` to `console.error()`"
   },
   "console.warn": {
     "prefix": "cw",
-    "body": "console.warn(${0})"
+    "body": ["console.warn(${0})"],
+    "description": "Expand `cw` to `console.warn()`"
   },
   "console.dir": {
     "prefix": "cod",
-    "body": "console.dir('${1}:', ${1})"
+    "body": ["console.dir('${1}:', ${1})"],
+    "description": "Expand `cod` to `console.dir()`"
   },
   "React Functional Component": {
     "prefix": "rfc",
