@@ -196,7 +196,7 @@ return {
 
     -- Prettier
     require('prettier').setup({
-      bin = 'prettierd',
+      bin = 'prettier',
       filetypes = {
         'javascript',
         'javascriptreact',
@@ -209,6 +209,14 @@ return {
         'json',
         'yaml',
         'markdown',
+      },
+      cli_options = {
+        arrow_parens = "never",
+        jsx_single_quote = true,
+        print_width = 100,
+        singe_attribute_per_line = true,
+        single_quote = true,
+        vue_indent_script_and_style = true
       }
     })
 
