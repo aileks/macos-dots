@@ -173,12 +173,12 @@ return {
             return utils.root_has_file({ 'vendor/bin/pint' })
           end,
         }),
-        null_ls.builtins.formatting.prettier.with({
-          condition = function(utils)
-            return utils.root_has_file({ '.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.js',
-              'prettier.config.js' })
-          end,
-        }),
+        -- null_ls.builtins.formatting.prettier.with({
+        --   condition = function(utils)
+        --     return utils.root_has_file({ '.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.js',
+        --       'prettier.config.js' })
+        --   end,
+        -- }),
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
@@ -196,7 +196,15 @@ return {
 
     -- Prettier
     require('prettier').setup({
-      bin = 'prettier',
+      bin = 'prettierd',
+      cli_options = {
+        arrow_parens = 'avoid',
+        jsx_single_quote = true,
+        print_width = 100,
+        single_attribute_per_line = true,
+        single_quote = true,
+        vue_indent_script_and_style = true,
+      },
       filetypes = {
         'javascript',
         'javascriptreact',
@@ -210,14 +218,6 @@ return {
         'yaml',
         'markdown',
       },
-      cli_options = {
-        arrow_parens = "never",
-        jsx_single_quote = true,
-        print_width = 100,
-        singe_attribute_per_line = true,
-        single_quote = true,
-        vue_indent_script_and_style = true
-      }
     })
 
     require('mason-null-ls').setup({ automatic_installation = true })
@@ -233,7 +233,7 @@ return {
     vim.keymap.set('n', '<leader>lr', ':LspRestart<CR>', { silent = true })
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-    vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+    vim.keymap.set('n', '<leader>lf', ':Prettier<CR>')
     vim.keymap.set('i', '<M-h>', function() vim.lsp.buf.signature_help() end, opts)
 
     -- Commands

@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.spicetify"
 
 # Path to OMZ installation.
 export ZSH="$HOME/.oh-my-zsh"
