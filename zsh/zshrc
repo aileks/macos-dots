@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.spicetify"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.spicetify"
 
 # Path to OMZ installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -44,3 +44,6 @@ export GPG_TTY=$(tty)
 
 # Misc
 eval "$(zoxide init zsh)"
+
+# bun completions
+[ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
