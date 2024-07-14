@@ -1,6 +1,6 @@
 # apps
 ctrl - return: open -n -a "WezTerm.app"
-ctrl + shift - w: open -a "Arc.app"
+ctrl + shift - w: open -a "Vivaldi.app"
 ctrl + shift - e: open -a "Zed.app"
 ctrl + shift - s: open -a "Spotify.app"
 ctrl + shift - d: open -a "Discord.app"
