@@ -3,7 +3,7 @@
     "inline_completion_provider": "none",
     "copilot": false
   },
-  "theme": "One Hunter Flexoki Dark",
+  "theme": "Kanagawa Wave",
   "telemetry": {
     "metrics": false,
     "diagnostics": false
@@ -13,7 +13,7 @@
   "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_line_height": "standard",
   "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 80,
+  "preferred_line_length": 120,
   "restore_on_startup": "none",
   "inlay_hints": {
     "enabled": true,
