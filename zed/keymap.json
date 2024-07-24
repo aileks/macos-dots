@@ -19,6 +19,7 @@
   {
     "context": "Editor && vim_mode == visual",
     "bindings": {
+      "shift-s": ["vim::PushOperator", { "AddSurrounds": {} }],
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp"
     }
