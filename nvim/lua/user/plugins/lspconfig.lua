@@ -229,10 +229,10 @@ return {
     vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
     vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
     vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
-    vim.keymap.set('n', '<leader>lr', ':LspRestart<CR>', { silent = true })
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+    vim.keymap.set('n', '<leader>lr', ':LspRestart<CR>', { silent = true })
+    vim.keymap.set('n', '<leader>lf', ':Format<CR>', { silent = true })
     vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-    vim.keymap.set('n', '<leader>lf', ':Prettier<CR>')
     vim.keymap.set('i', '<M-h>', function() vim.lsp.buf.signature_help() end, opts)
 
     -- Commands

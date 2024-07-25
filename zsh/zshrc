@@ -47,3 +47,6 @@ eval "$(zoxide init zsh)"
 
 # bun completions
 [ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
