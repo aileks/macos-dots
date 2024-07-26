@@ -19,6 +19,11 @@ ln -sf $DOTDIR/zed/settings.json $HOME/.config/zed/settings.json
 rm -rf $HOME/.config/zed/snippets
 ln -s $DOTDIR/zed/snippets $HOME/.config/zed/snippets
 
+# install omz
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 echo ""
 echo "All done!"
 echo "Remember to copy git config files!"
