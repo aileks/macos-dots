@@ -138,22 +138,7 @@ return {
     })
 
     -- CSS
-    lspconfig.cssls.setup({
-      capabilities = capabilities,
-    })
-
-    -- eslint
-    lspconfig.eslint.setup({
-      settings = {
-        packageManager = 'npm'
-      },
-      on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          buffer = bufnr,
-          command = "EslintFixAll",
-        })
-      end,
-    })
+    lspconfig.cssls.setup({ capabilities = capabilities })
 
     -- none-ls
     local null_ls = require('null-ls')
@@ -161,18 +146,17 @@ return {
     null_ls.setup({
       temp_dir = '/tmp',
       sources = {
-        -- This doesn't work for whatever reason
-        null_ls.builtins.formatting.eslint_d.with({
-        condition = function(utils)
-          return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
-        end,
-        }),
         null_ls.builtins.formatting.pint.with({
           condition = function(utils)
             return utils.root_has_file({ 'vendor/bin/pint' })
           end,
         }),
-        null_ls.builtins.formatting.prettier.with({
+        -- null_ls.builtins.formatting.eslint_d.with({
+        --   condition = function(utils)
+        --     return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
+        --   end,
+        -- }),
+        null_ls.builtins.formatting.prettierd.with({
           condition = function(utils)
             return utils.root_has_file({ '.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.js',
               'prettier.config.js' })

@@ -1,6 +1,7 @@
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+vim.opt.spell = true
 vim.opt.cmdheight = 0
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
