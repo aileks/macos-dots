@@ -47,6 +47,18 @@ return {
       },
     })
 
+    -- Python
+    lspconfig.pyright.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        client.server_capabilities.documentRangeFormattingProvider = true
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
+      end
+    })
+
     -- PHP
     lspconfig.intelephense.setup({
       commands = {
@@ -59,9 +71,9 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
       end,
       capabilities = capabilities
     })
@@ -100,9 +112,9 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
       end,
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
@@ -122,9 +134,6 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
       end,
       capabilities = capabilities,
       filetypes = { "css", "eruby", "html", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
@@ -138,7 +147,13 @@ return {
     })
 
     -- CSS
-    lspconfig.cssls.setup({ capabilities = capabilities })
+    lspconfig.cssls.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = true
+        client.server_capabilities.documentRangeFormattingProvider = true
+      end,
+    })
 
     -- none-ls
     local null_ls = require('null-ls')
@@ -151,17 +166,14 @@ return {
             return utils.root_has_file({ 'vendor/bin/pint' })
           end,
         }),
-        -- null_ls.builtins.formatting.eslint_d.with({
-        --   condition = function(utils)
-        --     return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
-        --   end,
-        -- }),
         null_ls.builtins.formatting.prettierd.with({
           condition = function(utils)
             return utils.root_has_file({ '.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.js',
               'prettier.config.js' })
           end,
         }),
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.diagnostics.ruff
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
