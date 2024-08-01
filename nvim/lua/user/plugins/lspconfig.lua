@@ -7,6 +7,7 @@ return {
     { 'nvimtools/none-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
     'jayp0521/mason-null-ls.nvim',
     'MunifTanjim/prettier.nvim',
+    'MunifTanjim/eslint.nvim'
   },
   config = function()
     require('mason').setup({
@@ -50,12 +51,22 @@ return {
     -- Python
     lspconfig.pyright.setup({
       capabilities = capabilities,
+      filetypes = { "python" },
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = true
         client.server_capabilities.documentRangeFormattingProvider = true
         if client.server_capabilities.inlayHintProvider then
           vim.lsp.buf.inlay_hint(bufnr, true)
         end
+      end,
+    })
+    lspconfig.ruff.setup({
+      capabilities = capabilities,
+      filetypes = { "python" },
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        client.server_capabilities.hoverProvider = false
       end
     })
 
@@ -131,11 +142,11 @@ return {
 
     -- Emmet
     lspconfig.emmet_ls.setup({
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
       end,
-      capabilities = capabilities,
       filetypes = { "css", "eruby", "html", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
       init_options = {
         html = {
@@ -173,7 +184,6 @@ return {
           end,
         }),
         null_ls.builtins.formatting.black,
-        null_ls.builtins.diagnostics.ruff
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
@@ -212,6 +222,27 @@ return {
         'json',
         'yaml',
         'markdown',
+      },
+    })
+
+    -- Eslint
+    require('eslint').setup({
+      bin = 'eslint_d',
+      code_actions = {
+        enable = true,
+        apply_on_save = {
+          enable = true,
+          types = { "directive", "problem", "suggestion", "layout" },
+        },
+        disable_rule_comment = {
+          enable = true,
+          location = "separate_line",
+        },
+      },
+      diagnostics = {
+        enable = true,
+        report_unused_disable_directives = false,
+        run_on = "save",
       },
     })
 
