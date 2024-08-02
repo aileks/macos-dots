@@ -7,7 +7,7 @@ return {
     { 'nvimtools/none-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
     'jayp0521/mason-null-ls.nvim',
     'MunifTanjim/prettier.nvim',
-    'MunifTanjim/eslint.nvim'
+    -- 'MunifTanjim/eslint.nvim'
   },
   config = function()
     require('mason').setup({
@@ -88,34 +88,6 @@ return {
       end,
       capabilities = capabilities
     })
-
-    -- PHPactor
-    -- lspconfig.phpactor.setup({
-    --   capabilities = capabilities,
-    --   on_attach = function(client, bufnr)
-    --     client.server_capabilities.completionProvider = false
-    --     client.server_capabilities.hoverProvider = false
-    --     client.server_capabilities.implementationProvider = false
-    --     client.server_capabilities.referencesProvider = false
-    --     client.server_capabilities.renameProvider = false
-    --     client.server_capabilities.selectionRangeProvider = false
-    --     client.server_capabilities.signatureHelpProvider = false
-    --     client.server_capabilities.typeDefinitionProvider = false
-    --     client.server_capabilities.workspaceSymbolProvider = false
-    --     client.server_capabilities.definitionProvider = false
-    --     client.server_capabilities.documentHighlightProvider = false
-    --     client.server_capabilities.documentSymbolProvider = false
-    --     client.server_capabilities.documentFormattingProvider = false
-    --     client.server_capabilities.documentRangeFormattingProvider = false
-    --   end,
-    --   init_options = {
-    --     ["language_server_phpstan.enabled"] = false,
-    --     ["language_server_psalm.enabled"] = false,
-    --   },
-    --   handlers = {
-    --     ['textDocument/publishDiagnostics'] = function() end
-    --   }
-    -- })
 
     -- TypeScript
     lspconfig.tsserver.setup({
@@ -225,26 +197,32 @@ return {
       },
     })
 
-    -- Eslint
-    require('eslint').setup({
-      bin = 'eslint_d',
-      code_actions = {
-        enable = true,
-        apply_on_save = {
-          enable = true,
-          types = { "directive", "problem", "suggestion", "layout" },
-        },
-        disable_rule_comment = {
-          enable = true,
-          location = "separate_line",
-        },
-      },
-      diagnostics = {
-        enable = true,
-        report_unused_disable_directives = false,
-        run_on = "save",
-      },
-    })
+    -- -- Eslint
+    -- require('eslint').setup({
+    --   bin = 'eslint',
+    --   code_actions = {
+    --     enable = true,
+    --     apply_on_save = {
+    --       enable = true,
+    --       types = { "directive", "problem", "suggestion", "layout" },
+    --     },
+    --     disable_rule_comment = {
+    --       enable = true,
+    --       location = "separate_line",
+    --     },
+    --   },
+    --   diagnostics = {
+    --     enable = true,
+    --     report_unused_disable_directives = false,
+    --     run_on = "save",
+    --   },
+    --   filetypes = {
+    --     'javascript',
+    --     'javascriptreact',
+    --     'typescript',
+    --     'typescriptreact',
+    --   },
+    -- })
 
     require('mason-null-ls').setup({ automatic_installation = true })
 
