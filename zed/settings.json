@@ -22,15 +22,12 @@
     "show_other_hints": true
   },
   "terminal": {
-    "font_size": 17
+    "font_size": 16
   },
   "toolbar": {
     "title": false,
     "quick_actions": false
   },
-  "vim_mode": true,
-  "relative_line_numbers": true,
-  "vertical_scroll_margin": 8,
   "ensure_final_newline_on_save": true,
   "tabs": {
     "git_status": true,
@@ -49,14 +46,36 @@
   },
   "languages": {
     "JavaScript": {
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--config", "~/.prettierrc", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       },
       "TypeScript": {
+        "format_on_save": {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--config", "~/.prettierrc", "--stdin-filepath", "{buffer_path}"]
+          }
+        },
         "code_actions_on_format": {
           "source.fixAll.eslint": true
         }
       }
     }
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 8,
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true
   }
 }
