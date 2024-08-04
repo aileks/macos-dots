@@ -26,9 +26,7 @@
   },
   "React Functional Component": {
     "prefix": "rfc",
-    "body": [
-      "import React from 'react'\n\nexport default function $1() {\n  return (\n    <div>$2</div>\n)\n}"
-    ],
+    "body": ["import React from 'react'\n\nexport default function $1() {\n  return (\n    <div>$2</div>\n)\n}"],
     "description": "Expand `rfc` to a React functional component"
   },
   "Constructor": {
@@ -38,13 +36,7 @@
   },
   "Class Definition": {
     "prefix": "class",
-    "body": [
-      "class ${1:name} {",
-      "\tconstructor(${2:parameters}) {",
-      "\t\t$0",
-      "\t}",
-      "}"
-    ],
+    "body": ["class ${1:name} {", "\tconstructor(${2:parameters}) {", "\t\t$0", "\t}", "}"],
     "description": "Class Definition"
   },
   "Interface Definition": {
@@ -69,13 +61,7 @@
   },
   "Property getter": {
     "prefix": "get",
-    "body": [
-      "",
-      "public get ${1:value}() : ${2:string} {",
-      "\t${3:return $0}",
-      "}",
-      ""
-    ],
+    "body": ["", "public get ${1:value}() : ${2:string} {", "\t${3:return $0}", "}", ""],
     "description": "Property getter"
   },
   "Define a full property": {
@@ -95,13 +81,7 @@
   },
   "Property setter": {
     "prefix": "set",
-    "body": [
-      "",
-      "public set ${1:value}(v : ${2:string}) {",
-      "\tthis.$3 = v;",
-      "}",
-      ""
-    ],
+    "body": ["", "public set ${1:value}(v : ${2:string}) {", "\tthis.$3 = v;", "}", ""],
     "description": "Property setter"
   },
   "Throw Exception": {
@@ -163,16 +143,7 @@
   },
   "Switch Statement": {
     "prefix": "switch",
-    "body": [
-      "switch (${1:key}) {",
-      "\tcase ${2:value}:",
-      "\t\t$0",
-      "\t\tbreak;",
-      "",
-      "\tdefault:",
-      "\t\tbreak;",
-      "}"
-    ],
+    "body": ["switch (${1:key}) {", "\tcase ${2:value}:", "\t\t$0", "\t\tbreak;", "", "\tdefault:", "\t\tbreak;", "}"],
     "description": "Switch Statement"
   },
   "While Statement": {

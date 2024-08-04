@@ -27,18 +27,13 @@
     "font_size": 16
   },
   "toolbar": {
-    "title": false,
+    "breadcrumbs": false,
     "quick_actions": false
   },
   "ensure_final_newline_on_save": true,
   "tabs": {
     "git_status": true,
-    "close_position": "right"
-  },
-  "git": {
-    "inline_blame": {
-      "enabled": false
-    }
+    "file_icons": true
   },
   "project_panel": {
     "default_width": 300
@@ -101,6 +96,12 @@
   },
   "scrollbar": {
     "show": "never"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 1000
+    }
   },
   "relative_line_numbers": true,
   "vertical_scroll_margin": 8,
