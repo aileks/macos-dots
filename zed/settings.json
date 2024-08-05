@@ -3,7 +3,7 @@
     "inline_completion_provider": "none",
     "copilot": false
   },
-  "theme": "Flexoki Dark",
+  "theme": "Kanagawa Wave",
   "telemetry": {
     "metrics": false,
     "diagnostics": false
@@ -55,8 +55,7 @@
       }
     },
     "JavaScript": {
-      "format_on_save": "on",
-      "formatter": {
+      "format_on_save": {
         "external": {
           "command": "prettier",
           "arguments": ["--config", "~/.prettierrc", "--stdin-filepath", "{buffer_path}"]
