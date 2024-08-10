@@ -1,19 +1,30 @@
 [
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       "space q q": "pane::CloseAllItems",
       "space w": "workspace::Save",
-      "space c": "editor::CopyPath",
+      "space C": "editor::CopyPath",
       "space i": ["workspace::SendKeystrokes", "i enter escape"],
       "space a": "editor::ToggleCodeActions",
       "space d": "editor::GoToTypeDefinitionSplit",
       "space o t": "workspace::ToggleBottomDock",
       "space f": "file_finder::Toggle",
-      "g i": "editor::GoToImplementationSplit",
+      "space c r": "editor::Rename",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
       "g r": "editor::FindAllReferences",
       "[ d": "editor::GoToDiagnostic",
-      "] d": "editor::GoToPrevDiagnostic"
+      "] d": "editor::GoToPrevDiagnostic",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "space e": "pane::RevealInProjectPanel"
     }
   },
   {
@@ -27,7 +38,8 @@
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      // insert mode keybinds go here
+      "j j": "vim::NormalBefore",
+      "j k": "vim::NormalBefore"
     }
   },
   {
@@ -40,9 +52,31 @@
     }
   },
   {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space g h d": "editor::ToggleHunkDiff",
+      "space g h r": "editor::RevertSelectedHunks",
+      "space t i": "editor::ToggleInlayHints",
+      "space u w": "editor::ToggleSoftWrap",
+      "space c z": "workspace::ToggleCenteredLayout",
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide",
+      "space P": "projects::OpenRecent",
+      "space s w": "pane::DeploySearch"
+    }
+  },
+  {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
-      "space f": "file_finder::Toggle"
+      "space f": "file_finder::Toggle",
+      "space P": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "q": "workspace::ToggleLeftDock",
+      "space e": "pane::RevealInProjectPanel"
     }
   }
 ]

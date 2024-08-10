@@ -3,6 +3,9 @@
     "inline_completion_provider": "none",
     "copilot": false
   },
+  "calls": {
+    "mute_on_join": true
+  },
   "theme": "Kanagawa Wave",
   "telemetry": {
     "metrics": false,
@@ -11,20 +14,18 @@
   "autosave": "on_focus_change",
   "cursor_blink": false,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 18,
   "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_line_height": "standard",
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 120,
-  "restore_on_startup": "none",
-  "inlay_hints": {
-    "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true
-  },
   "terminal": {
     "font_size": 16
+  },
+  "projects_online_by_default": true,
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 100,
+  "restore_on_startup": "none",
+  "inlay_hints": {
+    "enabled": true
   },
   "toolbar": {
     "breadcrumbs": false,
@@ -36,14 +37,29 @@
     "file_icons": true
   },
   "project_panel": {
-    "default_width": 300
+    "default_width": 200
+  },
+  "outline_panel": {
+    "default_width": 100,
+    "dock": "right"
   },
   "notification_panel": {
     "default_width": 100
   },
+  "auto_fold_dirs": true,
   "format_on_save": "on",
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
   "languages": {
     "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_other_hints": true,
+        "show_parameter_hints": false
+      },
       "format_on_save": {
         "external": {
           "command": "prettier",
@@ -67,7 +83,11 @@
     },
     "Python": {
       "language_servers": ["pyright", "ruff"],
-      "format_on_save": "on",
+      "format_on_save": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
       "formatter": [
         {
           "code_actions": {
