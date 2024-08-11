@@ -24,7 +24,9 @@
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
       "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem",
-      "space e": "pane::RevealInProjectPanel"
+      "space e": "pane::RevealInProjectPanel",
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"]
     }
   },
   {
