@@ -7,7 +7,6 @@ return {
     { 'nvimtools/none-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
     'jayp0521/mason-null-ls.nvim',
     'MunifTanjim/prettier.nvim',
-    -- 'MunifTanjim/eslint.nvim'
   },
   config = function()
     require('mason').setup({
@@ -200,33 +199,6 @@ return {
       },
     })
 
-    -- -- Eslint
-    -- require('eslint').setup({
-    --   bin = 'eslint',
-    --   code_actions = {
-    --     enable = true,
-    --     apply_on_save = {
-    --       enable = true,
-    --       types = { "directive", "problem", "suggestion", "layout" },
-    --     },
-    --     disable_rule_comment = {
-    --       enable = true,
-    --       location = "separate_line",
-    --     },
-    --   },
-    --   diagnostics = {
-    --     enable = true,
-    --     report_unused_disable_directives = false,
-    --     run_on = "save",
-    --   },
-    --   filetypes = {
-    --     'javascript',
-    --     'javascriptreact',
-    --     'typescript',
-    --     'typescriptreact',
-    --   },
-    -- })
-
     require('mason-null-ls').setup({ automatic_installation = true })
 
     -- Keymaps
@@ -234,8 +206,8 @@ return {
     vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
-    vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
+    vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>', { silent = true })
+    vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>', { silent = true })
     vim.keymap.set('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     vim.keymap.set('n', '<leader>lr', ':LspRestart<CR>', { silent = true })
