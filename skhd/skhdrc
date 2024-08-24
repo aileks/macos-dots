@@ -1,6 +1,0 @@
-# apps
-ctrl - return: open -n -a "WezTerm.app"
-ctrl + shift - w: open -a "Firefox Developer Edition.app"
-ctrl + shift - e: open -a "Zed.app"
-ctrl + shift - s: open -a "Music.app"
-ctrl + shift - d: open -a "Discord.app"
