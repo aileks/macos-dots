@@ -1,0 +1,21 @@
+[global]
+frame_color = "#EBA0AC"
+separator_color = frame
+font = "FiraCode Nerd Font Propo 10"
+corner_radius = 4
+scale = 1.5
+force_xwayland = true
+frame_width = 1
+
+[urgency_low]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+
+[urgency_normal]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+
+[urgency_critical]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+frame_color = "#B4BEFE"

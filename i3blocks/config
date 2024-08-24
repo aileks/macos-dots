@@ -1,0 +1,36 @@
+command=scripts/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[media-player]
+label= 
+instance=spotify
+interval=5
+signal=10
+
+[cpu_usage]
+label=󰻠 
+interval=10
+separator=false
+
+[memory]
+label=󰍛 
+separator=false
+interval=30
+
+[volume-pw]
+command=env AUDIO_DELTA=5 $HOME/.config/i3blocks/scripts/volume-pw
+separator=false
+interval=persist
+format=json
+
+[calendar]
+separator=false
+interval=30
+
+[powermenu]
+full_text= 
+ENABLE_CONFIRMATIONS=true (must be true or false)
+LAUNCHER=rofi
+LOCKSCRIPT=i3lock-fancy -p
+separator=false
