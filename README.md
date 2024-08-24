@@ -6,6 +6,7 @@
 - i3wm
 - i3blocks
 - Picom
+- Dunst
 - WezTerm
 - Zsh
 - Neovim
