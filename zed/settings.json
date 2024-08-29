@@ -6,7 +6,7 @@
   "calls": {
     "mute_on_join": true
   },
-  "theme": "Kanagawa Wave",
+  "theme": "Ayu Dark",
   "telemetry": {
     "metrics": false,
     "diagnostics": false
