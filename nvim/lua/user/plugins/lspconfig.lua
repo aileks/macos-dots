@@ -52,6 +52,7 @@ return {
       capabilities = capabilities,
       filetypes = { "python" },
       on_attach = function(client, bufnr)
+        client.server_capabilities.diagnosticProvider = false
         client.server_capabilities.documentFormattingProvider = true
         client.server_capabilities.documentRangeFormattingProvider = true
         if client.server_capabilities.inlayHintProvider then
@@ -63,6 +64,7 @@ return {
       capabilities = capabilities,
       filetypes = { "python" },
       on_attach = function(client, bufnr)
+        client.server_capabilities.diagnosticProvider = false
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
         client.server_capabilities.hoverProvider = false
@@ -94,9 +96,9 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        -- if client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.buf.inlay_hint(bufnr, true)
-        -- end
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.buf.inlay_hint(bufnr, true)
+        end
       end,
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
@@ -158,6 +160,7 @@ return {
           end,
         }),
         null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

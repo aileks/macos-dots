@@ -1,3 +1,3 @@
 return {
-  'aserowy/tmux.nvim'
+  'aserowy/tmux.nvim',
 }
