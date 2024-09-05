@@ -51,22 +51,30 @@ return {
     lspconfig.pyright.setup({
       capabilities = capabilities,
       filetypes = { "python" },
-      on_attach = function(client, bufnr)
-        client.server_capabilities.diagnosticProvider = false
-        client.server_capabilities.documentFormattingProvider = true
-        client.server_capabilities.documentRangeFormattingProvider = true
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
-      end,
+      settings = {
+        pyright = {
+          disableOrganizeImports = true,
+        },
+        python = {
+          analysis = {
+            ignore = { '*' },
+          },
+        },
+      },
     })
     lspconfig.ruff.setup({
       capabilities = capabilities,
       filetypes = { "python" },
+      init_options = {
+        settings = {
+          lineLength = 80,
+          logLevel = "error",
+          lint = {
+            select = { "E", "F", "N", "C4", "RUFF" }
+          }
+        }
+      },
       on_attach = function(client, bufnr)
-        client.server_capabilities.diagnosticProvider = false
-        client.server_capabilities.documentFormattingProvider = false
-        client.server_capabilities.documentRangeFormattingProvider = false
         client.server_capabilities.hoverProvider = false
       end
     })
@@ -96,9 +104,9 @@ return {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
-        if client.server_capabilities.inlayHintProvider then
-          vim.lsp.buf.inlay_hint(bufnr, true)
-        end
+        -- if client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.buf.inlay_hint(bufnr, true)
+        -- end
       end,
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
@@ -159,8 +167,7 @@ return {
               'prettier.config.js' })
           end,
         }),
-        null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.isort,
+        -- null_ls.builtins.formatting.black,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
