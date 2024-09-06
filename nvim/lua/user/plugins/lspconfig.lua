@@ -52,6 +52,20 @@ return {
       capabilities = capabilities,
       filetypes = { "python" },
     })
+    lspconfig.pyright.setup({
+      capabilities = capabilities,
+      filetypes = { "python" },
+      settings = {
+        pyright = {
+          disableOrganizeImports = true,
+        },
+        python = {
+          analysis = {
+            ignore = { '*' },
+          },
+        },
+      },
+    })
     lspconfig.ruff_lsp.setup({
       capabilities = capabilities,
       filetypes = { "python" },
