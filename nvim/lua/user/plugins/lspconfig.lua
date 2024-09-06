@@ -48,10 +48,6 @@ return {
     })
 
     -- Python
-    lspconfig.jedi_language_server.setup({
-      capabilities = capabilities,
-      filetypes = { "python" },
-    })
     lspconfig.pyright.setup({
       capabilities = capabilities,
       filetypes = { "python" },
@@ -103,7 +99,7 @@ return {
     })
 
     -- TypeScript
-    lspconfig.tsserver.setup({
+    lspconfig.ts_ls.setup({
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
