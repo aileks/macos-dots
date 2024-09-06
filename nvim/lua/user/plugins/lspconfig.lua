@@ -48,19 +48,9 @@ return {
     })
 
     -- Python
-    lspconfig.pyright.setup({
+    lspconfig.jedi_language_server.setup({
       capabilities = capabilities,
       filetypes = { "python" },
-      settings = {
-        pyright = {
-          disableOrganizeImports = true,
-        },
-        python = {
-          analysis = {
-            ignore = { '*' },
-          },
-        },
-      },
     })
     lspconfig.ruff_lsp.setup({
       capabilities = capabilities,
