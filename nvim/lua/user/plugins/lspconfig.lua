@@ -48,21 +48,19 @@ return {
     })
 
     -- Python
+    -- lspconfig.jedi_language_server.setup({
+    --   capabilities = capabilities,
+    --   filetypes = { "python" },
+    --   single_file_support = true
+    -- })
     lspconfig.pyright.setup({
       capabilities = capabilities,
       filetypes = { "python" },
-      settings = {
-        pyright = {
-          disableOrganizeImports = true,
-        },
-        python = {
-          analysis = {
-            ignore = { '*' },
-          },
-        },
+      pyright = {
+        disableOrganizeImports = true,
       },
     })
-    lspconfig.ruff_lsp.setup({
+    lspconfig.ruff.setup({
       capabilities = capabilities,
       filetypes = { "python" },
       init_options = {
