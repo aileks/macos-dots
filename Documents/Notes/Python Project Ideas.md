@@ -1,0 +1,5 @@
+- FFXIV Discord bot
+- Basic ML (Pandas, PyTorch, or TensorFlow)
+- Global market trends visualization
+- Pokemon DataFrames
+- Grade book
