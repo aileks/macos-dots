@@ -159,7 +159,7 @@ return {
             return utils.root_has_file({ 'vendor/bin/pint' })
           end,
         }),
-        null_ls.builtins.formatting.prettierd.with({
+        null_ls.builtins.formatting.prettier.with({
           condition = function(utils)
             return utils.root_has_file({ '.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.js',
               'prettier.config.js' })
@@ -183,7 +183,7 @@ return {
 
     -- Prettier
     require('prettier').setup({
-      bin = 'prettierd',
+      bin = 'prettier',
       cli_options = {
         arrow_parens = 'avoid',
         jsx_single_quote = true,
