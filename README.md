@@ -1,6 +1,6 @@
 # Addicted to Configuration
 
-### My dotfiles repo for Linux (Arch btw)
+### My dotfiles repo for WSL & Linux (Arch btw)
 
 #### Includes configuration for:
 - i3wm
