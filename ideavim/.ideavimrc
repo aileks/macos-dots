@@ -1,0 +1,59 @@
+" Options
+set spell
+set number
+set relativenumber
+set scrolloff=8
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set showmode
+set showcmd
+set clipboard+=unnamedplus
+set visualbell
+set highlightedyank
+set surround
+
+" Keymaps
+let mapleader = <space>
+" General
+map <leader>w :w<Return>
+map <leader>x :NERDTreeToggle<CR>
+map <leader>am <Action>(EditorPopupMenu)
+map <leader>as <Action>(SearchEverywhere)
+map <leader>f <Action>(GotoFile)
+map <leader>q <Action>(CloseContent)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Project Navigation
+nmap gi <Action>(GotoImplementation)
+nmap gy <Action>(GotoTypeDeclaration)
+
+" Remaps
+inoremap jk <Esc>
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+vnoremap < <gv
+vnoremap > >gv
+
+" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'kana/vim-textobj-entire'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'dbakker/vim-paragraph-motion'
