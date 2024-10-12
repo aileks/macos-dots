@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="sorin"
 
 # Plugins
-plugins=(ubuntu cp fast-syntax-highlighting fzf git python ruby thefuck tmux zsh-autosuggestions)
+plugins=(cp fast-syntax-highlighting fzf git python ruby thefuck tmux ubuntu zsh-autosuggestions)
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
 
@@ -55,3 +55,4 @@ eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
 
 export PATH=$PATH:/home/liyah/.spicetify
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -23,8 +23,8 @@ ln -s $DOTDIR/nvim $HOME/.config/nvim
 check_error
 rm -rf $HOME/.config/wezterm
 check_error
-# ln -s $DOTDIR/wezterm $HOME/.config/wezterm
-# check_error
+ln -s $DOTDIR/wezterm $HOME/.config/wezterm
+check_error
 
 # zed is a special case
 # ln -sf $DOTDIR/zed/keymap.json $HOME/.config/zed/keymap.json
