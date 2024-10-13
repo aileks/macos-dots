@@ -56,3 +56,5 @@ export PIPENV_VENV_IN_PROJECT=1
 
 export PATH=$PATH:/home/liyah/.spicetify
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export PATH=$PATH:/home/aileks/.spicetify

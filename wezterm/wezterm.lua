@@ -9,6 +9,5 @@ config.color_scheme = 'Ayu Dark (Gogh)'
 config.enable_tab_bar = false
 config.window_background_opacity = 0.95
 config.window_close_confirmation = 'NeverPrompt'
-config.window_decorations = "RESIZE"
 
 return config
