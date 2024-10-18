@@ -148,6 +148,9 @@ return {
     -- Tailwind
     lspconfig.tailwindcss.setup({ capabilities = capabilities })
 
+    -- Julia
+    lspconfig.julials.setup({ capabilities = capabilities })
+
     -- none-ls
     local null_ls = require('null-ls')
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

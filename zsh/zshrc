@@ -59,3 +59,12 @@ export PIPENV_VENV_IN_PROJECT=1
 
 # deno
 . "/home/aileks/.deno/env"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/aileks/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
