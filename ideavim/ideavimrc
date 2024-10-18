@@ -1,3 +1,6 @@
+" Keymaps
+let mapleader = " "
+
 " Options
 set spell
 set number
@@ -14,8 +17,6 @@ set visualbell
 set highlightedyank
 set surround
 
-" Keymaps
-let mapleader = <space>
 " General
 map <leader>w :w<Return>
 map <leader>x :NERDTreeToggle<CR>

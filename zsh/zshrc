@@ -1,3 +1,6 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/aileks/.zsh/completions:"* ]]; then export FPATH="/home/aileks/.zsh/completions:$FPATH"; fi
+
 # Path
 export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.spicetify"
 
@@ -54,7 +57,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
 
-export PATH=$PATH:/home/liyah/.spicetify
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-export PATH=$PATH:/home/aileks/.spicetify
+# deno
+. "/home/aileks/.deno/env"
