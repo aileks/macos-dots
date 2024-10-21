@@ -16,8 +16,8 @@ ZSH_THEME="sorin"
 
 # Plugins
 plugins=(cp fast-syntax-highlighting fzf git python ruby thefuck tmux ubuntu zsh-autosuggestions)
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_UNICODE=true
+# ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_UNICODE=true
 
 # OMZ script
 source $ZSH/oh-my-zsh.sh
