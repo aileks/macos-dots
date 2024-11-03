@@ -1,6 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/aileks/.zsh/completions:"* ]]; then export FPATH="/home/aileks/.zsh/completions:$FPATH"; fi
-
 # Path
 export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.spicetify"
 
@@ -56,15 +53,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
-
-# deno
-. "/home/aileks/.deno/env"
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/home/aileks/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
