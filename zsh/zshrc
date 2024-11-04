@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="sorin"
 
 # Plugins
-plugins=(cp fast-syntax-highlighting fzf git python ruby thefuck tmux ubuntu zsh-autosuggestions)
+plugins=(cp dnf fast-syntax-highlighting fzf git python ruby thefuck tmux zsh-autosuggestions)
 # ZSH_TMUX_AUTOSTART=true
 # ZSH_TMUX_UNICODE=true
 
@@ -44,9 +44,6 @@ export GPG_TTY=$(tty)
 
 # Misc
 eval "$(zoxide init zsh)"
-
-# bun completions
-[ -s "/Users/aileks/.bun/_bun" ] && source "/Users/aileks/.bun/_bun"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
