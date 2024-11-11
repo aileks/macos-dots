@@ -9,7 +9,7 @@ export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # Theme
-ZSH_THEME="jreese"
+ZSH_THEME="jaischeema"
 
 # Plugins
 plugins=(cp dnf fast-syntax-highlighting fzf git python ruby thefuck tmux zsh-autosuggestions)
