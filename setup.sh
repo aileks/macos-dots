@@ -19,7 +19,7 @@ rm -rf $HOME/.config/dwm
 ln -s $DOTDIR/dwm $HOME/.config/dwm
 
 # install dwm
-cd $HOME/.config/dwm && sudo make install
+cd $DOTDIR/dwm && sudo make install
 
 # install omz
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
