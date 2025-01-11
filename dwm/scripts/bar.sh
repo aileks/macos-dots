@@ -15,10 +15,6 @@ cpu() {
   printf "^c$white^ ^b$grey^ $cpu_val"
 }
 
-checkupdates() {
-  pacman -Qu
-}
-
 pkg_updates() {
   #updates=$({ timeout 20 doas xbps-install -un 2>/dev/null || true; } | wc -l) # void
   updates=$({ timeout 20 pacman -Qua 2>/dev/null || true; } | wc -l)
