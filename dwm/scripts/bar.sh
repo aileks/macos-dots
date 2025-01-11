@@ -9,12 +9,12 @@ interval=0
 . ~/.config/dwm/scripts/bar_themes/catppuccin
 
 pkg_updates() {
-  updates=$({ timeout 20 pacman -Qua 2>/dev/null || true; } | wc -l)
+  updates=$({ timeout 20 yay -Qua 2>/dev/null || true; } | wc -l)
 
-  if [ -z "$updates" > 0 ]; then
-    printf "^c$green^   Fully Updated"
-  else
+  if [ "$updates" -gt 0 ]; then
     printf "^c$green^   $updates"" updates"
+  else
+    printf "^c$green^   No updates"
   fi
 }
 
