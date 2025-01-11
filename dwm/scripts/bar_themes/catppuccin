@@ -2,10 +2,13 @@
 
 # colors
 
-black=#1E1D2D
-green=#ABE9B3
-white=#D9E0EE
-grey=#282737
-blue=#96CDFB
-red=#F28FAD
-darkblue=#83bae8
+black=#1e1e2e
+green=#a6e3a1
+white=#cdd6f4
+grey=#313244
+blue=#89b4fa
+red=#f38ba8
+darkblue=#5c8ae0
+teal=#89dceb
+mauve=#cba6f7
+orange=#fab387
