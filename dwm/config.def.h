@@ -64,10 +64,11 @@ static const char *colors[][3]      = {
 /* tagging */
 static char *tags[] = {"󰲠", "󰲢", "󰲤", "󰲦", "󰲨", "󰲪", "󰲬", "󰲮", "󰲰"};
 
-static const char* eww[] = { "eww", "open" , "eww", NULL };
+// static const char* eww[] = { "eww", "open" , "eww", NULL };
 
-static const Launcher launchers[] = {
+static const Launcher launchers[0] = {
     /* command     name to display */
+    // { eww,         "" },
 };
 
 static const int tagschemes[] = {
@@ -79,13 +80,13 @@ static const unsigned int ulinestroke   = 2; /* thickness / height of the underl
 static const unsigned int ulinevoffset  = 0; /* how far above the bottom of the bar the line should appear */
 static const int ulineall               = 0; /* 1 to show underline on all tags, 0 for just the active ones */
 
-static const Rule rules[] = {
+static const Rule rules[0] = {
     /* xprop(1):
      *  WM_CLASS(STRING) = instance, class
      *  WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     iscentered   isfloating   monitor */
-    { "eww",      NULL,       NULL,       0,            0,           1,           -1 },
+    // { "eww",      NULL,       NULL,       0,            0,           1,           -1 },
 };
 
 /* layout(s) */
