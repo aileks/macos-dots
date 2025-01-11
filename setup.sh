@@ -19,6 +19,8 @@ rm -rf $HOME/.config/dwm
 ln -s $DOTDIR/dwm $HOME/.config/dwm
 
 # install dwm
+echo "Compiling dwm, sudo password needed!"
+echo ""
 cd $DOTDIR/dwm && sudo make install
 
 # install omz
