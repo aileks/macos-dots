@@ -35,7 +35,7 @@ static const int new_window_attach_on_end = 1; /*  1 means the new window will a
 #define ICONSIZE 18   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[] = {"Iosevka:style:medium:size=12", "JetBrainsMono Nerd Font Mono:style:medium:size=19"};
+static const char *fonts[] = {"BerkeleyMono Nerd Font:style:medium:size=12", "BerkeleyMono Nerd Font:style:medium:size=18"};
 
 // theme
 #include "themes/catppuccin.h"
@@ -64,7 +64,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static char *tags[] = {"󰖟", "󱋊", "", "󰕧", "", "", "", "", ""};
+static char *tags[] = {"󰬺", "󰬻", "󰬼", "󰬽", "󰬾", "󰬿", "󰭀", "󰭁", "󰭂"};
 
 // static const char* eww[] = { "eww", "open" , "eww", NULL };
 
