@@ -18,7 +18,7 @@ ln -s $DOTDIR/dunst $HOME/.config/dunst
 rm -rf $HOME/.config/dwm
 ln -s $DOTDIR/dwm $HOME/.config/dwm
 rm -rf $HOME/.config/fastfetch
-ln -s $DOTDIR/dwm $HOME/.config/fastfetch
+ln -s $DOTDIR/fastfetch $HOME/.config/fastfetch
 
 # install dwm
 echo "Compiling dwm, sudo password needed!"
