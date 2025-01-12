@@ -6,5 +6,6 @@ xset r rate 200 50 &
 picom &
 dash ~/.config/dwm/scripts/bar.sh &
 xautolock -detectsleep -time 15 -locker "i3lock-fancy -pf JetBrains-Mono-SemiBold-Italic" &
+nvidia-settings --load-config-only
 
 while type chadwm >/dev/null; do chadwm && continue || break; done
