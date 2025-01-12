@@ -1,5 +1,3 @@
-/* See LICENSE file for copyright and license details. */
-
 #include <X11/XF86keysym.h>
 
 /* appearance */
@@ -20,11 +18,11 @@ static const int showtab            = showtab_auto;
 static const int toptab             = 1;        /* 0 means bottom tab */
 static const int floatbar           = 1;        /* 1 means the bar will float(don't have padding),0 means the bar have padding */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = 5;
-static const int vertpadbar         = 11;
-static const int vertpadtab         = 35;
-static const int horizpadtabi       = 15;
-static const int horizpadtabo       = 15;
+static const int horizpadbar        = 6;
+static const int vertpadbar         = 12;
+static const int vertpadtab         = 36;
+static const int horizpadtabi       = 16;
+static const int horizpadtabo       = 16;
 static const int scalepreview       = 4;
 static const int tag_preview        = 1;        /* 1 means enable, 0 is off */
 static const int colorfultag        = 1;        /* 0 means use SchemeSel for selected non vacant tag */
@@ -33,11 +31,11 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
-static const int new_window_attach_on_end = 0; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
-#define ICONSIZE 19   /* icon size */
+static const int new_window_attach_on_end = 1; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
+#define ICONSIZE 18   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[]          = {"BerkeleyMono Nerd Font:style:medium:size=12" ,"BerkeleyMono Nerd Font:style:medium:size=19" };
+static const char *fonts[] = {"Iosevka:style:medium:size=12", "JetBrainsMono Nerd Font Mono:style:medium:size=19"};
 
 // theme
 #include "themes/catppuccin.h"
@@ -59,14 +57,14 @@ static const char *colors[][3]      = {
     [SchemeTag7]       = { mauve,   black,  black },
     [SchemeTag8]       = { yellow,  black,  black },
     [SchemeTag9]       = { teal,    black,  black },
-    [SchemeLayout]     = { green,   black,  black },
+    [SchemeLayout]     = { sapphire,   black,  black },
     [SchemeBtnPrev]    = { green,   black,  black },
     [SchemeBtnNext]    = { yellow,  black,  black },
     [SchemeBtnClose]   = { red,     black,  black },
 };
 
 /* tagging */
-static char *tags[] = {"󰲠", "󰲢", "󰲤", "󰲦", "󰲨", "󰲪", "󰲬", "󰲮", "󰲰"};
+static char *tags[] = {"󰖟", "󱋊", "", "󰕧", "", "", "", "", ""};
 
 // static const char* eww[] = { "eww", "open" , "eww", NULL };
 
@@ -278,7 +276,8 @@ static const Button buttons[] = {
     * to control these separately (i.e. to retain the feature to move a tiled window
     * into a floating position).
     */
-    { ClkClientWin,         MODKEY,         Button1,        dragmfact,      {0} },
+    { ClkClientWin,         MODKEY,         Button1,        moveorplace,    {0} },
+    { ClkClientWin,         MODKEY,         Button2,        dragmfact,      {0} },
     { ClkClientWin,         MODKEY,         Button3,        dragcfact,      {0} },
     { ClkTagBar,            0,              Button1,        view,           {0} },
     { ClkTagBar,            0,              Button3,        toggleview,     {0} },
