@@ -8,19 +8,17 @@ interval=0
 # load colors
 . ~/.config/dwm/scripts/bar_themes/catppuccin
 
-pkg_updates() {
-  updates=$({ timeout 12h yay -Qua 2>/dev/null || true; } | wc -l)
-
-  if [ "$updates" -gt 0 ]; then
-    printf "^c$green^   $updates"" updates"
-  else
-    printf "^c$green^   No updates"
-  fi
-}
+# pkg_updates() {
+#   updates=$({ timeout 12h yay -Qua 2>/dev/null || true; } | wc -l)
+#   if [ "$updates" -gt 0 ]; then
+#     printf "^c$green^   $updates"" updates"
+#   else
+#     printf "^c$green^   No updates"
+#   fi
+# }
 
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
-
   printf " ^c$black^ ^b$orange^   "
   printf "^c$white^^b$grey^ $cpu_val ^b$black^"
 }
@@ -57,5 +55,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$(pkg_updates)$(cpu) $(mem) $(clock)"
+  sleep 1 && xsetroot -name "$(cpu) $(mem) $(clock)"
 done
