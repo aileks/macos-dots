@@ -156,6 +156,9 @@ static const Key keys[] = {
     { MODKEY,                           XK_w,       spawn,      SHCMD("brave")},
     { MODKEY,                           XK_e,       spawn,      SHCMD("thunar")},
 
+    // lock screen
+    { Mod4Mask,                         XK_l,       spawn,      SHCMD("i3lock-fancy -pf BerkeleyMono-Nerd-Font")},
+
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
     { MODKEY|ControlMask,               XK_t,       togglegaps,     {0} },
