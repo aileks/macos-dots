@@ -3,8 +3,8 @@ icon_theme="Papirus-Dark"
 frame_color = "#89b4fa"
 separator_color= frame
 highlight = "#89b4fa"
-font = "BerkeleyMono Nerd Font 11"
-corner_radius = 4
+font = "BerkeleyMono Nerd Font 12"
+corner_radius = 0
 scale = 1.5
 frame_width = 1
 
