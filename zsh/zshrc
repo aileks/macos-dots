@@ -31,6 +31,7 @@ alias ar="php artisan"
 alias rm="trash"
 alias c="clear"
 alias dir="cd ~ && cd \$(find * -type d | fzf)"
+alias ff="fastfetch"
 
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
