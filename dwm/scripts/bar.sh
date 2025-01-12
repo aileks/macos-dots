@@ -9,7 +9,7 @@ interval=0
 . ~/.config/dwm/scripts/bar_themes/catppuccin
 
 pkg_updates() {
-  updates=$({ timeout 20 yay -Qua 2>/dev/null || true; } | wc -l)
+  updates=$({ timeout 12h yay -Qua 2>/dev/null || true; } | wc -l)
 
   if [ "$updates" -gt 0 ]; then
     printf "^c$green^   $updates"" updates"
