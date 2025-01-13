@@ -2,7 +2,7 @@
 
 xrdb merge ~/.Xresources
 feh --bg-fill ~/Pictures/Wallpapers/flowers.jpeg &
-xset r rate 150 50 &
+xset r rate 200 60 &
 picom &
 dash ~/.config/dwm/scripts/bar.sh &
 xss-lock -- i3lock-fancy &
