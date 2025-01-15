@@ -12,9 +12,9 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jaischeema"
 
 # Plugins
-plugins=(archlinux cp fast-syntax-highlighting fzf git python ruby thefuck tmux zsh-autosuggestions)
-ZSH_TMUX_AUTOSTART=true
-# ZSH_TMUX_AUTONAME_SESSION=true
+plugins=(cp fast-syntax-highlighting fzf git python ruby thefuck tmux ubuntu zsh-autosuggestions)
+# ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTONAME_SESSION=true
 ZSH_TMUX_UNICODE=true
 
 # OMZ script
@@ -53,3 +53,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
 
+
+export PATH=$PATH:/home/aileks/.spicetify
