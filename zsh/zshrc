@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jaischeema"
 
 # Plugins
-plugins=(cp fast-syntax-highlighting fzf git python ruby thefuck tmux ubuntu zsh-autosuggestions)
+plugins=(cp fast-syntax-highlighting fzf git python ruby tmux ubuntu zsh-autosuggestions)
 # ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTONAME_SESSION=true
 ZSH_TMUX_UNICODE=true
