@@ -55,8 +55,6 @@ static const char *colors[][3]      = {
     [SchemeTag5]       = { pink,    black,  black },
     [SchemeTag6]       = { sky,     black,  black },
     [SchemeTag7]       = { mauve,   black,  black },
-    [SchemeTag8]       = { yellow,  black,  black },
-    [SchemeTag9]       = { teal,    black,  black },
     [SchemeLayout]     = { sapphire,   black,  black },
     [SchemeBtnPrev]    = { green,   black,  black },
     [SchemeBtnNext]    = { yellow,  black,  black },
@@ -64,7 +62,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static char *tags[] = {"󰬺", "󰬻", "󰬼", "󰬽", "󰬾", "󰬿", "󰭀", "󰭁", "󰭂"};
+static char *tags[] = {"󰬺", "󰬻", "󰬼", "󰬽", "󰬾", "󰬿", "󰭀"};
 
 // static const char* eww[] = { "eww", "open" , "eww", NULL };
 
