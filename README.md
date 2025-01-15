@@ -20,7 +20,7 @@ Fedora ([wezterm](https://wezfurlong.org/wezterm/install/linux.html#__tabbed_1_4
 sudo dnf install -y git neovim zsh tmux wezterm fzf ripgrep eza trash-cli fastfetch dunst
 ```
 
-Arch (requires an AUR helper such as [yay](https://github.com/Jguer/yay))
+Arch
 ```sh
 sudo pacman -Syu git neovim zsh tmux wezterm fzf ripgrep eza trash-cli fastfetch dunst
 ```
