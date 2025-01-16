@@ -149,7 +149,7 @@ return {
     lspconfig.tailwindcss.setup({ capabilities = capabilities })
 
     -- COBOL
-    lspconfig.cobal_ls.setup({ capabilities = capabilities })
+    lspconfig.cobol_ls.setup({ capabilities = capabilities })
 
     -- none-ls
     local null_ls = require('null-ls')
