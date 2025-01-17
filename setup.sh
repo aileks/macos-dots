@@ -21,9 +21,9 @@ rm -rf $HOME/.config/fastfetch
 ln -s $DOTDIR/fastfetch $HOME/.config/fastfetch
 
 # install dwm
-#echo "Compiling dwm, sudo password needed!"
-#echo ""
-#cd $DOTDIR/dwm && sudo make install
+echo "Compiling dwm, sudo password needed!"
+echo ""
+cd $DOTDIR/dwm && sudo make install
 
 # install omz
 echo "Installing Oh My Zsh"
