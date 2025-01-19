@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.pyenv/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.pyenv/bin:$HOME/.bun/bin"
 
 # Path to OMZ installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -53,5 +53,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
 
-
-export PATH=$PATH:/home/aileks/.spicetify
+# bun completions
+[ -s "/home/aileks/.bun/_bun" ] && source "/home/aileks/.bun/_bun"
