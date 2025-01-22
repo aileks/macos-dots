@@ -1,6 +1,6 @@
 # Addicted to Configuration
 
-### My dotfiles repo for WSL & Linux (Ubuntu)
+### DWM dotfiles
 
 #### Includes configuration for:
 - WezTerm
@@ -8,6 +8,8 @@
 - Neovim
 - Tmux
 - Fastfetch
+- DWM
+- Dunst
 
 #### Install general programs:
 Debian/Ubuntu ([wezterm](https://wezfurlong.org/wezterm/install/linux.html#__tabbed_1_3) and [fastfetch](https://github.com/fastfetch-cli/fastfetch) need 3rd party repos)
