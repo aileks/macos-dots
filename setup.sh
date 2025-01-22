@@ -27,7 +27,6 @@ cd $DOTDIR/dwm && sudo make install
 
 # install omz
 echo "Installing Oh My Zsh"
-echo ""
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
