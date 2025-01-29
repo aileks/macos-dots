@@ -43,6 +43,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # GPG stuff
 export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 
 # Misc
 eval "$(zoxide init zsh)"
