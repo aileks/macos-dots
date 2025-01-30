@@ -53,5 +53,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 export PIPENV_VENV_IN_PROJECT=1
 
-
-export PATH=$PATH:/home/aileks/.spicetify
