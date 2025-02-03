@@ -1,12 +1,12 @@
 #!/bin/sh
 
 xrdb merge ~/.Xresources
-feh --bg-fill ~/Pictures/Wallpapers/flowers.jpeg &
-xset r rate 200 60 &
-picom &
+feh --no-fehbg --bg-fill ~/Pictures/Wallpaper/wallpaper.png &
+xset r rate 200 50 &
+picom -b &
 dash ~/.config/dwm/scripts/bar.sh &
-nvidia-settings --load-config-only
+nvidia-settings --load-config-only &
 nm-tray &
-xss-lock -- i3lock-fancy -pf JetBrains-Mono-SemiBold-Italic &
+xss-lock -- i3lock-fancy -pf BerkeleyMono-Nerd-Font &
 
 while type chadwm >/dev/null; do chadwm && continue || break; done
