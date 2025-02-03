@@ -149,7 +149,7 @@ static const Key keys[] = {
 
     { MODKEY,                           XK_space,   spawn,      SHCMD("rofi -show drun") },
     { MODKEY,                           XK_Return,  spawn,      SHCMD("wezterm-gui")},
-    { MODKEY,                           XK_w,       spawn,      SHCMD("brave")},
+    { MODKEY,                           XK_w,       spawn,      SHCMD("brave-browser")},
     { MODKEY,                           XK_e,       spawn,      SHCMD("thunar")},
 
     // lock screen
