@@ -1,5 +1,5 @@
 # Path
-export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.pyenv/bin:$HOME/.bun"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.composer/vendor/bin:$HOME/.spicetify:$HOME/.pyenv/bin:$HOME/.bun:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
 # Path to OMZ installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -12,7 +12,7 @@ export SUDO_EDITOR=nvim
 ZSH_THEME="jaischeema"
 
 # Plugins
-plugins=(archlinux cp fast-syntax-highlighting fzf git python ruby tmux zsh-autosuggestions)
+plugins=(cp fast-syntax-highlighting fzf git python ruby tmux ubuntu zsh-autosuggestions)
 # ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTONAME_SESSION=true
 ZSH_TMUX_UNICODE=true
