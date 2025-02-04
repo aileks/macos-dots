@@ -21,10 +21,16 @@ ln -s $DOTDIR/dwm $HOME/.config/dwm
 rm -rf $HOME/.config/fastfetch
 ln -s $DOTDIR/fastfetch $HOME/.config/fastfetch
 
+# copy
+cp $DOTDIR/.Xresources $HOME
+
+############################################
+### MADE OBSOLETE BY MY ANSIBLE PLAYBOOK ###
+############################################
 # install dwm
-echo "Compiling dwm, sudo password needed!"
-echo ""
-cd $DOTDIR/dwm && sudo make install
+# echo "Compiling dwm, sudo password needed!"
+# echo ""
+# cd $DOTDIR/dwm && sudo make install
 
 # install omz
 # echo "Installing Oh My Zsh"
