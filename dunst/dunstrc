@@ -1,5 +1,6 @@
 [global]
-icon_theme="Papirus-Dark"
+icon_theme="Papirus"
+enable_recursive_icon_lookup = true
 frame_color = "#89b4fa"
 separator_color= frame
 highlight = "#89b4fa"
