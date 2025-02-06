@@ -1,6 +1,6 @@
 # Addicted to Configuration
 
-### DWM dotfiles
+## DWM dotfiles
 
 #### Includes configuration for:
 - WezTerm
