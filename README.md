@@ -1,7 +1,5 @@
 # Addicted to Configuration
 
-### DWM dotfiles
-
 #### Includes configuration for:
 - WezTerm
 - Zsh
