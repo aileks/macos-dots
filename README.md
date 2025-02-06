@@ -1,5 +1,7 @@
 # Addicted to Configuration
 
+## macOS dotfiles
+
 #### Includes configuration for:
 - Aerospace
 - Fastfetch
