@@ -35,7 +35,7 @@ cpu() {
 
 mem() {
   printf "^c$mauve^^b$black^  "
-  printf "^c$mauve^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^c$mauve^ $(LC_ALL=C free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 # wlan() {
