@@ -1,5 +1,7 @@
 # Addicted to Configuration
 
+## Fedora dotfiles
+
 #### Includes configuration for:
 - WezTerm
 - Zsh
